@@ -1,33 +1,47 @@
 import React from "react";
 import "../css/MainPage.css";
-import github from "../img/github.svg";
+import githubLogo from "../img/github.svg";
+import headerImg from "../img/headerImg.png";
+import linkedinLogo from "../img/linkedin.svg";
+import ProjectCard from "../components/ProjectCard";
 
 function MainPage() {
 	return (
 		<div>
 			<header>
-				<div id="header-left-block">
-					<h1>Alvaro Fernandez</h1>
-					<p>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, rerum. Debitis accusantium deleniti enim iste dignissimos? Similique, exercitationem! Odit vero, numquam quae ratione maxime
-						sunt reiciendis laudantium quaerat iure ipsum!
-					</p>
-					<img src={ github } alt="github" />
-				</div>
-				<div id="header-right-block">
-					<img src="../img/headerImg.png" alt="header" id="header-img" />
+				<div id="header-front">
+					<div id="header-left-block">
+						<h1>Lorem ipsum dolor</h1>
+						<p className="header-text">
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, rerum. Debitis accusantium deleniti enim iste dignissimos? Similique, exercitationem! Odit vero, numquam quae ratione maxime
+							sunt reiciendis laudantium quaerat iure ipsum!
+						</p>
+						<div>
+							<img src={githubLogo} alt="github" className="header-logo" />
+							<img src={linkedinLogo} alt="github" className="header-logo" />
+						</div>
+					</div>
+					<div id="header-right-block">
+						<img id="header-img" src={headerImg} alt="header" />
+					</div>
 				</div>
 			</header>
 			<section id="projects">
-				<h2>Photography</h2>
-				<p>This is the photography section of my portfolio.</p>
+				<h2>Projects</h2>
+				
+				<div className="cards">
+					<ProjectCard />
+					<ProjectCard />
+					<ProjectCard />
+					<ProjectCard />
+				</div>
 			</section>
-			<section id="developer" className="developer">
-				<h2>Developer</h2>
+			<section id="about" className="developer">
+				<h2>About</h2>
 				<p>This is the developer section of my portfolio.</p>
 			</section>
-			<section id="concept-artist" className="concept-artist">
-				<h2>Concept Artist</h2>
+			<section id="contact" className="concept-artist">
+				<h2>Contact</h2>
 				<p>This is the concept artist section of my portfolio.</p>
 			</section>
 		</div>
