@@ -5,13 +5,14 @@ import headerImg from "../img/headerImg.png";
 import linkedinLogo from "../img/linkedin.svg";
 import ProjectCard from "../components/ProjectCard";
 
+
 function MainPage() {
 	return (
 		<div>
 			<header>
 				<div id="header-front">
 					<div id="header-left-block">
-						<h1>Lorem ipsum dolor</h1>
+						<h1>Alvaro Fernandez</h1>
 						<p className="header-text">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, rerum. Debitis accusantium deleniti enim iste dignissimos? Similique, exercitationem! Odit vero, numquam quae ratione maxime
 							sunt reiciendis laudantium quaerat iure ipsum!
@@ -27,7 +28,7 @@ function MainPage() {
 				</div>
 			</header>
 			<section id="projects">
-				<h2>Projects</h2>
+				<h2 className="title-section">Projects</h2>
 				
 				<div className="cards">
 					<ProjectCard />
@@ -37,11 +38,11 @@ function MainPage() {
 				</div>
 			</section>
 			<section id="about" className="developer">
-				<h2>About</h2>
+				<h2 className="title-section">About</h2>
 				<p>This is the developer section of my portfolio.</p>
 			</section>
 			<section id="contact" className="concept-artist">
-				<h2>Contact</h2>
+				<h2 className="title-section">Contact</h2>
 				<p>This is the concept artist section of my portfolio.</p>
 			</section>
 		</div>

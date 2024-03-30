@@ -5,7 +5,7 @@ import projectExample from '../img/code.png'
 function ProjectCard() {
 	return (
 		<div className="card">
-			<img src={projectExample} alt="Card Image" />
+			<img src={projectExample} alt="Card" />
 			<div className="card-content">
 				<h2 class="card-title">Title</h2>
 				<p className="card-description">This is a small description of the card content.</p>
