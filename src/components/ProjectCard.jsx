@@ -1,11 +1,11 @@
 import React from "react";
-import '../css/projectcard.css';
+import '../css/projectcardsoutput.css';
 import projectExample from '../img/code.png'
 
 function ProjectCard() {
 	return (
 		<div className="card">
-			<img src={projectExample} alt="Card" />
+			<img src={projectExample} alt="Card" className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
 			<div className="card-content">
 				<h2 class="card-title">Title</h2>
 				<p className="card-description">This is a small description of the card content.</p>
