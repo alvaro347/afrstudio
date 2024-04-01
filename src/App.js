@@ -2,6 +2,8 @@
 import './css/App.css';
 import MainPage from './pages/MainPage';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
+import './css/MediaQuery.css'
 
 
 function App() {
@@ -9,6 +11,7 @@ function App() {
     <div className="App">
       <Navigation />
       <MainPage />
+      <Footer />
     </div>
   );
 }

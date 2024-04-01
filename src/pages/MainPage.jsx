@@ -9,15 +9,15 @@ import ProjectCard from "../components/ProjectCard";
 function MainPage() {
 	return (
 		<div>
-			<header>
+			<header id="header">
 				<div id="header-front">
 					<div id="header-left-block">
-						<h1>Alvaro Fernandez</h1>
+						<h1 className="font-bold">Alvaro Fernandez</h1>
 						<p className="header-text">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, rerum. Debitis accusantium deleniti enim iste dignissimos? Similique, exercitationem! Odit vero, numquam quae ratione maxime
 							sunt reiciendis laudantium quaerat iure ipsum!
 						</p>
-						<div>
+						<div className="flex">
 							<img src={githubLogo} alt="github" className="header-logo" />
 							<img src={linkedinLogo} alt="github" className="header-logo" />
 						</div>

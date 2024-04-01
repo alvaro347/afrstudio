@@ -1,0 +1,9 @@
+@media screen and (min-width: 1200px) {
+  .cards {
+    max-width: 1400px;
+  }
+  #header-front {
+    max-width: 1400px;
+    
+  }
+}

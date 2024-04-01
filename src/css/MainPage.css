@@ -26,6 +26,7 @@ h1 {
 
 #header-img {
 	width: 100%;
+
 }
 
 .header-logo {
@@ -39,6 +40,9 @@ section {
 
 .title-section {
 	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	margin: 10px 0;
 }
 
 .photography {
@@ -55,6 +59,7 @@ section {
 
 .cards {
 	display: flex;
+	flex-grow: 3;
 	flex-wrap: wrap;
 	justify-content: center;
 
