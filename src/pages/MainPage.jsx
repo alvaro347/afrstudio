@@ -8,7 +8,7 @@ import ProjectCard from "../components/ProjectCard";
 
 function MainPage() {
 	return (
-		<div>
+		<div className="main-page">
 			<header id="header">
 				<div id="header-front">
 					<div id="header-left-block">

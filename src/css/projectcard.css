@@ -3,7 +3,7 @@
   flex-grow: 1;
   box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
   overflow: hidden;
-  max-width: 500px;
+  max-width: 450px;
   min-width: 400px;
   margin: 10px 10px;
   background-color: #ffffff;
@@ -25,21 +25,17 @@
 }
 
 .card-title {
-  font-size: 1.5rem;
-
+  font-size: 1.3rem;
+  text-transform: uppercase;
   font-weight: bold;
 }
 
 .card-description {
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   color: #666;
   margin: 5px 0;
 }
 
-.icons {
-  
-
-}
 
 .more-info {
   border-top: 1px solid rgb(175, 175, 175);
@@ -48,6 +44,7 @@
 
 .more-info-text {
   margin-top: 10px;
+  font-size: 0.8rem;
 }
 
 .more-info-text p {
