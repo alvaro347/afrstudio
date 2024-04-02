@@ -1,7 +1,7 @@
 .card {
   /* border-radius: 5px; */
   flex-grow: 1;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   max-width: 500px;
   min-width: 400px;
@@ -11,43 +11,69 @@
 }
 
 .card:hover {
-  border: solid black;
+  outline: 3px solid rgb(136, 136, 136);
 }
 
 .card img {
   width: 100%;
   height: auto;
-  max-height: 350px;
+  max-height: 400px;
 }
 
 .card-content {
-  padding: 10px;
+  padding: 10px 15px;
 }
 
 .card-title {
   font-size: 1.5rem;
-  margin: 5px 0;
+
   font-weight: bold;
 }
 
 .card-description {
   font-size: 0.9rem;
   color: #666;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .icons {
-  padding: 5px;
+  
+
+}
+
+.more-info {
+  border-top: 1px solid rgb(175, 175, 175);
+
+}
+
+.more-info-text {
+  margin-top: 10px;
+}
+
+.more-info-text p {
+  font-size: 0.9rem;
+  margin-right: 5px;
+  text-align: right;
+  color: #3D23DA;
+}
+
+.more-info-text p:hover {
+  /* font-weight: 600; */
+  transition: text-decoration 1s ease;
+  text-decoration: underline;
 }
 
 .icons img {
- 
+  padding: 5px;
+ margin-top: 10px;
   width: 40px; /* Adjust size as needed */
   height: auto; /* Adjust size as needed */
-  
+
 }
 
 .icons img:hover {
-  border: 1px solid black;
+  /* outline: 3px solid #3D23DA; */
+  outline: 3px solid black;
+  outline-offset: -3px;
 
 }
