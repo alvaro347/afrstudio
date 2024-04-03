@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/ProjectCard.css";
+import "../css/ProjectShowcase.css";
 // import projectExample from "../img/code.png";
 import logo from "../img/github.svg";
 import htmlLogo from "../img/html.svg";
@@ -7,9 +7,9 @@ import htmlLogo2 from "../img/html2.svg";
 import image1 from "../img/image1.png";
 import reactLogo from "../img/react.svg";
 
-function ProjectCard() {
+function ProjectShowcase() {
 	return (
-		<div className="card">
+		<div className="p-showcase">
 			<a href="#projects">
 			<img src={image1} alt="Card" className="project-image h-full w-full object-cover object-center lg:h-full lg:w-full" />
 		
@@ -36,4 +36,4 @@ function ProjectCard() {
 	);
 }
 
-export default ProjectCard;
+export default ProjectShowcase;

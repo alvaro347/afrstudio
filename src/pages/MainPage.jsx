@@ -4,7 +4,7 @@ import githubLogo from "../img/github.svg";
 import headerImg from "../img/headerImg.png";
 import linkedinLogo from "../img/linkedin.svg";
 import ProjectCard from "../components/ProjectCard";
-
+import ProjectShowcase from "../components/ProjectShowcase";
 
 function MainPage() {
 	return (
@@ -29,7 +29,11 @@ function MainPage() {
 			</header>
 			<section id="projects">
 				<h2 className="title-section">Projects</h2>
-				
+				<div className="cards">
+					<ProjectShowcase />
+					{/* <ProjectShowcase /> */}
+				</div>
+				<h2 className="title-section">Others</h2>
 				<div className="cards">
 					<ProjectCard />
 					<ProjectCard />
