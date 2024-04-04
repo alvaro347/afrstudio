@@ -1,8 +1,8 @@
 import React from "react";
 import "../css/ProjectCard.css";
 // import projectExample from "../img/code.png";
-import logo from "../img/github.svg";
-import htmlLogo from "../img/html.svg";
+// import logo from "../img/github.svg";
+// import htmlLogo from "../img/html.svg";
 import htmlLogo2 from "../img/html2.svg";
 import image1 from "../img/image1.png";
 import reactLogo from "../img/react.svg";

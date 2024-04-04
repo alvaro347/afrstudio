@@ -1,8 +1,8 @@
 import React from "react";
 import "../css/MainPage.css";
-import githubLogo from "../img/github.svg";
+// import githubLogo from "../img/github.svg";
 import headerImg from "../img/headerImg.png";
-import linkedinLogo from "../img/linkedin.svg";
+// import linkedinLogo from "../img/linkedin.svg";
 import ProjectCard from "../components/ProjectCard";
 import ProjectShowcase from "../components/ProjectShowcase";
 import ProjectShowcase2 from "../components/ProjectShowcase2";
