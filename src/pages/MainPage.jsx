@@ -5,6 +5,7 @@ import headerImg from "../img/headerImg.png";
 import linkedinLogo from "../img/linkedin.svg";
 import ProjectCard from "../components/ProjectCard";
 import ProjectShowcase from "../components/ProjectShowcase";
+import ProjectShowcase2 from "../components/ProjectShowcase2";
 
 function MainPage() {
 	return (
@@ -12,28 +13,37 @@ function MainPage() {
 			<header id="header">
 				<div id="header-front">
 					<div id="header-left-block">
-						<h1 className="font-bold">Alvaro Fernandez</h1>
+					<div id="header-right-block">
+						<img id="header-img" src={headerImg} alt="header" />
+					</div>
+						<h2 id="header-title" className="font-bold">Web Studio</h2>
 						<p className="header-text">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, rerum. Debitis accusantium deleniti enim iste dignissimos? Similique, exercitationem! Odit vero, numquam quae ratione maxime
 							sunt reiciendis laudantium quaerat iure ipsum!
 						</p>
-						<div className="flex">
+						{/* <div className="header-icons flex">
 							<img src={githubLogo} alt="github" className="header-logo" />
 							<img src={linkedinLogo} alt="github" className="header-logo" />
-						</div>
-					</div>
-					<div id="header-right-block">
-						<img id="header-img" src={headerImg} alt="header" />
+						</div> */}
 					</div>
 				</div>
 			</header>
 			<section id="projects">
-				<h2 className="title-section">Projects</h2>
+			<div className="title-text">
+
+				<h2 className="title-section">Highlights</h2>
+				{/* <p className="text-gray-900">Selected Projects</p> */}
+			</div>
 				<div className="cards">
 					<ProjectShowcase />
+					<ProjectShowcase2 />
+					<ProjectShowcase2 />
 					{/* <ProjectShowcase /> */}
 				</div>
+				<div className="title-text">
+
 				<h2 className="title-section">Others</h2>
+				</div>
 				<div className="cards">
 					<ProjectCard />
 					<ProjectCard />

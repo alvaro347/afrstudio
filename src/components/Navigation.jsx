@@ -5,6 +5,8 @@ import logo from "../img/Logo.png";
 export default function Navigation() {
 	return (
 		<nav>
+		<div className="nav-content">
+
 			<div className="logo">
 			<a href="#header"><img src={logo} alt="logo" /></a>
 			</div>
@@ -13,6 +15,7 @@ export default function Navigation() {
 				<a href="#about" className="nav-link">About</a>
 				<a href="#contact" className="nav-link">Contact</a>
 			</div>
+		</div>
 		</nav>
 	);
 }
