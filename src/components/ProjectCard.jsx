@@ -23,7 +23,7 @@ function ProjectCard() {
 
 				<div className="more-info flex justify-between">
 					<div className="icons flex">
-						<a href="#123"><img src={htmlLogo2} alt="Icon 1" className="" /></a>
+						<a href="#123"><img src={reactLogo} alt="Icon 1" className="" /></a>
 						<a href="#4556"><img src={reactLogo} alt="Icon 2" /></a>
 					</div>
 					{/* <div className="self-center more-info-text grid">

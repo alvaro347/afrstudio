@@ -13,9 +13,9 @@ header {
 	margin: 0 auto;
 	color: #2b2b2b;
 	/* margin-top: 60px; */
-	padding: 100px 50px 50px 50px;
-	height: 800px;
-	align-content: center;
+	padding: 60px 50px 50px 50px;
+	/* height: 1000px; */
+	/* align-content: center; */
 	/* justify-content: center; */
 }
 
@@ -26,6 +26,11 @@ header {
 
 .header-text {
 	text-align: center;
+}
+
+.header-presentation {
+	margin: 0 auto;
+	width: 70%;
 }
 
 h1 {
@@ -39,14 +44,16 @@ h1 {
 
 #header-front {
 	/* display: flex; */
-	width: 70%;
+	/* width: 70%; */
 margin: 0 auto;
 	/* justify-content: center; */
 }
 
 #header-img {
-	margin-bottom: 40px;
-	width: 100%;
+	margin: 60px auto;
+
+	max-width: 1200px;
+	width: 90%;
 }
 
 .header-logo {
@@ -84,11 +91,16 @@ section {
 }
 
 .cards {
+	flex-direction: row;
+	margin: 0 auto;
 	display: flex;
+	max-width: 1450px;
 	flex-grow: 3;
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
+
 
 .header-icons {
 	margin-top: 20px;

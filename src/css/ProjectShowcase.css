@@ -3,9 +3,11 @@
 	/* flex-grow: 1; */
 	box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
 	overflow: hidden;
-	max-width: 1400px;
-	min-width: 700px;
-	margin: 10px 10px;
+	max-width: 85%;
+	/* max-width: 1400px;
+	min-width: 700px; */
+	margin: 20px 10px;
+
 	background-color: #f0f0f0;
 
   border-radius: 20px;
@@ -19,7 +21,7 @@
 
 .project-image1 {
 	width: 100%;
-	height: auto;
+	/* height: auto; */
 	max-height: 500px;
 	/* border-radius: 10px; */
 }

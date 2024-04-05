@@ -16,11 +16,13 @@ function MainPage() {
 					<div id="header-right-block">
 						<img id="header-img" src={headerImg} alt="header" />
 					</div>
-						<h2 id="header-title" className="font-bold">Web Studio</h2>
+					<div className="header-presentation">
+						<h2 id="header-title" className="font-bold">Portfolio</h2>
 						<p className="header-text">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, rerum. Debitis accusantium deleniti enim iste dignissimos? Similique, exercitationem! Odit vero, numquam quae ratione maxime
 							sunt reiciendis laudantium quaerat iure ipsum!
 						</p>
+					</div>
 						{/* <div className="header-icons flex">
 							<img src={githubLogo} alt="github" className="header-logo" />
 							<img src={linkedinLogo} alt="github" className="header-logo" />
@@ -36,8 +38,8 @@ function MainPage() {
 			</div>
 				<div className="cards">
 					<ProjectShowcase />
-					<ProjectShowcase2 />
-					<ProjectShowcase2 />
+					<ProjectShowcase />
+
 					{/* <ProjectShowcase /> */}
 				</div>
 				<div className="title-text">
@@ -48,16 +50,16 @@ function MainPage() {
 					<ProjectCard />
 					<ProjectCard />
 					<ProjectCard />
-					<ProjectCard />
+					
 				</div>
 			</section>
 			<section id="about" className="developer">
 				<h2 className="title-section">About</h2>
-				<p>This is the developer section of my portfolio.</p>
+				<p>This is the about section of my portfolio.</p>
 			</section>
 			<section id="contact" className="concept-artist">
 				<h2 className="title-section">Contact</h2>
-				<p>This is the concept artist section of my portfolio.</p>
+				<p>This is the contact section of my portfolio.</p>
 			</section>
 		</div>
 	);
