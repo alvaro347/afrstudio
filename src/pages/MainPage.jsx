@@ -1,13 +1,10 @@
 import React from "react";
 import "../css/MainPage.css";
-// import githubLogo from "../img/github.svg";
-import headerImg from "../img/headerImg.png";
-// import LinkedInLogo from "../img/LinkedIn.svg";
-import ProjectCard from "../components/ProjectCard";
+import ProjectsListCards from "../components/ProjectsListCards";
 import ProjectShowcase from "../components/ProjectShowcase";
-// import ProjectShowcase2 from "../components/ProjectShowcase2";
 
-function MainPage() {
+function MainPage({ projects, headerImg }) {
+
 	return (
 		<div className="main-page">
 			<header id="header">
@@ -21,9 +18,12 @@ function MainPage() {
 								AFR Website
 							</h1>
 							<p className="header-text">
-								Lorem ipsum dolor sit, amet <span className="blue-text">consectetur adipisicing elit.</span> Corrupti, rerum. Debitis
-								<span className="blue-text">accusantium deleniti enim</span> iste dignissimos? Similique, exercitationem! Odit vero,
-								numquam quae ratione maxime sunt reiciendis laudantium quaerat iure ipsum!
+								Lorem ipsum dolor sit, amet{" "}
+								<span className="blue-text">consectetur adipisicing elit.</span> Corrupti, rerum.
+								Debitis
+								<span className="blue-text">accusantium deleniti enim</span> iste dignissimos?
+								Similique, exercitationem! Odit vero, numquam quae ratione maxime sunt reiciendis
+								laudantium quaerat iure ipsum!
 							</p>
 						</div>
 						{/* <div className="header-icons flex">
@@ -38,20 +38,14 @@ function MainPage() {
 					<h2 className="title-section">Highlights</h2>
 					{/* <p className="text-gray-900">Selected Projects</p> */}
 				</div>
-				<div className="cards">
-					<ProjectShowcase />
-					<ProjectShowcase />
-
-					{/* <ProjectShowcase /> */}
+				<div id="projects-list-highlights">
+					<ProjectShowcase project={projects.project1} />
+					<ProjectShowcase project={projects.project2} />
 				</div>
 				<div className="title-text">
 					<h2 className="title-section">Others</h2>
 				</div>
-				<div className="cards">
-					<ProjectCard />
-					<ProjectCard />
-					<ProjectCard />
-				</div>
+				<ProjectsListCards projects={projects} />
 			</section>
 			<section id="about" className="developer">
 				<h2 className="title-section">About</h2>
