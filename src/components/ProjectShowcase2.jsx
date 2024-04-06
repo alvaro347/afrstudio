@@ -18,11 +18,13 @@ function ProjectShowcase2() {
 
 			<div className="more-info-side justify-between">
 				<div className="project-content">
-				<a href="#123">
-					<h2 className="project-title2">Project Title</h2>
-					<p className="project-description">This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills. This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills. This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills
-					</p>
-				</a>
+					<a href="#123">
+						<h2 className="project-title2">Project Title</h2>
+						<p className="project-description">
+							This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills. This is a small description of the card content. This projects it's about this and that. the
+							content an intention was to showcase react skills. This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills
+						</p>
+					</a>
 				</div>
 				<div className="icons-side2 flex">
 					<a href="#123">
