@@ -3,15 +3,15 @@ import "../css/ProjectShowcase.css";
 // import projectExample from "../img/code.png";
 // import logo from "../img/github.svg";
 // import htmlLogo from "../img/html.svg";
-import htmlLogo2 from "../img/html2.svg";
+// import htmlLogo2 from "../img/html2.svg";
 import image1 from "../img/image1.png";
-import reactLogo from "../img/react.svg";
+// import reactLogo from "../img/react.svg";/
 
 function ProjectShowcase() {
 	return (
 		<div className="p-showcase">
 			<a href="#projects">
-			<img src={image1} alt="Card" className="project-image1 h-full w-full object-cover object-center lg:h-full lg:w-full" />
+			<img src={ image1 } alt="Card" className="project-image1 h-full w-full object-cover object-center lg:h-full lg:w-full" />
 		
 			<div className="card-content1">
 			

@@ -12,7 +12,11 @@ function ProjectShowcase2() {
 		<div className="p-showcase2">
 			<div className="project-img-box">
 				<a href="#projects">
-					<img src={image1} alt="Card" className="project-image2 h-full w-full object-cover object-center lg:h-full lg:w-full" />
+					<img
+						src={image1}
+						alt="Card"
+						className="project-image2 h-full w-full object-cover object-center lg:h-full lg:w-full"
+					/>
 				</a>
 			</div>
 
@@ -21,8 +25,11 @@ function ProjectShowcase2() {
 					<a href="#123">
 						<h2 className="project-title2">Project Title</h2>
 						<p className="project-description">
-							This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills. This is a small description of the card content. This projects it's about this and that. the
-							content an intention was to showcase react skills. This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills
+							This is a small description of the card content. This projects it's about this and that. the
+							content an intention was to showcase react skills. This is a small description of the card
+							content. This projects it's about this and that. the content an intention was to showcase react
+							skills. This is a small description of the card content. This projects it's about this and that.
+							the content an intention was to showcase react skills
 						</p>
 					</a>
 				</div>
