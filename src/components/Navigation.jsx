@@ -8,7 +8,7 @@ export default function Navigation() {
 		<div className="nav-content">
 
 			<div className="logo">
-			<a href="#header"><img src={logo} alt="logo" /></a>
+			<a href="#header"><img src={ logo } alt="logo" /></a>
 			</div>
 			<div>
 				<a href="#projects" className="nav-link">Projects</a>

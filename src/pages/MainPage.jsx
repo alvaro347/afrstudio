@@ -21,9 +21,9 @@ function MainPage() {
 								AFR Website
 							</h1>
 							<p className="header-text">
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, rerum. Debitis accusantium
-								deleniti enim iste dignissimos? Similique, exercitationem! Odit vero, numquam quae ratione
-								maxime sunt reiciendis laudantium quaerat iure ipsum!
+								Lorem ipsum dolor sit, amet <span className="blue-text">consectetur adipisicing elit.</span> Corrupti, rerum. Debitis
+								<span className="blue-text">accusantium deleniti enim</span> iste dignissimos? Similique, exercitationem! Odit vero,
+								numquam quae ratione maxime sunt reiciendis laudantium quaerat iure ipsum!
 							</p>
 						</div>
 						{/* <div className="header-icons flex">

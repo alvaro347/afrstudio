@@ -30,6 +30,7 @@
 }
 
 .card-title {
+	/* margin-bottom: 5px; */
 	font-size: 1.4rem;
 	text-transform: uppercase;
 	font-weight: bold;
@@ -43,7 +44,7 @@
 .card-description {
 	font-size: 0.75rem;
 	color: #666;
-	margin: 0 0 15px 0;
+	margin: 0 0 10px 0;
 }
 
 .more-info {

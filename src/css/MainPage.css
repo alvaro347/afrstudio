@@ -1,7 +1,7 @@
 body {
 	font-family: JetBrains Mono, Arial, sans-serif;
 	padding: 0;
-	background-color: #eaeaea;
+	background-color: #dfdfdf;
 }
 
 /* .main-page {
@@ -20,6 +20,7 @@ header {
 }
 
 #header-title {
+	color: #424242;
 	font-size: 3rem;
 	text-align: center;
 }
@@ -76,6 +77,10 @@ section {
 .title-text {
 	text-align: center;
 	margin-bottom: 40px;
+}
+
+.blue-text {
+	color: #3d23da;
 }
 
 .photography {

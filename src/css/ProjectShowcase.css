@@ -7,15 +7,13 @@
 	/* max-width: 1400px;
 	min-width: 700px; */
 	margin: 20px 10px;
-
 	background-color: #f0f0f0;
-
-  border-radius: 20px;
+	border-radius: 20px;
 	transition: background-color 0.3s ease;
 }
 
-.card:hover {
-  background-color: #ffffff;
+.p-showcase:hover {
+	background-color: #ffffff;
 	outline: 2px solid rgb(160, 160, 160);
 }
 
@@ -27,26 +25,27 @@
 }
 
 .card-content1 {
-	padding: 30px 40px;
+	padding: 20px 40px;
 	/* padding: 10px 15px; */
 	/* padding: 10px 0 0 0; */
 }
 
 .card-title1 {
+	margin-bottom: 5px;
 	font-size: 2rem;
 	text-transform: uppercase;
 	font-weight: bold;
 }
 
 .card-title1:hover {
-  text-decoration: underline;
-  color: #3d23da;
+	text-decoration: underline;
+	color: #3d23da;
 }
 
 .card-description1 {
-	font-size: 0.75rem;
+	font-size: 0.9rem;
 	color: #666;
-	margin: 5px 0;
+	margin-bottom: 10px;
 }
 
 .more-info {
@@ -77,14 +76,14 @@
 	margin-right: 5px;
 	width: 50px; /* Adjust size as needed */
 	height: auto; /* Adjust size as needed */
+	/* background-color: #e4e4e4; */
 }
 
 .icons img:hover {
 	/* outline: 3px solid #3D23DA; */
 	/* outline: 2px solid black; */
-  background-color: #e4e4e4;
-  border-radius: 5px;
+	background-color: #e4e4e4;
+	border-radius: 5px;
 	outline-offset: -3px;
 	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.24); /* Larger inset shadow on hover */
-
 }

@@ -36,9 +36,9 @@ function ProjectCard() {
 						<img src={reactLogo} alt="Icon 2" />
 					</a>
 				</div>
-				{/* <div className="self-center more-info-text grid">
+				<div className="self-center more-info-text grid">
 						<p className="">More information &#10230;</p>
-					</div> */}
+					</div>
 			</div>
 		</div>
 	);
