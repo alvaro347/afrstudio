@@ -1,13 +1,27 @@
 // import logo from './img/logo.svg';
 import './css/App.css';
+import './css/MediaQuery.css'
 import MainPage from './pages/MainPage';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import './css/MediaQuery.css'
 import image1 from "./img/image1.png";
 import reactLogo from "./img/react.svg";
 import headerImg from "./img/headerImg.png";
 import htmlLogo from "./img/html2.svg"
+
+
+const icons = {
+  reactIcon: {
+    name: "react",
+    img: reactLogo,
+    link: "#react"
+  },
+  htmlIcon: {
+    name: "html",
+    img: htmlLogo,
+    link: "#html"
+  }
+}
 
 
 const projects = {
@@ -17,7 +31,7 @@ const projects = {
     date: "",
     description: "This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills",
     img: image1,
-    icons: [reactLogo, reactLogo]
+    icons: [icons.reactIcon, icons.htmlIcon]
   },
   project2: {
     title: "Project 2: B",
@@ -25,7 +39,7 @@ const projects = {
     date: "",
     description: "This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills",
     img: image1,
-    icons: [reactLogo, htmlLogo],
+    icons: [icons.reactIcon, icons.htmlIcon],
     keywords: {
       tags: ["web", "server"],
       link: ""
@@ -37,19 +51,7 @@ const projects = {
     date: "",
     description: "This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills",
     img: image1,
-    icons: [htmlLogo, reactLogo],
-    keywords: {
-      tags: ["web"],
-      link: ""
-    }
-  },
-	project4: {
-    title: "Project 4: B",
-    location: "",
-    date: "",
-    description: "This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills",
-    img: image1,
-    icons: [reactLogo, reactLogo],
+    icons: [icons.htmlIcon, icons.reactIcon],
     keywords: {
       tags: ["web"],
       link: ""

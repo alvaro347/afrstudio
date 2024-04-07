@@ -5,8 +5,8 @@ function ProjectCardIcons({ projectIcons }) {
 	function ShowIcons() {
 		return projectIcons.map((icon) => {
 			return (
-				<a href="#123">
-					<img src={icon} alt="Icon 1" className="" />
+				<a href={icon.link} key={icon.name + "link"}>
+					<img key={icon.name} src={icon.img} alt={icon.name} className="" />
 				</a>
 			);
 		});
