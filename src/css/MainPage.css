@@ -32,6 +32,12 @@ body {
 	text-align: center;
 }
 
+#about-text {
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+}
+
 .header-presentation {
 
 	margin: 60px auto;
@@ -77,6 +83,13 @@ section {
 	/* font-weight: bold; */
 	margin: 40px 0 10px 0;
 }
+
+.sorting-icons {
+  margin: 0 auto;
+  width: 200px;
+	position: relative;
+}
+
 
 .title-text {
 	text-align: center;

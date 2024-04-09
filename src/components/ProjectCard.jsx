@@ -2,7 +2,6 @@ import React from "react";
 import "../css/ProjectCard.css";
 import ProjectCardIcons from "./ProjectCardIcons";
 
-
 function ProjectCard({ project }) {
 	return (
 		<div className="card">
@@ -21,7 +20,9 @@ function ProjectCard({ project }) {
 			<div className="more-info flex justify-between">
 				<ProjectCardIcons projectIcons={project.icons} />
 				<div className="self-center more-info-text grid">
+					<a href="#projects">
 					<p className="">More information &#10230;</p>
+					</a>
 				</div>
 			</div>
 		</div>

@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/MainPage.css";
 import ProjectsListCards from "../components/ProjectsListCards";
 import ProjectShowcase from "../components/ProjectShowcase";
+import ProjectCardIcons from "../components/ProjectCardIcons";
 
-function MainPage({ projects, headerImg }) {
+// TODO: Change the hero section height to be 100vh - nav height.
+// TODO: Handle sorting function to show or hide projects depending on the
+
+function MainPage({ projects, headerImg, icons }) {
+	const [iconSort, setIconSort] = useState("");
+
+	function iconSortingHandle() {
+		setIconSort("react");
+	}
 
 	return (
 		<div className="main-page">
@@ -18,12 +27,11 @@ function MainPage({ projects, headerImg }) {
 								AFR Website
 							</h1>
 							<p className="header-text">
-								Lorem ipsum dolor sit, amet{" "}
-								<span className="blue-text">consectetur adipisicing elit.</span> Corrupti, rerum.
-								Debitis
-								<span className="blue-text">accusantium deleniti enim</span> iste dignissimos?
-								Similique, exercitationem! Odit vero, numquam quae ratione maxime sunt reiciendis
-								laudantium quaerat iure ipsum!
+								Lorem ipsum dolor sit, amet <span className="blue-text">consectetur adipisicing elit.</span>{" "}
+								Corrupti, rerum. Debitis
+								<span className="blue-text">accusantium deleniti enim</span> iste dignissimos? Similique,
+								exercitationem! Odit vero, numquam quae ratione maxime sunt reiciendis laudantium quaerat iure
+								ipsum!
 							</p>
 						</div>
 						{/* <div className="header-icons flex">
@@ -44,12 +52,32 @@ function MainPage({ projects, headerImg }) {
 				</div>
 				<div className="title-text">
 					<h2 className="title-section">Others</h2>
+					<div className="sorting-icons">
+						<ProjectCardIcons projectIcons={icons} />
+					</div>
 				</div>
-				<ProjectsListCards projects={projects} />
+				<div>
+					<ProjectsListCards projects={projects} />
+				</div>
 			</section>
 			<section id="about" className="developer">
 				<h2 className="title-section">About</h2>
-				<p>This is the about section of my portfolio.</p>
+				<p id="about-text">
+					I'm a versatile professional with a background in electrical engineering and industrial design. Over
+					the years, I've seamlessly blended my engineering expertise with a keen eye for design, delivering
+					impactful solutions that have made a difference for numerous companies.
+					<br />
+					<br />
+					Specializing in software engineering and web development, I'm passionate about crafting seamless
+					user experiences and building visually stunning applications. My unique combination of technical
+					skills and design sensibility allows me to create innovative solutions that not only captivate users
+					but also drive business growth.
+					<br />
+					<br />
+					Explore my portfolio to see how I've helped companies elevate their digital presence and achieve
+					their goals through the perfect fusion of engineering and design. Let's collaborate and create
+					something extraordinary together!
+				</p>
 			</section>
 			<section id="contact" className="concept-artist">
 				<h2 className="title-section">Contact</h2>

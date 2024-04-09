@@ -12,11 +12,7 @@ function ProjectShowcase2() {
 		<div className="p-showcase2">
 			<div className="project-img-box">
 				<a href="#projects">
-					<img
-						src={image1}
-						alt="Card"
-						className="project-image2 h-full w-full object-cover object-center lg:h-full lg:w-full"
-					/>
+					<img src={image1} alt="Card" className="project-image2 h-full w-full object-cover object-center lg:h-full lg:w-full" />
 				</a>
 			</div>
 
