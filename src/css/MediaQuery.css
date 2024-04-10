@@ -1,9 +1,36 @@
-/* @media screen and (min-width: 1200px) {
-  .cards {
-    max-width: 1400px;
-  }
-  #header-front {
-    max-width: 1400px;
+@media screen and (max-width: 800px) {
+  .header-paragraph {
+    font-size: 0.9rem;
     
   }
-} */
+  
+  #header-title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1400px) {
+  .header-paragraph {
+    font-size: 1.2rem;
+    
+  }
+  
+  #header-title {
+    font-size: 10vh;
+   
+  }
+
+}
+
+@media screen and (min-width: 1401px) {
+  .header-paragraph {
+    font-size: 1.3rem;
+    
+  }
+  #header-title {
+    font-size: 10vh;
+    
+  }
+}
+
+
