@@ -16,22 +16,26 @@ function MainPage({ projects, headerImg, icons }) {
 
 	return (
 		<div className="main-page">
+		<div id="background-image" ></div>
 			<header id="header">
 				<div id="header-front">
 					<div id="header-left-block">
 						<div id="header-right-block">
 							<img id="header-img" src={headerImg} alt="header" />
 						</div>
-						<div className="header-presentation">
-							<h1 id="header-title" className="font-bold">
-								AFR Website
+						<div className="header-text">
+							<h1 id="header-title">
+								AFR STUDIO
+								<br />
+								DEV. & DESIGN
 							</h1>
-							<p className="header-text">
-								Lorem ipsum dolor sit, amet <span className="blue-text">consectetur adipisicing elit.</span>{" "}
+							<p className="header-paragraph">
+								Lorem ipsum dolor sit, amet <span className="blue-text">consectetur adipisicing elit.</span>
 								Corrupti, rerum. Debitis
-								<span className="blue-text">accusantium deleniti enim</span> iste dignissimos? Similique,
-								exercitationem! Odit vero, numquam quae ratione maxime sunt reiciendis laudantium quaerat iure
-								ipsum!
+								<span className="blue-text">accusantium deleniti enim</span> accusantium.
+							</p>
+							<p>
+								Alvaro Fernandez
 							</p>
 						</div>
 						{/* <div className="header-icons flex">
@@ -53,7 +57,7 @@ function MainPage({ projects, headerImg, icons }) {
 				<div className="title-text">
 					<h2 className="title-section">Others</h2>
 					<div className="sorting-icons">
-						<ProjectCardIcons projectIcons={icons} />
+						{/* <ProjectCardIcons projectIcons={icons} /> */}
 					</div>
 				</div>
 				<div>
@@ -79,9 +83,12 @@ function MainPage({ projects, headerImg, icons }) {
 					something extraordinary together!
 				</p>
 			</section>
-			<section id="contact" className="concept-artist">
-				<h2 className="title-section">Contact</h2>
-				<p>This is the contact section of my portfolio.</p>
+			<section id="contact">
+				{/* <h2 className="title-section">Contact</h2> */}
+				{/* <p>This is the contact section of my portfolio.</p> */}
+				<button type="button" className="contact-button">
+					Let's Talk!
+				</button>
 			</section>
 		</div>
 	);
