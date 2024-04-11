@@ -5,7 +5,6 @@ nav {
 	align-content: center;
 	position: sticky;
 	width: 100%;
-
 }
 
 #logo {
@@ -16,7 +15,6 @@ nav {
 #nav-links {
 	width: 400px;
 	align-content: center;
-
 }
 
 #nav-left {
@@ -26,7 +24,6 @@ nav {
 	width: 100px;
 	display: flex;
 	justify-content: right;
-
 }
 
 #button-contact {
@@ -53,12 +50,9 @@ nav {
 	margin-top: 20px;
 }
 
-
 .header-p-name {
 	margin-top: 10px;
 }
-
-
 
 .icon-search-link {
 	align-content: center;
@@ -94,4 +88,3 @@ nav {
 	background-color: #d4d4d4;
 	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.24); /* Larger inset shadow on hover */
 }
-

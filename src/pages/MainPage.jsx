@@ -6,11 +6,9 @@ import ProjectShowcase from "../components/ProjectShowcase";
 import gitHub from "../img/github.svg";
 import ArtStation from "../img/artstationoriginal.svg";
 
-
 // TODO: Change the hero section height to be 100vh - nav height.
 // TODO: Handle sorting function to show or hide projects depending on the
 // [X]: Change hero section (can't do 100vh - 60px)
-
 
 function MainPage({ projects, headerImg, icons }) {
 	// const [iconSort, setIconSort] = useState("");
@@ -32,12 +30,15 @@ function MainPage({ projects, headerImg, icons }) {
 							<h1 id="header-title">
 								AFR-STUDIO
 								<br />
-								<span className="blue-text-outline italic">DEV.</span><span className="blink-effect">|</span><span className="text-margin-design"> & DESIGN.</span>
+								<span className="blue-text-outline italic">DEV.</span>
+								<span className="blink-effect">|</span>
+								<span className="text-margin-design"> & DESIGN.</span>
 							</h1>
 							<p className="header-paragraph">
-								Crafting innovative solutions that bridge <span className="blue-text">creativity and technology,</span> driving <span className="blue-text">tangible results
-								and elevating user experiences</span> across diverse industries.
-								
+								Crafting innovative solutions that bridge{" "}
+								<span className="blue-text">creativity and technology,</span> driving{" "}
+								<span className="blue-text">tangible results and elevating user experiences</span> across
+								diverse industries.
 							</p>
 							{/* <p className="header-p-name">Alvaro Fernandez</p> */}
 							<div id="buttons-header">

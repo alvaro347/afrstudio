@@ -21,7 +21,7 @@ function ProjectCard({ project }) {
 				<ProjectCardIcons projectIcons={project.icons} />
 				<div className="self-center more-info-text grid">
 					<a href="#projects">
-					<p className="">More information &#10230;</p>
+						<p className="">More information &#10230;</p>
 					</a>
 				</div>
 			</div>

@@ -15,7 +15,6 @@ function ProjectCardIcons({ projectIcons }) {
 			});
 		}
 		return <div className="icons flex">{ShowIcons()}</div>;
-
 	} else {
 		function ShowIcons() {
 			return Object.entries(projectIcons).map(([icon, iconData]) => {
@@ -28,7 +27,6 @@ function ProjectCardIcons({ projectIcons }) {
 		}
 
 		return <div className="icons flex">{ShowIcons()}</div>;
-
 	}
 }
 
