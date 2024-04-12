@@ -18,10 +18,15 @@
 }
 
 .project-image {
+	transition: 400ms ease;
 	width: 100%;
 	height: auto;
 	max-height: 400px;
 	border-radius: 10px;
+}
+
+.project-image:hover {
+	transform: scale(1.05);
 }
 
 .card-content {

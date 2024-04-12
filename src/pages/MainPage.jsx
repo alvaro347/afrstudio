@@ -53,6 +53,20 @@ function MainPage({ projects, headerImg, icons }) {
 									</button>
 								</a>
 							</div>
+							<div className="hero-types">
+								<div className="work-type">
+									<h3 className="work-type-title">Web Development</h3>
+
+								</div>
+								<div className="work-type">
+									<h3 className="work-type-title">Concept Art</h3>
+
+								</div>
+								<div className="work-type">
+									<h3 className="work-type-title">3D Designs</h3>
+	
+								</div>
+							</div>
 						</div>
 						{/* <div className="header-icons flex">
 							<img src={githubLogo} alt="github" className="header-logo" />
@@ -62,21 +76,45 @@ function MainPage({ projects, headerImg, icons }) {
 				</div>
 			</header>
 			<section id="projects">
+				{/* <div className="work-types">
+					<div className="work-type">
+						<h3 className="work-type-title">Art Direction</h3>
+						<p className="work-type-p">Illustrations</p>
+						<p className="work-type-p">Creative Concept</p>
+						<p className="work-type-p">Visual Identity</p>
+					</div>
+					<div className="work-type">
+						<h3 className="work-type-title">Developer</h3>
+						<p className="work-type-p">Websites</p>
+						<p className="work-type-p">Wireframes</p>
+						<p className="work-type-p">Landing page</p>
+					</div>
+					<div className="work-type">
+						<h3 className="work-type-title">3D Designs</h3>
+						<p className="work-type-p">Architecture</p>
+						<p className="work-type-p">Products</p>
+						<p className="work-type-p">Packaging</p>
+					</div>
+				</div> */}
 				<div className="title-text">
+					<p className="text-gray-900 blue-text">Selected Projects</p>
 					<h2 className="section-title">Project/* Highlights</h2>
-					{/* <p className="text-gray-900">Selected Projects</p> */}
 				</div>
 				<div id="projects-list-highlights">
 					<ProjectShowcase project={projects.project1} />
 					<ProjectShowcase project={projects.project2} />
 				</div>
+			</section>
+			<section>
 				<div className="title-text">
-					<h2 className="section-title">Others</h2>
+				<p className="text-gray-900 blue-text">Other Projects</p>
+					<h2 className="section-title">Other projects</h2>
 					<div className="sorting-icons">{/* <ProjectCardIcons projectIcons={icons} /> */}</div>
 				</div>
 				<div>
 					<ProjectsListCards projects={projects} />
 				</div>
+
 			</section>
 			<section id="about" className="developer">
 				<h2 className="section-title">About</h2>

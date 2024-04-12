@@ -5,11 +5,14 @@ function ProjectShowcase({ project }) {
 	return (
 		<div className="p-showcase">
 			<a href="#projects">
+			<div className="project-image-container">
 				<img
 					src={project.img}
 					alt="Card"
 					className="project-image1 h-full w-full object-cover object-center lg:h-full lg:w-full"
 				/>
+
+			</div>
 				<div className="card-content1">
 					<h2 className="card-title1">{project.title}</h2>
 					<p className="card-description1">{project.description}</p>

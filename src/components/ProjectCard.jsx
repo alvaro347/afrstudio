@@ -6,11 +6,13 @@ function ProjectCard({ project }) {
 	return (
 		<div className="card">
 			<a href="#projects">
-				<img
-					className="project-image h-full w-full object-cover object-center lg:h-full lg:w-full"
-					src={project.img}
-					alt="Card"
-				/>
+				<div className="project-image-container">
+					<img
+						className="project-image h-full w-full object-cover object-center lg:h-full lg:w-full"
+						src={project.img}
+						alt="Card"
+					/>
+				</div>
 				<div className="card-content">
 					<h2 className="card-title">{project.title}</h2>
 					<p className="card-description">{project.description}</p>
