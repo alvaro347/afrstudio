@@ -9,7 +9,7 @@ export default function Navigation() {
 			<div className="nav-content">
 				<div className="nav-width">
 					<div id="nav-left">
-						<a href="#nav"><img id="logo" src={ logo } alt="logo" /></a>
+						<a href="./index.html"><img id="logo" src={ logo } alt="logo" /></a>
 					</div>
 					<div id="nav-links">
 						<a href="#projects" className="nav-link">Projects</a>

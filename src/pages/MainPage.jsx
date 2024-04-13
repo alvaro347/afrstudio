@@ -21,18 +21,17 @@ function MainPage({ projects, headerImg, icons }) {
 		<div className="main-page">
 			{/* <div id="background-image"></div> */}
 			<header id="header">
-				<div id="header-front">
 					<div id="header-left-block">
 						<div id="header-img-container">
 							<img id="header-img" src={headerImg} alt="header" />
 						</div>
 						<div className="header-text">
 							<h1 id="header-title">
-								AFR-STUDIO
+								<span className="roboto-bold">AFR STUDIO</span>
 								<br />
 								<span className="blue-text-outline italic">DEV.</span>
 								<span className="blink-effect">|</span>
-								<span className="text-margin-design"> & DESIGN.</span>
+								<span className="text-margin-design roboto-bold"> & DESIGN.</span>
 							</h1>
 							<p className="header-paragraph">
 								Crafting innovative solutions that bridge{" "}
@@ -55,16 +54,19 @@ function MainPage({ projects, headerImg, icons }) {
 							</div>
 							<div className="hero-types">
 								<div className="work-type">
-									<h3 className="work-type-title">Web Development</h3>
-
+									<a href="#projects">
+										<h3 className="work-type-title">Web Development</h3>
+									</a>
 								</div>
 								<div className="work-type">
-									<h3 className="work-type-title">Concept Art</h3>
-
+									<a href="https://www.artstation.com/alvaro347">
+										<h3 className="work-type-title">Concept Art</h3>
+									</a>
 								</div>
 								<div className="work-type">
-									<h3 className="work-type-title">3D Designs</h3>
-	
+									<a href="https://www.artstation.com/alvaro347">
+										<h3 className="work-type-title">3D Design</h3>
+									</a>
 								</div>
 							</div>
 						</div>
@@ -72,7 +74,6 @@ function MainPage({ projects, headerImg, icons }) {
 							<img src={githubLogo} alt="github" className="header-logo" />
 							<img src={LinkedInLogo} alt="github" className="header-logo" />
 						</div> */}
-					</div>
 				</div>
 			</header>
 			<section id="projects">
@@ -107,14 +108,13 @@ function MainPage({ projects, headerImg, icons }) {
 			</section>
 			<section>
 				<div className="title-text">
-				<p className="text-gray-900 blue-text">Other Projects</p>
+					<p className="text-gray-900 blue-text">Other Projects</p>
 					<h2 className="section-title">Other projects</h2>
 					<div className="sorting-icons">{/* <ProjectCardIcons projectIcons={icons} /> */}</div>
 				</div>
 				<div>
 					<ProjectsListCards projects={projects} />
 				</div>
-
 			</section>
 			<section id="about" className="developer">
 				<h2 className="section-title">About</h2>

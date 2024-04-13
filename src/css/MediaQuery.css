@@ -2,15 +2,21 @@
 	.header-paragraph {
 		font-size: 0.9rem;
 	}
+	#header-img {
+		width: 100%;
+	}
 
 	#header-title {
-		font-size: 4rem;
+		font-size: 3.5rem;
 	}
 }
 
 @media screen and (min-width: 801px) and (max-width: 1400px) {
 	.header-paragraph {
 		font-size: 1.2rem;
+	}
+	#header-img {
+		width: 80%;
 	}
 
 	#header-title {
@@ -25,4 +31,8 @@
 	#header-title {
 		font-size: 10vh;
 	}
+	#header-img {
+		width: 100%;
+	}
+
 }

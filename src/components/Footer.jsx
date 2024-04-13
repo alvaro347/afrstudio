@@ -25,6 +25,7 @@ function Footer() {
 					</ul>
 				</div>
 
+
 				<div className="footer-social">
 					<ul className="social-list">
 						<li className="social-icon">
