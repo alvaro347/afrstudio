@@ -2,7 +2,7 @@
 import "./css/App.css";
 import "./css/MediaQuery.css";
 import MainPage from "./pages/MainPage";
-import Navigation from "./components/Navigation";
+// import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import image1 from "./img/image1.png";
 import reactLogo from "./img/react.svg";
@@ -62,25 +62,13 @@ const projects = {
 			link: "",
 		},
 	},
-	project4: {
-		title: "Project 4: B",
-		location: "",
-		date: "",
-		description:
-			"This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills",
-		img: image1,
-		icons: [icons.htmlIcon, icons.reactIcon],
-		keywords: {
-			tags: ["web"],
-			link: "",
-		},
-	},
+
 };
 
 function App() {
 	return (
 		<div className="App">
-			<Navigation />
+		
 			<MainPage projects={projects} headerImg={headerImg} icons={icons} />
 			<Footer />
 		</div>

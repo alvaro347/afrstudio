@@ -1,4 +1,7 @@
 @media screen and (max-width: 800px) {
+	#header {
+		height: auto;
+	}
 	.header-paragraph {
 		font-size: 0.9rem;
 	}
@@ -15,6 +18,7 @@
 }
 
 @media screen and (min-width: 801px) and (max-width: 1440px) {
+
 	.header-paragraph {
 		font-size: 1.2rem;
 	}
@@ -45,4 +49,14 @@
 		width: 100%;
 	}
 
+}
+
+
+
+
+@media screen and (min-width: 801px)  {
+	#header {
+		height: 100vh;
+		
+	}
 }

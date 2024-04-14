@@ -3,7 +3,7 @@ nav {
 	text-align: center;
 	height: 60px;
 	align-content: center;
-	position: sticky;
+	position: static;
 	width: 100%;
 }
 
@@ -69,10 +69,7 @@ nav {
 	border-bottom: 1px solid #727272;
 }
 
-.nav-content {
-	/* margin: 0 auto; */
-	/* max-width: 1400px; */
-}
+
 
 .nav-link {
 	color: #424242;

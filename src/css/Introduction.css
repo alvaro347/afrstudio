@@ -1,21 +1,22 @@
 #introduction {
   /* padding: 20px; */
+  height: 900px;
 
-  margin: 0 auto;
-  max-width: 1600px;
+  align-content: center;
 }
 
 .intro-container {
   display: inline-block;
   width: 50%;
-vertical-align: middle;
+  vertical-align: middle;
 }
 
 .introduction-image {
   margin: 0 auto;
-  height: 600px;
+  height: 800px;
+  opacity: 0.5;
 }
 
 .intro-container p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }

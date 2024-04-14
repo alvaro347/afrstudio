@@ -7,6 +7,7 @@ import Skills from "../components/Skills";
 // import ProjectCardIcons from "../components/ProjectCardIcons";
 import gitHub from "../img/github.svg";
 import ArtStation from "../img/artstationoriginal.svg";
+import Navigation from '../components/Navigation';
 
 // TODO: Change the hero section height to be 100vh - nav height.
 // TODO: Handle sorting function to show or hide projects depending on the
@@ -24,64 +25,59 @@ function MainPage({ projects, headerImg, icons }) {
 	return (
 		<div className="main-page">
 			{/* <div id="background-image"></div> */}
+			<Navigation />
 			<header id="header">
-				<div id="header-left-block" className="section-container">
-					<div id="header-img-container">
-						<img id="header-img" src={headerImg} alt="header" />
+				<div id="header-img-container">
+					<img id="header-img" src={headerImg} alt="header" />
+				</div>
+				<div className="header-text">
+					<h1 id="header-title">
+						<span className="roboto-bold">AFR-STUDIO</span>
+						<br />
+						<span className="blue-text-outline italic">DEV.</span>
+						<span className="blink-effect">|</span>
+						<span className="text-margin-design roboto-bold"> & DESIGN.</span>
+					</h1>
+					<p className="header-paragraph">
+						Crafting innovative solutions that bridge{" "}
+						<span className="blue-text">creativity and technology,</span> driving{" "}
+						<span className="blue-text">tangible results and elevating user experiences</span> across diverse
+						industries.
+					</p>
+					{/* <p className="header-p-name">Alvaro Fernandez</p> */}
+					<div id="buttons-header">
+						<a href="https://github.com/alvaro347" rel="noreferrer" target="_blank">
+							<button className="button-header">
+								<img className="hero-logo" src={gitHub} alt="github" /> Github
+							</button>
+						</a>
+						<a href="https://www.artstation.com/alvaro347" rel="noreferrer" target="_blank">
+							<button className="button-header">
+								<img className="hero-logo" src={ArtStation} alt="github" /> ArtStation
+							</button>
+						</a>
 					</div>
-					<div className="header-text">
-						<h1 id="header-title">
-							<span className="roboto-bold">AFR STUDIO</span>
-							<br />
-							<span className="blue-text-outline italic">DEV.</span>
-							<span className="blink-effect">|</span>
-							<span className="text-margin-design roboto-bold"> & DESIGN.</span>
-						</h1>
-						<p className="header-paragraph">
-							Crafting innovative solutions that bridge{" "}
-							<span className="blue-text">creativity and technology,</span> driving{" "}
-							<span className="blue-text">tangible results and elevating user experiences</span> across
-							diverse industries.
-						</p>
-						{/* <p className="header-p-name">Alvaro Fernandez</p> */}
-						<div id="buttons-header">
-							<a href="https://github.com/alvaro347">
-								<button className="button-header">
-									<img className="hero-logo" src={gitHub} alt="github" /> Github
-								</button>
-							</a>
-							<a href="https://www.artstation.com/alvaro347">
-								<button className="button-header">
-									<img className="hero-logo" src={ArtStation} alt="github" /> ArtStation
-								</button>
+					<div className="hero-types">
+						<div className="work-type">
+							<a href="#projects" target="_blank">
+								<h3 className="work-type-title">Web-Development</h3>
 							</a>
 						</div>
-						<div className="hero-types">
-							<div className="work-type">
-								<a href="#projects" target="_blank">
-									<h3 className="work-type-title">Web-Development</h3>
-								</a>
-							</div>
-							<div className="work-type">
-								<a href="https://www.artstation.com/alvaro347" target="_blank">
-									<h3 className="work-type-title">Concept Art</h3>
-								</a>
-							</div>
-							<div className="work-type">
-								<a href="https://www.artstation.com/alvaro347" target="_blank">
-									<h3 className="work-type-title">3D Design</h3>
-								</a>
-							</div>
+						<div className="work-type">
+							<a href="https://www.artstation.com/alvaro347" rel="noreferrer" target="_blank">
+								<h3 className="work-type-title">Concept Art</h3>
+							</a>
+						</div>
+						<div className="work-type">
+							<a href="https://www.artstation.com/alvaro347" rel="noreferrer" target="_blank">
+								<h3 className="work-type-title">3D Design</h3>
+							</a>
 						</div>
 					</div>
-						<div className="header-bottom">
-							<p>Based in Europe</p>
-							<p>Freelance available!</p>
-						</div>
-					{/* <div className="header-icons flex">
-							<img src={githubLogo} alt="github" className="header-logo" />
-							<img src={LinkedInLogo} alt="github" className="header-logo" />
-						</div> */}
+				<div className="header-bottom">
+					<p>Based in Europe</p>
+					<p>Freelance available!</p>
+				</div>
 				</div>
 			</header>
 			<Introduction />
@@ -109,7 +105,7 @@ function MainPage({ projects, headerImg, icons }) {
 					</div> */}
 					<div className="title-text">
 						<p className="text-gray-900 blue-text section-title-small">Selected Projects</p>
-						<h2 className="section-title">Project/* Highlights</h2>
+						<h2 className="section-title">Project * Highlights</h2>
 					</div>
 					<div id="projects-list-highlights">
 						<ProjectShowcase project={projects.project1} />
@@ -123,7 +119,7 @@ function MainPage({ projects, headerImg, icons }) {
 				<div className="section-container">
 					<div className="title-text">
 						<p className="text-gray-900 blue-text">Other Projects</p>
-						<h2 className="section-title">Other projects</h2>
+						<h2 className="section-title">Other * projects</h2>
 						<div className="sorting-icons">{/* <ProjectCardIcons projectIcons={icons} /> */}</div>
 					</div>
 					<div>
@@ -134,7 +130,7 @@ function MainPage({ projects, headerImg, icons }) {
 			<Skills />
 			<section id="about" className="developer">
 				<div className="section-container">
-				<p className="section-title-small blue-text">Professional Services</p>
+					<p className="section-title-small blue-text">Professional Services</p>
 
 					<h2 className="section-title">About</h2>
 					<p id="about-text">
@@ -155,13 +151,13 @@ function MainPage({ projects, headerImg, icons }) {
 					</p>
 				</div>
 			</section>
-			<section id="contact">
-				{/* <h2 className="section-title">Contact</h2> */}
-				{/* <p>This is the contact section of my portfolio.</p> */}
+			{/* <section id="contact">
+				<h2 className="section-title">Contact</h2>
+				<p>This is the contact section of my portfolio.</p>
 				<button type="button" className="contact-button">
 					Let's Talk!
 				</button>
-			</section>
+			</section> */}
 		</div>
 	);
 }

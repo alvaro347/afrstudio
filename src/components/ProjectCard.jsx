@@ -3,32 +3,37 @@ import "../css/ProjectCard.css";
 import ProjectCardIcons from "./ProjectCardIcons";
 
 function ProjectCard({ project }) {
-	return (
-		<div className="card">
-			<a href="#projects">
-				<div className="project-image-container">
-					<img
-						className="project-image h-full w-full object-cover object-center lg:h-full lg:w-full"
-						src={project.img}
-						alt="Card"
-					/>
-				</div>
-				<div className="card-content">
-					<h2 className="card-title">{project.title}</h2>
-					<p className="card-description">{project.description}</p>
-				</div>
-			</a>
-
-			<div className="more-info flex justify-between">
-				<ProjectCardIcons projectIcons={project.icons} />
-				<div className="self-center more-info-text grid">
-					<a href="#projects">
-						<p className="">More information &#10230;</p>
-					</a>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className="card">
+      <div className="card-container">
+        <div className="project-image-container">
+          <a href="#projects">
+            <img
+              className="project-image h-full w-full object-cover object-center lg:h-full lg:w-full"
+              src={project.img}
+              alt="Card"
+            />
+          </a>
+        </div>
+        <div className="card-description-container">
+          <div className="card-text">
+            <a href="#projects">
+              <h2 className="card-title">{project.title}</h2>
+              <p className="card-description">{project.description}</p>
+            </a>
+          </div>
+          <div className="more-info flex justify-between">
+            <ProjectCardIcons projectIcons={project.icons} />
+            <div className="self-center more-info-text grid">
+              <a href="#projects">
+                <p className="">More information &#10230;</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default ProjectCard;
