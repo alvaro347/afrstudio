@@ -1,6 +1,6 @@
 body {
   font-family: JetBrains Mono, Arial, sans-serif;
-  background-color: #ebebeb;
+  background-color: #e7e7e7;
 }
 
 .section-container {
@@ -87,24 +87,6 @@ body {
   /* margin: 0 auto; */
 }
 
-.header-text {
-  /* display: grid; */
-  /* max-width: 1000px; */
-  /* margin: 0 auto; */
-  /* align-content: space-between; */
-  /* height: 45%; */
-}
-
-/* .header-text:hover {
-	pointer-events: none;
-} */
-
-#header-front {
-  /* display: flex; */
-  /* width: 70%; */
-
-  /* justify-content: center; */
-}
 
 #header-img {
   /* opacity: 20%; */
@@ -143,9 +125,6 @@ body {
   margin-right: 5px;
 }
 
-section {
-  /* padding: 20px; */
-}
 
 .section-title-small {
   text-align: left;
@@ -215,15 +194,6 @@ section {
   justify-content: center;
 }
 
-#projects-list-highlights {
-  /* flex-direction: row; */
-  /* margin: 0 auto; */
-  /* display: flex; */
-  /* max-width: 1450px; */
-  /* flex-grow: 3; */
-  /* flex-wrap: wrap; */
-  /* justify-content: center; */
-}
 
 .header-icons {
   margin-top: 20px;

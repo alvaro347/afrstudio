@@ -18,6 +18,7 @@ import Navigation from '../components/Navigation';
 function MainPage({ projects, headerImg, icons }) {
 	// const [iconSort, setIconSort] = useState("");
 
+
 	// function iconSortingHandle() {
 	// 	setIconSort("react");
 	// }
@@ -59,7 +60,7 @@ function MainPage({ projects, headerImg, icons }) {
 					</div>
 					<div className="hero-types">
 						<div className="work-type">
-							<a href="#projects" target="_blank">
+							<a href="#projects">
 								<h3 className="work-type-title">Web-Development</h3>
 							</a>
 						</div>
