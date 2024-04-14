@@ -1,5 +1,11 @@
 #skills {
-  padding: 20px;
+
+}
+
+#skills-main {
+ padding: 50px 30px;
+ max-width: 1440px;
+ margin: 0 auto;
 }
 
 .skills-description {
@@ -39,7 +45,7 @@
 .skill-img {
   margin: 0 auto;
   max-width: 200px;
-  height: 200px;
+  height: 150px;
   margin-bottom: 30px;
 }
 

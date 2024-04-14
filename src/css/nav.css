@@ -61,17 +61,17 @@ nav {
 .nav-width {
 	display: flex;
 	justify-content: space-between;
-	padding: 10px 0;
+	/* padding: 10px 20px; */
 	margin: 0 auto;
 	height: 100%;
-	width: 80%;
-	max-width: 1400px;
+	/* width: 80%; */
+	max-width: 1440px;
 	border-bottom: 1px solid #727272;
 }
 
 .nav-content {
-	margin: 0 auto;
-	max-width: 1400px;
+	/* margin: 0 auto; */
+	/* max-width: 1400px; */
 }
 
 .nav-link {

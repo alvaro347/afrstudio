@@ -5,17 +5,24 @@
 	#header-img {
 		width: 100%;
 	}
+	.nav-width {
+		padding: 10px 20px;
+	}
 
 	#header-title {
 		font-size: 3.5rem;
 	}
 }
 
-@media screen and (min-width: 801px) and (max-width: 1400px) {
+@media screen and (min-width: 801px) and (max-width: 1440px) {
 	.header-paragraph {
 		font-size: 1.2rem;
 	}
+	.nav-width {
+		padding: 10px 20px;
+	}
 	#header-img {
+		/* max-height: 400px; */
 		width: 80%;
 	}
 
@@ -24,9 +31,12 @@
 	}
 }
 
-@media screen and (min-width: 1401px) {
+@media screen and (min-width: 1441px) {
 	.header-paragraph {
 		font-size: 1.3rem;
+	}
+	.nav-width {
+		padding: 10px 0px;
 	}
 	#header-title {
 		font-size: 10vh;

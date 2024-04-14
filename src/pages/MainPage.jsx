@@ -11,6 +11,8 @@ import ArtStation from "../img/artstationoriginal.svg";
 // TODO: Change the hero section height to be 100vh - nav height.
 // TODO: Handle sorting function to show or hide projects depending on the
 // [X]: Change hero section (can't do 100vh - 60px)
+// TODO: Other projects should only print 3 (then add a link for additional)
+// NOTE: For Flex elements use the skills section as base
 
 function MainPage({ projects, headerImg, icons }) {
 	// const [iconSort, setIconSort] = useState("");
@@ -23,7 +25,7 @@ function MainPage({ projects, headerImg, icons }) {
 		<div className="main-page">
 			{/* <div id="background-image"></div> */}
 			<header id="header">
-				<div id="header-left-block">
+				<div id="header-left-block" className="section-container">
 					<div id="header-img-container">
 						<img id="header-img" src={headerImg} alt="header" />
 					</div>
@@ -72,6 +74,10 @@ function MainPage({ projects, headerImg, icons }) {
 							</div>
 						</div>
 					</div>
+						<div className="header-bottom">
+							<p>Based in Europe</p>
+							<p>Freelance available!</p>
+						</div>
 					{/* <div className="header-icons flex">
 							<img src={githubLogo} alt="github" className="header-logo" />
 							<img src={LinkedInLogo} alt="github" className="header-logo" />
@@ -80,64 +86,74 @@ function MainPage({ projects, headerImg, icons }) {
 			</header>
 			<Introduction />
 			<section id="projects">
-				{/* <div className="work-types">
-					<div className="work-type">
-						<h3 className="work-type-title">Art Direction</h3>
-						<p className="work-type-p">Illustrations</p>
-						<p className="work-type-p">Creative Concept</p>
-						<p className="work-type-p">Visual Identity</p>
+				<div className="section-container">
+					{/* <div className="work-types">
+						<div className="work-type">
+							<h3 className="work-type-title">Art Direction</h3>
+							<p className="work-type-p">Illustrations</p>
+							<p className="work-type-p">Creative Concept</p>
+							<p className="work-type-p">Visual Identity</p>
+						</div>
+						<div className="work-type">
+							<h3 className="work-type-title">Developer</h3>
+							<p className="work-type-p">Websites</p>
+							<p className="work-type-p">Wireframes</p>
+							<p className="work-type-p">Landing page</p>
+						</div>
+						<div className="work-type">
+							<h3 className="work-type-title">3D Designs</h3>
+							<p className="work-type-p">Architecture</p>
+							<p className="work-type-p">Products</p>
+							<p className="work-type-p">Packaging</p>
+						</div>
+					</div> */}
+					<div className="title-text">
+						<p className="text-gray-900 blue-text section-title-small">Selected Projects</p>
+						<h2 className="section-title">Project/* Highlights</h2>
 					</div>
-					<div className="work-type">
-						<h3 className="work-type-title">Developer</h3>
-						<p className="work-type-p">Websites</p>
-						<p className="work-type-p">Wireframes</p>
-						<p className="work-type-p">Landing page</p>
+					<div id="projects-list-highlights">
+						<ProjectShowcase project={projects.project1} />
+						<ProjectShowcase project={projects.project2} />
+
+						{/* <ProjectShowcase project={projects.project2} /> */}
 					</div>
-					<div className="work-type">
-						<h3 className="work-type-title">3D Designs</h3>
-						<p className="work-type-p">Architecture</p>
-						<p className="work-type-p">Products</p>
-						<p className="work-type-p">Packaging</p>
-					</div>
-				</div> */}
-				<div className="title-text">
-					<p className="text-gray-900 blue-text section-title-small">Selected Projects</p>
-					<h2 className="section-title">Project/* Highlights</h2>
-				</div>
-				<div id="projects-list-highlights">
-					<ProjectShowcase project={projects.project1} />
-					<ProjectShowcase project={projects.project2} />
 				</div>
 			</section>
 			<section>
-				<div className="title-text">
-					<p className="text-gray-900 blue-text">Other Projects</p>
-					<h2 className="section-title">Other projects</h2>
-					<div className="sorting-icons">{/* <ProjectCardIcons projectIcons={icons} /> */}</div>
-				</div>
-				<div>
-					<ProjectsListCards projects={projects} />
+				<div className="section-container">
+					<div className="title-text">
+						<p className="text-gray-900 blue-text">Other Projects</p>
+						<h2 className="section-title">Other projects</h2>
+						<div className="sorting-icons">{/* <ProjectCardIcons projectIcons={icons} /> */}</div>
+					</div>
+					<div>
+						<ProjectsListCards projects={projects} />
+					</div>
 				</div>
 			</section>
 			<Skills />
 			<section id="about" className="developer">
-				<h2 className="section-title">About</h2>
-				<p id="about-text">
-					I'm a versatile professional with a background in electrical engineering and industrial design. Over
-					the years, I've seamlessly blended my engineering expertise with a keen eye for design, delivering
-					impactful solutions that have made a difference for numerous companies.
-					<br />
-					<br />
-					Specializing in software engineering and web development, I'm passionate about crafting seamless
-					user experiences and building visually stunning applications. My unique combination of technical
-					skills and design sensibility allows me to create innovative solutions that not only captivate users
-					but also drive business growth.
-					{/* <br />
-					<br />
-					Explore my portfolio to see how I've helped companies elevate their digital presence and achieve
-					their goals through the perfect fusion of engineering and design. Let's collaborate and create
-					something extraordinary together! */}
-				</p>
+				<div className="section-container">
+				<p className="section-title-small blue-text">Professional Services</p>
+
+					<h2 className="section-title">About</h2>
+					<p id="about-text">
+						I'm a versatile professional with a background in electrical engineering and industrial design.
+						Over the years, I've seamlessly blended my engineering expertise with a keen eye for design,
+						delivering impactful solutions that have made a difference for numerous companies.
+						<br />
+						<br />
+						Specializing in software engineering and web development, I'm passionate about crafting seamless
+						user experiences and building visually stunning applications. My unique combination of technical
+						skills and design sensibility allows me to create innovative solutions that not only captivate
+						users but also drive business growth.
+						{/* <br />
+						<br />
+						Explore my portfolio to see how I've helped companies elevate their digital presence and achieve
+						their goals through the perfect fusion of engineering and design. Let's collaborate and create
+						something extraordinary together! */}
+					</p>
+				</div>
 			</section>
 			<section id="contact">
 				{/* <h2 className="section-title">Contact</h2> */}
