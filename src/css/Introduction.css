@@ -1,0 +1,21 @@
+#introduction {
+  /* padding: 20px; */
+
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.intro-container {
+  display: inline-block;
+  width: 50%;
+vertical-align: middle;
+}
+
+.introduction-image {
+  margin: 0 auto;
+  height: 600px;
+}
+
+.intro-container p {
+  font-size: 1.5rem;
+}
