@@ -1,22 +1,32 @@
-/* #skills {
+#skills {
+  
+  background-image: radial-gradient(circle at 5px 5px, rgba(117, 117, 117, 0.116) 5px, transparent 0);
+  background-size: 40px 40px;
+  
+}
 
-} */
+.dotted-background {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.87) 0%, rgba(255, 255, 255, 0) 100%);
+
+}
 
 #skills-main {
+  
   padding: 50px 30px;
   max-width: 1440px;
   margin: 0 auto;
 }
 
 .skills-description {
+  
   text-align: center;
   margin: 40px 0 60px 0;
 }
 
 .skills-description-title {
-  margin: 0 auto 10px auto;
+  margin: 0 auto 20px auto;
   max-width: 500px;
-  font-weight: 700;
+  font-weight: 800;
   color: #333;
   font-size: 1.7rem;
 }
@@ -24,6 +34,7 @@
 .skills-description-text {
   max-width: 800px;
   margin: 0 auto;
+  
 }
 
 .skills-container {
@@ -35,26 +46,34 @@
 }
 
 .skill {
-  transition: background-color 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: width 0.5s ease;
   border-radius: 10px;
-  background: radial-gradient(circle, rgb(235, 235, 235) 0%,rgba(221, 221, 221, 0.37) 100%), url(https://grainy-gradients.vercel.app/noise.svg);
+  background: radial-gradient(circle, rgb(235, 235, 235) 0%,rgba(221, 221, 221, 0.37) 100%), url('../img/noise.svg');
   /* background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%,rgb(177, 178, 180) 100%); */
-  flex: 25% 25% 25%;
+  /* flex: 25% 25% 25%; */
   margin: 10px 10px;
   width: 350px;
   height: 450px;
   text-align: center;
-  align-content: center;
+  align-content: space-between;
 }
 
 .skill:hover {
   box-shadow: 5px -5px 7px 0px rgba(255, 255, 255, 0.72), -5px 4px 9px 0px rgba(0, 0, 0, 0.24);
- 
+  width: 450px;
+  transform: translateY(0);
   backdrop-filter: blur(10px);
 }
 
+.skill:hover .skill-img {
+  opacity: 1;
+}
+
 .skill-img {
-  transition: transform 0.3s ease;
+  opacity: 0.7;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
   height: 50%;
   margin: 0 auto;
   /* max-width: 200px; */
@@ -75,4 +94,13 @@
 .skill-text {
   color: #616161;
   font-size: 0.9rem;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.skill-number {
+  text-align: left;
+  width: 80%;
+  margin: 20px auto;
+  /* border-bottom: 1px solid #7a7a7a; */
 }

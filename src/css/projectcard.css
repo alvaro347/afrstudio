@@ -17,8 +17,19 @@
 	outline: 2px solid rgb(160, 160, 160);
 }
 
+.project-image-container {
+	background-color: #d1d1d1;
+}
+
+.card-container:hover .project-image-container .project-image {
+	filter: saturate(1);
+	opacity: 1;
+}
+
 .project-image {
-	transition: 400ms ease;
+	filter: saturate(0);
+	opacity: 0.5;
+	transition: 600ms ease;
 	width: 100%;
 	height: auto;
 	max-height: 400px;

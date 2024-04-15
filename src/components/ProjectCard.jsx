@@ -9,7 +9,7 @@ function ProjectCard({ project }) {
         <div className="project-image-container">
           <a href="#projects">
             <img
-              className="project-image h-full w-full object-cover object-center lg:h-full lg:w-full"
+              className="project-image"
               src={project.img}
               alt="Card"
             />

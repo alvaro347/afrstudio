@@ -15,6 +15,10 @@
 	#header-title {
 		font-size: 3.5rem;
 	}
+
+	.section-title {
+		font-size: 3rem;
+	}
 }
 
 @media screen and (min-width: 801px) and (max-width: 1440px) {
@@ -33,6 +37,9 @@
 	#header-title {
 		font-size: 10vh;
 	}
+	.section-title {
+		font-size: 5.5rem;
+	}
 }
 
 @media screen and (min-width: 1441px) {
@@ -48,7 +55,9 @@
 	#header-img {
 		width: 100%;
 	}
-
+	.section-title {
+		font-size: 5.5rem;
+	}
 }
 
 
