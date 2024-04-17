@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/ProjectCard.css";
+import "../css/ProjectCard.scss";
 import ProjectCardIcons from "./ProjectCardIcons";
 
 function ProjectCard({ project }) {

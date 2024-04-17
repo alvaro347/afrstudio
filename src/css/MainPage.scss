@@ -1,11 +1,12 @@
+@import 'LightTheme';
+
 body {
   font-family: JetBrains Mono, Arial, sans-serif;
-  background-color: #e7e7e7;
+  background-color: $backgroundColor;
 }
 
 .section-container {
   padding: 60px 30px 60px 30px;
-
   max-width: 1440px;
   margin: 0 auto;
 }
@@ -48,22 +49,21 @@ body {
 }
 
 #header {
-  /* border-bottom: 1px solid black; */
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 30px;
-  color: #2b2b2b;
+  color: $darkGrey;
 }
 
 #header-title {
   pointer-events: none;
   margin-bottom: 20px;
-  color: #424242;
+  color: $darkGrey;
   /* font-size: 7vw; */
   /* max-width: 900px; */
   letter-spacing: -5px;
   text-align: left;
-  /* font-style: italic; */
+  // font-style: italic;
   font-weight: 900;
   line-height: 1;
 }
@@ -95,6 +95,7 @@ body {
   transition: 200ms linear;
   /* z-index: -2; */
   max-width: 1200px;
+  
   /* text-align: center;  */
   /* left: 50%; */
   /* margin-left: -200px; */
@@ -106,11 +107,12 @@ body {
   left: 50%; 
 
   transform: translate(-50%, -50%);  */
+  &:hover {
+    /* z-index: 3; */
+    transform: scale(1.05);
+  }
 }
-#header-img:hover {
-  /* z-index: 3; */
-  transform: scale(1.05);
-}
+
 
 #header-img-container {
   align-content: center;
@@ -157,36 +159,23 @@ body {
 }
 
 .blue-text {
-  color: #3d23da;
+  color: $blue;
 }
 
 .grey-text {
-  color: #696969;
+  color: $grey;
 }
 
 .blue-text-outline {
   -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: #3d23da;
-  /* outline: 1px solid #3d23da; */
-
-  color: #3f23da00;
-}
-
-.photography {
-  background-color: #f2f2f2;
-}
-
-.developer {
-  background-color: #e0e0e0;
+  -webkit-text-stroke-color: $blue;
+  color: $transparent;
 }
 
 #projects-list-cards {
-  /* margin: 0 auto; */
   flex-direction: row;
   flex-wrap: wrap;
-  /* align-items: flex-start; */
   align-content: stretch;
-  /* margin: 0 auto; */
   display: flex;
   max-width: 1440px;
   flex-grow: 3;
@@ -194,70 +183,24 @@ body {
   justify-content: center;
 }
 
-
 .header-icons {
   margin-top: 20px;
 }
-
-.contact-button {
-  margin: 0 auto;
-  display: block;
-  width: 100%;
-  max-width: 400px; /* Adjust maximum width as needed */
-  padding: 20px;
-  font-size: 2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  background-color: #eeeeee; /* Default background color */
-  color: #333; /* Default text color */
-  outline: 2px solid transparent; /* Default border */
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.2s;
-}
-
-.contact-button:hover {
-  background-color: #f0f0f0; /* Hover background color */
-  color: #3d23da; /* Hover text color */
-  border-color: #3d23da; /* Hover border color */
-  transform: translateY(-2px); /* Move button slightly on hover */
-}
-/*
-.contact-button:hover::before {
-  background-color: rgba(255, 255, 255, 0.2); 
-}
-
-.contact-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0); 
-  transition: background-color 0.3s;
-}
-*/
 
 .text-margin-design {
   margin-left: -0.5%;
 }
 
 .blink-effect {
-  /* -webkit-text-stroke-width: 0.5px; */
-  /* -webkit-text-stroke-color: #3d23da; */
-  /* outline: 1px solid #3d23da; */
-  /* color: #3f23da00; */
   animation: blink 1.5s steps(1) infinite;
   margin-left: -2.5%;
   font-weight: 900;
   animation-delay: 0s;
   animation-fill-mode: none;
   -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: #3d23da;
+  -webkit-text-stroke-color: $blue;
   animation-range: normal;
   color: #3f23da00;
-  /* border-left: 1px solid #3d23da; */
-  /* animation-fill-mode: forwards; */
   letter-spacing: -3px;
 }
 
@@ -272,13 +215,10 @@ body {
 @keyframes blink {
   0%,
   100% {
-    /* background-color: transparent; */
     -webkit-text-stroke-color: #3f23da00;
   }
   50% {
-    -webkit-text-stroke-color: #3d23da;
-
-    /* background-color: rgb(15 23 42); */
+    -webkit-text-stroke-color: $blue;
   }
 }
 
@@ -286,7 +226,6 @@ body {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
-  /* position: sticky; */
 }
 
 .hero-logo {
@@ -295,26 +234,7 @@ body {
 }
 
 .button-header {
-  height: 40px;
-  align-items: center;
-  display: flex;
-  margin-right: 20px;
-  color: #1d1d1d;
-  /* background-color: #b6b6b6; */
-  outline: 2px solid #727272;
-  font-weight: 600;
-
-  text-decoration: none;
-  padding: 7px 15px;
-  /* height: 20px; */
-  border-radius: 20px;
-  transition: background-color 0.3s ease;
-}
-
-.button-header:hover {
-  color: #3d23da;
-  background-color: #cacaca;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.24);
+  @include lightButton
 }
 
 .hero-types {
@@ -339,15 +259,15 @@ body {
   font-size: 1.7rem;
   font-weight: 500;
   margin-bottom: 10px;
+  &:hover {
+    text-decoration: underline;
+    color: $blue;
+  }
 }
 
-.work-type-title:hover {
-  text-decoration: underline;
-  color: #3d23da;
-}
 
 .work-type-p {
-  color: #646464;
+  color: $grey;
 }
 
 .work-type:last-child {

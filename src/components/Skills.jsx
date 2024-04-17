@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import image1 from "../img/image1.png";
-import "../css/Skills.css";
+import "../css/Skills.scss";
 import www from "../img/www.png";
 import light from "../img/light.png";
 import box from "../img/box.png";

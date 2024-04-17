@@ -1,6 +1,6 @@
 // import logo from './img/logo.svg';
-import "./css/App.css";
-import "./css/MediaQuery.css";
+import "./css/App.scss";
+import "./css/MediaQuery.scss";
 import MainPage from "./pages/MainPage";
 // import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";

@@ -1,3 +1,5 @@
+@import './lightTheme.scss';
+
 nav {
 	/* background-color: #eaeaea; */
 	text-align: center;
@@ -27,15 +29,7 @@ nav {
 }
 
 #button-contact {
-	color: #383838;
-	/* background-color: #949494; */
-	outline: 1px solid #727272;
-	font-weight: 600;
-	text-decoration: none;
-	padding: 7px 15px;
-	/* height: 20px; */
-	border-radius: 20px;
-	transition: background-color 0.3s ease;
+ @include lightButton;
 }
 
 #button-contact:hover {
