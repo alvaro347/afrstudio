@@ -21,7 +21,7 @@ const Navigation = () => {
       <div className="nav-content">
         <div className="nav-width">
           <div id="nav-left">
-            <a href="./index.html">
+            <a href="./">
               <img id="logo" src={logo} alt="logo" />
             </a>
           </div>
@@ -37,7 +37,7 @@ const Navigation = () => {
             </a>
           </div>
           <div id="nav-right">
-            <button className="button-header" onClick={themeHandler}>Dark</button>
+            <button className="button-header" onClick={themeHandler}>&#9728;</button>
             <a className="icon-search-link" href="#header">
               <button id="button-contact">Contact</button>
             </a>

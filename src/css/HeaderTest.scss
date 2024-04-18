@@ -1,0 +1,45 @@
+@import "LightTheme";
+
+body {
+  font-family: JetBrains Mono, Arial, sans-serif;
+  background-color: $backgroundColor;
+}
+
+.section-container {
+  // padding: 60px 30px 60px 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#header {
+  padding: 20px 20px;
+  height: calc(100vh - 60px);
+}
+
+.header-image-container {
+  height: 60%;
+
+  border-radius: 10px;
+  align-content: center;
+  overflow: hidden;
+
+  background: url('../img/headerImg.png') transparent no-repeat center;
+  background-size: contain;
+}
+
+.header-img {
+  // width: 90%;
+  height: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+
+.header-text {
+  height: 40%;
+  align-items: center;
+  align-content: center;
+}
+
+.header-paragraph {
+  width: 80%;
+}
