@@ -73,7 +73,7 @@ function MainPage({ projects, headerImg, icons }) {
               <a href="https://www.artstation.com/alvaro347" rel="noreferrer" target="_blank">
                 <h3 className="work-type-title">3D Design</h3>
               </a>
-            </div>
+            </div> 
           </div>
           <div className="header-bottom">
             <p>Based in Europe</p>

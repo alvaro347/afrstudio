@@ -1,12 +1,8 @@
 @import "./LightTheme.scss";
 
 #skills {
-  background-image: radial-gradient(circle at 5px 5px, rgba(117, 117, 117, 0.116) 5px, transparent 0);
+  background-image: $backgroundDotted;
   background-size: 40px 40px;
-}
-
-.dotted-background {
-  background: $backgroundDotted;
 }
 
 #skills-main {

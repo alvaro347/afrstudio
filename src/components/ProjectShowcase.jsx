@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ProjectPopup from "./ProjectPopup";
 import "../css/ProjectShowcase.scss";
 
 function ProjectShowcase({ project }) {
+  const [buttonPopup, setButtonPopup] = useState(false);
+
+  const handlePopup = (e) => {
+    if (e === false) {
+      setButtonPopup(false)
+      document.body.style.overflow = "unset";
+    } else {
+      setButtonPopup(true)
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  useEffect(() => {
+    const close = (e) => {
+      if (e.keyCode === 27) {
+        handlePopup(false)
+      }
+    }
+    window.addEventListener('keydown', close)
+    return () => window.removeEventListener('keydown', close)
+  }, [])
+
   return (
-    <div className="p-showcase">
-      <a href="#projects">
+    <div className="p-showcase" >
+      <div className="cursor-pointer" onClick={() => handlePopup(true)}>
         <div className="project-image-container">
           <img src={project.img} alt="Card" className="project-image" />
         </div>
@@ -12,7 +35,7 @@ function ProjectShowcase({ project }) {
           <h2 className="card-title">{project.title}</h2>
           <p className="card-description">{project.description}</p>
         </div>
-      </a>
+      </div>
       {/* <div className="more-info flex justify-between">
 					<div className="icons flex">
 						<a href="#123"><img src={htmlLogo2} alt="Icon 1" className="" /></a>
@@ -22,6 +45,8 @@ function ProjectShowcase({ project }) {
       {/* <div className="self-center more-info-text grid">
 						<p className="">More information &#10230;</p>
 					</div> */}
+
+      <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />
     </div>
   );
 }

@@ -37,7 +37,7 @@ const Navigation = () => {
             </a>
           </div>
           <div id="nav-right">
-            <button className="button-header" onClick={themeHandler}>&#9728;</button>
+            {/* <button className="button-header" onClick={themeHandler}>&#9728;</button> */}
             <a className="icon-search-link" href="#header">
               <button id="button-contact">Contact</button>
             </a>

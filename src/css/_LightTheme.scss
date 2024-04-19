@@ -1,6 +1,9 @@
 // NOTE: Light Theme.
 
 // Light Theme color variables.
+
+
+
 $blue: #3d23da;
 $textColor: #1d1d1d;
 $darkGrey: #3d3d3d;
@@ -10,7 +13,7 @@ $backgroundColor: #e7e7e7;
 $transparent: #ffffff00;
 
 // Background effects.
-$backgroundDotted: radial-gradient(circle, rgb(235, 235, 235) 0%, rgba(221, 221, 221, 0.37) 100%), url("../img/noise.svg");
+$backgroundDotted: radial-gradient(circle at 5px 5px, rgba(117, 117, 117, 0.116) 5px, transparent 0);
 $boxShadow3D: 5px -5px 7px 0px rgba(255, 255, 255, 0.72), -5px 4px 9px 0px rgba(0, 0, 0, 0.24);
 $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
 
