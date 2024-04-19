@@ -16,6 +16,10 @@ function Introduction() {
             </span>{" "}
             and a commitment to delivering <span className="blue-text">exceptional results.</span>
           </p>
+          <div className="intro-sub">
+            <button className="intro-button">lolo</button>
+            <button className="intro-button">lolo</button>
+          </div>
         </div>
         <div className="intro-img-container">
           <img src={image1} className="intro-img" alt="" />

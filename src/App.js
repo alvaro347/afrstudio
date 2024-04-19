@@ -30,6 +30,11 @@ const projects = {
     description:
       "This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills",
     img: image1,
+    images: [
+      image1,
+      image1,
+      image1
+    ],
     icons: [icons.reactIcon, icons.htmlIcon],
     keywords: {
       tags: ["web", "server"],
@@ -43,6 +48,11 @@ const projects = {
     description:
       "This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills",
     img: image1,
+    images: [
+      image1,
+      image1,
+      image1
+    ],
     icons: [icons.reactIcon, icons.htmlIcon],
     keywords: {
       tags: ["web", "server"],
@@ -56,6 +66,11 @@ const projects = {
     description:
       "This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills",
     img: image1,
+    images: [
+      image1,
+      image1,
+      image1
+    ],
     icons: [icons.htmlIcon, icons.reactIcon],
     keywords: {
       tags: ["web"],

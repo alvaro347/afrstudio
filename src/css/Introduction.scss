@@ -1,26 +1,38 @@
 @import './LightTheme.scss';
 
 #introduction {
-  height: 900px;
+
   align-content: center;
+
 }
 
 .intro-container {
-  display: flex;
+  height: 100%;
 }
 
 .intro-text {
-  width: 60%;
+  align-content: center;
   vertical-align: middle;
   margin-right: 20px;
 }
 
 .intro-img-container {
   vertical-align: middle;
+  align-content: center;
 }
 
 .intro-img {
   margin: 0 auto;
   opacity: 0.5;
   border-radius: 10px;
+
+}
+
+.intro-button {
+  @include lightButton;
+}
+
+.intro-sub {
+ display: flex;
+ margin-top: 20px;
 }

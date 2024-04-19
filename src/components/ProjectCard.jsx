@@ -1,11 +1,36 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "../css/ProjectCard.scss";
 import ProjectCardIcons from "./ProjectCardIcons";
+import ProjectPopup from "./ProjectPopup";
+
 
 function ProjectCard({ project }) {
+  const [buttonPopup, setButtonPopup] = useState(false);
+
+  const handlePopup = (e) => {
+    if (e === false) {
+      setButtonPopup(false);
+      document.body.style.overflow = "unset";
+    } else {
+      setButtonPopup(true);
+      document.body.style.overflow = "hidden";
+    }
+  };
+
+  useEffect(() => {
+    const close = (e) => {
+      if (e.keyCode === 27) {
+        handlePopup(false);
+      }
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, []);
   return (
     <div className="card">
-      <div className="card-container">
+          <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />
+
+      <div className="card-container" onClick={() => handlePopup(true)}>
         <div className="project-image-container">
           <a href="#projects">
             <img

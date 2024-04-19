@@ -7,26 +7,26 @@ function ProjectShowcase({ project }) {
 
   const handlePopup = (e) => {
     if (e === false) {
-      setButtonPopup(false)
+      setButtonPopup(false);
       document.body.style.overflow = "unset";
     } else {
-      setButtonPopup(true)
+      setButtonPopup(true);
       document.body.style.overflow = "hidden";
     }
-  }
+  };
 
   useEffect(() => {
     const close = (e) => {
       if (e.keyCode === 27) {
-        handlePopup(false)
+        handlePopup(false);
       }
-    }
-    window.addEventListener('keydown', close)
-    return () => window.removeEventListener('keydown', close)
-  }, [])
+    };
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, []);
 
   return (
-    <div className="p-showcase" >
+    <div className="p-showcase">
       <div className="cursor-pointer" onClick={() => handlePopup(true)}>
         <div className="project-image-container">
           <img src={project.img} alt="Card" className="project-image" />
