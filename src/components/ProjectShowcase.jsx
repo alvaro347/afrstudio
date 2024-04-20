@@ -10,20 +10,12 @@ function ProjectShowcase({ project }) {
       setButtonPopup(false);
       document.body.style.overflow = "unset";
     } else {
-      setButtonPopup(true);
+      // setTimeout(() => {
+        setButtonPopup(true);
+      // }, 200);
       document.body.style.overflow = "hidden";
     }
   };
-
-  useEffect(() => {
-    const close = (e) => {
-      if (e.keyCode === 27) {
-        handlePopup(false);
-      }
-    };
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
-  }, []);
 
   return (
     <div className="p-showcase">
@@ -45,8 +37,7 @@ function ProjectShowcase({ project }) {
       {/* <div className="self-center more-info-text grid">
 						<p className="">More information &#10230;</p>
 					</div> */}
-
-      <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />
+      {buttonPopup && <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />}
     </div>
   );
 }

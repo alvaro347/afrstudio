@@ -1,51 +1,95 @@
-@import 'LightTheme';
+@import "LightTheme";
+
+// .popup-show {
+//     opacity: 1;
+//   visibility: visible;
+//   transition: opacity 0.3s ease;
+// }
+
+// .popup-enter-done {
+//   opacity: 1;
+//   pointer-events: auto;
+//   transform: scale(1);
+// }
+// .popup-exit {
+//   opacity: 0;
+//   transform: scale(0.4);
+// } 
+
+.popup.open {
+  opacity: 1;
+}
+
+.popup.close {
+  transition: opacity 200ms ease;
+  opacity: 0;
+}
 
 .popup {
+  transition: opacity 200ms ease-in;
+  opacity: 0;
+  backdrop-filter: blur(6px);
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-height: 100vh;
+  height: 100vh;
   display: flex;
-  padding: 40px;
   z-index: 100000;
   border-radius: 8px;
+  background-color: #33333370;
 }
 
-.popup-content {
+.popup-container {
   justify-content: center;
   align-items: center;
+  // padding: 40px;
   position: fixed;
-  background-color: rgba(187, 187, 187, 0.911);
+  border-radius: 20px;
+  background-color: rgba(233, 233, 233, 0.911);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
+  
+  max-width: 1200px;
   height: calc(100vh - 80px);
   // background-color: #fff;
   // padding: 20px;
-  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.295);
+}
+
+.popup-content {
+  // opacity: 0;
+// width: 100%;
+  padding: 60px 40px;
+  // position: fixed;
+  // left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
+
+  // left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
+  // width: 90%;
+  
+  // max-width: 1200px;
+
+  // background-color: #fff;
+  // padding: 20px;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.295);
 }
 
 .popup-close {
   position: absolute;
   top: 16px;
   right: 16px;
-  @include lightButton
+  @include lightButton;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    // transform: scale(0.9);
-  }
-  to {
-    opacity: 1;
-    // transform: scale(1);
-  }
-}
+
 
 .slideshow {
   display: flex;
@@ -60,7 +104,6 @@ height: 100vh;
 
 .popup-details {
   margin-top: 20px;
-  
 }
 
 .popup-title {
