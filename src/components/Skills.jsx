@@ -4,17 +4,46 @@ import "../css/Skills.scss";
 import www from "../img/www.png";
 import light from "../img/light.png";
 import box from "../img/box.png";
-import Accordion from './Accordion'
+import Accordion from "./Accordion";
+import headerImg from "../img/headerImg.png";
+import image1 from "../img/image1.png";
+
+const accordionData = [
+  {
+    title: "Web-Development",
+    description: "Crafting responsive and user-friendly websites that leave a lasting impression.Crafting responsive and user-friendly websites that leave a lasting impression.",
+    image: headerImg,
+  },
+  {
+    title: "Art Direction",
+    description: " goes here. Description of skill 2 goes here.Description of skill 2 goes here.",
+    image: image1,
+  },
+  {
+    title: "Concept Art",
+    description: "Transforming ideas into visually stunning and captivating designs.",
+    image: image1,
+  },
+  {
+    title: "3D Design",
+    description: "Creating realistic and immersive 3D models for various industries.",
+    image: headerImg,
+  },
+];
 
 const Skills = () => {
   const [activeSkill, setActiveSkill] = useState(null);
   const activeSkillHandle = (index) => {
-
     setActiveSkill(index);
   };
   const handleMouseLeave = () => {
-
     setActiveSkill(null);
+  };
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleItemClick = (index) => {
+    setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
   return (
     <section id="skills">
@@ -57,7 +86,16 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <Accordion />
+<div id="accordion-menu">      
+      {accordionData.map((item, index) => (
+        <Accordion
+          key={index}
+          item={item}
+          isOpen={activeIndex === index}
+          onClick={() => handleItemClick(index)}
+        />
+      ))}
+</div>
     </section>
   );
 };

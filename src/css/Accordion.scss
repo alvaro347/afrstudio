@@ -1,14 +1,26 @@
 /* Accordion Styles */
-.accordion {
-  max-width: 600px;
-  margin: 20px auto;
-  
-}
+@import "./LightTheme.scss";
 
 .accordion-item {
-  border-bottom: 1px solid #616161;
+  color: $textColor;
+  cursor: pointer;
+  border-bottom: 1px solid #585858;
+  // padding: 10px;
+  width: 400px;
+
+  // display: inline-block;
+  // max-height: 200px;  
+  // padding: 0 1rem;
   overflow: hidden;
   // transition: max-height 0.3s ease;
+}
+
+.accordion-main {
+  // margin: 10px 0;
+  // height: 80px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .accordion-item:last-child {
@@ -17,8 +29,8 @@
 
 .accordion-header {
   cursor: pointer;
-  padding: 10px;
-  font-size: 2rem;
+  display: flex;
+  font-size: 1.8rem;
 
   font-weight: bold; /* Apple Design: Bold font */
 }
@@ -32,17 +44,20 @@
 }
 
 
-.answer-container{
+.accordion-description-container {
   display: grid;
   // height: 0px;
+  // max-height: 200px;  
+  // padding-top: 10px;
   // padding: 0 1rem;
+  overflow: hidden;
   transition: height .3s ease-in-out;
 }
-.answer-content{
+.accordion-description {
 
-  padding: 0 10px 15px 10px;
-  // margin: 10px 0;
-  font-size: 20px;
+  // padding: 0 10px 15px 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
   font-style: italic;
 }
 
@@ -53,17 +68,40 @@
   max-height: 1000px; /* Set a large enough value to ensure it fully expands */
 }
 
+.accordion-image-container {
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
+  width: 500px;
+  height: 300px;
+}
+
 .accordion-image {
   max-width: 500px;
-  max-height: 200px;
+  max-height: 500px;
 // inset: 0;
   // display: grid;
   // position: absolute;
   // grid-template-columns: auto minmax(500px, 1000px);
 }
 
+.accordion-image.hidden {
+  display: hidden;
+}
+
 /* Remove mouse pointer cursor when no-cursor class is applied */
-.no-cursor,
-.no-cursor h2 {
+.no-cursor {
   cursor: default;
+  pointer-events: none;
+}
+
+
+.arrow{
+  font-size: 2.5rem;
+  transition: .5s ease-in-out;
+}
+
+.arrow.active{
+    transform: scaleY(-1);
+  // color: #1db954;
 }
