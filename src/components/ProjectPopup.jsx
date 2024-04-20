@@ -10,7 +10,7 @@ const ProjectPopup = ({ project, trigger, handlePopup }) => {
     setClassName("close");
     setTimeout(() => {
       handlePopup(false);
-    }, 200);
+    }, 300);
   };
 
   useEffect(() => {

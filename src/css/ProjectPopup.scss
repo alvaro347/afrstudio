@@ -17,18 +17,24 @@
 // } 
 
 .popup.open {
+  backdrop-filter: blur(5px);
+  background-color: #33333370;
   opacity: 1;
+  transition: all 200ms ease-in;
 }
 
 .popup.close {
-  transition: opacity 200ms ease;
+  backdrop-filter: unset;
+  background-color: #ffffff00;
+  transition: all 300ms ease;
   opacity: 0;
 }
 
 .popup {
-  transition: opacity 200ms ease-in;
+
   opacity: 0;
-  backdrop-filter: blur(6px);
+  backdrop-filter: unset;
+  background-color: #ffffff00;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -38,7 +44,6 @@
   display: flex;
   z-index: 100000;
   border-radius: 8px;
-  background-color: #33333370;
 }
 
 .popup-container {

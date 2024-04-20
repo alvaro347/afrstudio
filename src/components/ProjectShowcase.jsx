@@ -10,9 +10,7 @@ function ProjectShowcase({ project }) {
       setButtonPopup(false);
       document.body.style.overflow = "unset";
     } else {
-      // setTimeout(() => {
         setButtonPopup(true);
-      // }, 200);
       document.body.style.overflow = "hidden";
     }
   };

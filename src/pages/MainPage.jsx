@@ -9,10 +9,8 @@ import Header from "../components/Header";
 import gitHub from "../img/github.svg";
 import ArtStation from "../img/artstationoriginal.svg";
 
-
-// TODO: Change the hero section height to be 100vh - nav height.
-// TODO: Handle sorting function to show or hide projects depending on the
-// [X]: Change hero section (can't do 100vh - 60px)
+// TODO: Make accordion menu for the skills.
+// TODO: Handle sorting function to show or hide projects depending on the technology used
 // TODO: Other projects should only print 3 (then add a link for additional)
 // NOTE: For Flex elements use the skills section as base
 

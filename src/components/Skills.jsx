@@ -4,6 +4,7 @@ import "../css/Skills.scss";
 import www from "../img/www.png";
 import light from "../img/light.png";
 import box from "../img/box.png";
+import Accordion from './Accordion'
 
 const Skills = () => {
   const [activeSkill, setActiveSkill] = useState(null);
@@ -56,6 +57,7 @@ const Skills = () => {
           </div>
         </div>
       </div>
+      <Accordion />
     </section>
   );
 };

@@ -1,0 +1,69 @@
+/* Accordion Styles */
+.accordion {
+  max-width: 600px;
+  margin: 20px auto;
+  
+}
+
+.accordion-item {
+  border-bottom: 1px solid #616161;
+  overflow: hidden;
+  // transition: max-height 0.3s ease;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-header {
+  cursor: pointer;
+  padding: 10px;
+  font-size: 2rem;
+
+  font-weight: bold; /* Apple Design: Bold font */
+}
+
+.accordion-item-content {
+  // padding: 0 16px;
+  
+  // max-height: 0;
+  // overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+
+.answer-container{
+  display: grid;
+  // height: 0px;
+  // padding: 0 1rem;
+  transition: height .3s ease-in-out;
+}
+.answer-content{
+
+  padding: 0 10px 15px 10px;
+  // margin: 10px 0;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.accordion-item.active .accordion-item-content {
+  transition: height 0.3s ease-out;
+  // max-height: 200px;
+  // height: 200px;
+  max-height: 1000px; /* Set a large enough value to ensure it fully expands */
+}
+
+.accordion-image {
+  max-width: 500px;
+  max-height: 200px;
+// inset: 0;
+  // display: grid;
+  // position: absolute;
+  // grid-template-columns: auto minmax(500px, 1000px);
+}
+
+/* Remove mouse pointer cursor when no-cursor class is applied */
+.no-cursor,
+.no-cursor h2 {
+  cursor: default;
+}
