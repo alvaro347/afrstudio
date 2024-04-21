@@ -34,18 +34,32 @@ const Navigation = ({ toggleTheme, isDarkMode }) => {
     setShowMenu(false);
   };
 
+  const [prevMenuState, setPrevMenuState] = useState(false);
+
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerHeight < 850 && showMenu) {
+      if (window.innerWidth <= 800 && prevMenuState) {
+        setShowMenu(true);
+      } else if (window.innerWidth > 800) {
         setShowMenu(false);
       }
     };
+    // const handleResize = () => {
+    //   if (window.innerHeight > 850) {
+    //     setShowMenu(false);
+    //   }
+    // };
+    // handleResize();
+    // window.addEventListener('resize', handleResize);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [showMenu]);
+  }, [prevMenuState]);
 
+  useEffect(() => {
+    setPrevMenuState(showMenu);
+  }, [showMenu]);
   return (
     <nav>
       <div id="nav-width">
