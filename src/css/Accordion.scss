@@ -2,23 +2,25 @@
 @import "./LightTheme.scss";
 
 .accordion-item {
-  color: $textColor;
   cursor: pointer;
-  border-bottom: 1px solid #585858;
+  border-bottom: 1px solid #969696;
   // padding: 10px;
-  width: 400px;
 
   // display: inline-block;
-  // max-height: 200px;  
+  // max-height: 200px;
   // padding: 0 1rem;
   overflow: hidden;
   // transition: max-height 0.3s ease;
 }
 
 .accordion-main {
+  color: $darkGrey;
   // margin: 10px 0;
   // height: 80px;
-  margin: 10px 0;
+  height: 80px;
+  justify-items: center;
+  align-items: center;
+
   display: flex;
   justify-content: space-between;
 }
@@ -37,26 +39,26 @@
 
 .accordion-item-content {
   // padding: 0 16px;
-  
+
   // max-height: 0;
   // overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
 
-
 .accordion-description-container {
-  display: grid;
+  display: block;
+ height: auto;
+  color: $grey;
   // height: 0px;
-  // max-height: 200px;  
+  // max-height: 200px;
   // padding-top: 10px;
   // padding: 0 1rem;
   overflow: hidden;
-  transition: height .3s ease-in-out;
+  transition: height 0.3s ease-in-out;
 }
 .accordion-description {
-
   // padding: 0 10px 15px 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 1rem;
   font-style: italic;
 }
@@ -68,26 +70,13 @@
   max-height: 1000px; /* Set a large enough value to ensure it fully expands */
 }
 
-.accordion-image-container {
-  display: inline-block;
-  justify-content: center;
-  align-content: center;
-  width: 500px;
-  height: 300px;
-}
-
-.accordion-image {
-  max-width: 500px;
-  max-height: 500px;
-// inset: 0;
-  // display: grid;
-  // position: absolute;
-  // grid-template-columns: auto minmax(500px, 1000px);
-}
-
-.accordion-image.hidden {
-  display: hidden;
-}
+// .accordion-image-container {
+//   display: inline-block;
+//   justify-content: center;
+//   align-content: center;
+//   width: 500px;
+//   height: 300px;
+// }
 
 /* Remove mouse pointer cursor when no-cursor class is applied */
 .no-cursor {
@@ -95,13 +84,12 @@
   pointer-events: none;
 }
 
-
-.arrow{
+.arrow {
   font-size: 2.5rem;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
-.arrow.active{
-    transform: scaleY(-1);
+.arrow.active {
+  transform: scaleY(-1);
   // color: #1db954;
 }

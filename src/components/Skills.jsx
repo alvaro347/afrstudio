@@ -11,7 +11,8 @@ import image1 from "../img/image1.png";
 const accordionData = [
   {
     title: "Web-Development",
-    description: "Crafting responsive and user-friendly websites that leave a lasting impression.Crafting responsive and user-friendly websites that leave a lasting impression.",
+    description:
+      "Crafting responsive and user-friendly websites that leave a lasting impression.Crafting responsive and user-friendly websites that leave a lasting impression.",
     image: headerImg,
   },
   {
@@ -22,12 +23,12 @@ const accordionData = [
   {
     title: "Concept Art",
     description: "Transforming ideas into visually stunning and captivating designs.",
-    image: image1,
+    image: headerImg,
   },
   {
     title: "3D Design",
     description: "Creating realistic and immersive 3D models for various industries.",
-    image: headerImg,
+    image: image1,
   },
 ];
 
@@ -86,16 +87,22 @@ const Skills = () => {
           </div>
         </div>
       </div>
-<div id="accordion-menu">      
-      {accordionData.map((item, index) => (
-        <Accordion
-          key={index}
-          item={item}
-          isOpen={activeIndex === index}
-          onClick={() => handleItemClick(index)}
-        />
-      ))}
-</div>
+      <div id="accordion">
+        <div id="accordion-menu">
+          {accordionData.map((item, index) => (
+            <Accordion
+              key={index}
+              item={item}
+              activeImg={item.image}
+      s        isOpen={activeIndex === index}
+              onClick={() => handleItemClick(index)}
+            />
+          ))}
+        </div>
+        <div className="accordion-image-container">
+          <img src={accordionData[activeIndex].image} className="accordion-image" alt="" />
+        </div>
+      </div>
     </section>
   );
 };
