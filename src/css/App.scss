@@ -1,3 +1,5 @@
+@use "sass:meta";
+@import 'LightTheme';
 /* .App {
   text-align: center;
 }
@@ -37,4 +39,38 @@
   }
 } */
 
+// Light Theme
+$primary-color-light: #007bff;
+$background-color-light: #ffffff;
+$text-color-light: #333333;
 
+
+// Dark Theme
+$primary-color-dark: #007bff;
+$background-color-dark: #333333;
+$text-color-dark: #ffffff;
+
+.root {
+
+  transition: all 0.3s, color 0.3s;
+
+  &.light {
+    background-color: $background-color-light;
+
+  }
+
+  &.dark {
+
+    $text-Color1:$text-color-dark;
+    background-color: $background-color-dark;
+    color: $text-color-dark;
+  }
+}
+
+[class="App light"] {
+  --test01: #{meta.inspect($primary-color-light)};
+}
+
+[class="App dark"] {
+  --test01: red;
+}

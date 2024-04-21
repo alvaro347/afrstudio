@@ -1,20 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/MainPage.scss";
 import ProjectsListCards from "../components/ProjectsListCards";
 import ProjectShowcase from "../components/ProjectShowcase";
 import Introduction from "../components/Introduction";
 import Skills from "../components/Skills";
 import Header from "../components/Header";
-// import ProjectCardIcons from "../components/ProjectCardIcons";
-import gitHub from "../img/github.svg";
-import ArtStation from "../img/artstationoriginal.svg";
 
-// TODO: Make accordion menu for the skills.
-// TODO: Handle sorting function to show or hide projects depending on the technology used
-// TODO: Other projects should only print 3 (then add a link for additional)
+
+// TODO: Combine themes and variables into one file.
 // NOTE: For Flex elements use the skills section as base
 
 function MainPage({ projects, headerImg, icons }) {
+
+
+
+
   // const [iconSort, setIconSort] = useState("");
 
   // function iconSortingHandle() {

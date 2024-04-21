@@ -1,4 +1,4 @@
-// import logo from './img/logo.svg';
+import React, { useState } from "react";
 import "./css/App.scss";
 import "./css/MediaQuery.scss";
 import MainPage from "./pages/MainPage";
@@ -30,7 +30,7 @@ const projects = {
     description:
       "This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills",
     overview: "",
-    keypoints: ["This and that", "and also this"],
+    keyPoints: ["This and that", "and also this"],
     img: image1,
     images: [image1],
     icons: [icons.reactIcon, icons.htmlIcon],
@@ -70,9 +70,15 @@ const projects = {
 };
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
-    <div className="App">
-      <Navigation />
+    <div className={`App ${isDarkMode ? "dark" : "light"}`}>
+      <Navigation toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
       <MainPage projects={projects} headerImg={headerImg} icons={icons} />
       <Footer />
     </div>

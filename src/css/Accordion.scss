@@ -1,26 +1,18 @@
 /* Accordion Styles */
 @import "./LightTheme.scss";
+@import "App.scss";
 
 .accordion-item {
   cursor: pointer;
   border-bottom: 1px solid #969696;
-  // padding: 10px;
-
-  // display: inline-block;
-  // max-height: 200px;
-  // padding: 0 1rem;
   overflow: hidden;
-  // transition: max-height 0.3s ease;
 }
 
 .accordion-main {
   color: $darkGrey;
-  // margin: 10px 0;
-  // height: 80px;
   height: 80px;
   justify-items: center;
   align-items: center;
-
   display: flex;
   justify-content: space-between;
 }
@@ -33,31 +25,21 @@
   cursor: pointer;
   display: flex;
   font-size: 1.8rem;
-
-  font-weight: bold; /* Apple Design: Bold font */
+  font-weight: bold;
 }
 
 .accordion-item-content {
-  // padding: 0 16px;
-
-  // max-height: 0;
-  // overflow: hidden;
   transition: max-height 0.2s ease-out;
 }
 
 .accordion-description-container {
   display: block;
  height: auto;
-  color: $grey;
-  // height: 0px;
-  // max-height: 200px;
-  // padding-top: 10px;
-  // padding: 0 1rem;
+  // color: $text-Color2;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
 }
 .accordion-description {
-  // padding: 0 10px 15px 10px;
   margin-bottom: 20px;
   font-size: 1rem;
   font-style: italic;
@@ -65,20 +47,9 @@
 
 .accordion-item.active .accordion-item-content {
   transition: height 0.3s ease-out;
-  // max-height: 200px;
-  // height: 200px;
-  max-height: 1000px; /* Set a large enough value to ensure it fully expands */
+  max-height: 1000px; 
 }
 
-// .accordion-image-container {
-//   display: inline-block;
-//   justify-content: center;
-//   align-content: center;
-//   width: 500px;
-//   height: 300px;
-// }
-
-/* Remove mouse pointer cursor when no-cursor class is applied */
 .no-cursor {
   cursor: default;
   pointer-events: none;
@@ -91,5 +62,4 @@
 
 .arrow.active {
   transform: scaleY(-1);
-  // color: #1db954;
 }

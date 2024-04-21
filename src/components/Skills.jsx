@@ -94,7 +94,7 @@ const Skills = () => {
               key={index}
               item={item}
               activeImg={item.image}
-      s        isOpen={activeIndex === index}
+              isOpen={activeIndex === index}
               onClick={() => handleItemClick(index)}
             />
           ))}

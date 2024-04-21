@@ -1,9 +1,6 @@
 import React from "react";
 import "../css/HeaderTest.scss";
-import headerImg from "../img/headerImg.png";
-import Navigation from "./Navigation";
-import gitHub from "../img/github.svg";
-import ArtStation from "../img/artstationoriginal.svg";
+
 
 const Header = () => {
   return (
