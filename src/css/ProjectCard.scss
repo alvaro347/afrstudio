@@ -1,4 +1,4 @@
-@import "./LightTheme.scss";
+@import "./themes.scss";
 
 .card {
   box-shadow: $boxShadowBasic;
@@ -41,7 +41,7 @@
 }
 
 .card-title {
-  color: $textColor;
+  color: var(--textColor01);
   /* margin-bottom: 5px; */
   font-size: 1.4rem;
   text-transform: uppercase;

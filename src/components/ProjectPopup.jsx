@@ -38,11 +38,11 @@ const ProjectPopup = ({ project, trigger, handlePopup }) => {
         {/* <h3 className="popup-title">{project.title}</h3>
       <p className="popup-description">{project.description}</p> */}
         <div className="popup-container" onClick={(e) => e.stopPropagation()}>
-          <button className="popup-close" onClick={() => onClose()}>
-            Close
-          </button>
-
           <div className="popup-content">
+            <button className="popup-close" onClick={() => onClose()}>
+              <div className="line-close-1"></div>
+              <div className="line-close-2"></div>
+            </button>
             <div className="slideshow">
               {/* Slideshow of images */}
               {project.images.map((image, index) => (

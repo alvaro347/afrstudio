@@ -1,4 +1,4 @@
-@import "./LightTheme.scss";
+@import "./themes.scss";
 
 #skills {
   background-image: $backgroundDotted;
@@ -20,7 +20,7 @@
   margin: 0 auto 20px auto;
   max-width: 500px;
   font-weight: 800;
-  color: $textColor;
+  color: var(--textColor01);
   font-size: 1.7rem;
 }
 

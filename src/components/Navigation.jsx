@@ -22,7 +22,6 @@ const Navigation = ({ toggleTheme, isDarkMode }) => {
     //   document.getElementById("nav-links").style.display = "none";
     // } else {
     //   document.getElementById("nav-links").style.display = "block";
-
     // }
     // document.getElementById("nav-links").style.display = "block";
     setShowMenu(!showMenu);

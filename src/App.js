@@ -28,7 +28,7 @@ const projects = {
     location: "",
     date: "",
     description:
-      "This is a small description of the card content. This projects it's about this and that. the content an intention was to showcase react skills",
+      "This is a small description of the card content. This projects it's about this and that.",
     overview: "",
     keyPoints: ["This and that", "and also this"],
     img: image1,

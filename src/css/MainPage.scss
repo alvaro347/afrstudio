@@ -1,5 +1,4 @@
-@import 'LightTheme';
-@import 'App.scss';
+@import "./themes.scss";
 
 body {
   font-family: JetBrains Mono, Arial, sans-serif;
@@ -53,7 +52,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 30px;
-  color: var(--test01);
+  color: var(--textColor01);
 }
 
 #header-title {

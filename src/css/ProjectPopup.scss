@@ -1,4 +1,4 @@
-@import "LightTheme";
+@import "./themes.scss";
 
 // .popup-show {
 //     opacity: 1;
@@ -31,36 +31,43 @@
 }
 
 .popup {
-
+  overflow-y: auto;
   opacity: 0;
   backdrop-filter: unset;
-  background-color: #ffffff00;
   position: fixed;
+  //   left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
+  align-content: center;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  height: 100vh;
-  display: flex;
+  // min-height: 100vh;
+  // display: flex;
   z-index: 100000;
   border-radius: 8px;
+
+  
 }
 
 .popup-container {
   justify-content: center;
   align-items: center;
+
   // padding: 40px;
-  position: fixed;
+ margin: 20px auto;
   border-radius: 20px;
   background-color: rgba(233, 233, 233, 0.911);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  // left: 50%;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
+// margin: 0 auto;
   width: 90%;
-  
+  // height: 100%;
   max-width: 1200px;
-  height: calc(100vh - 80px);
+  // min-height: calc(100vh - 80px);
   // background-color: #fff;
   // padding: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.295);
@@ -69,7 +76,7 @@
 .popup-content {
   // opacity: 0;
 // width: 100%;
-  padding: 60px 40px;
+  padding: 40px 40px;
   // position: fixed;
   // left: 50%;
   // top: 50%;
@@ -88,10 +95,39 @@
 }
 
 .popup-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  @include lightButton;
+margin: 0 0 10px auto;
+// margin-right: 0 !important;
+  // position: absolute;
+  // top: 16px;
+  // right: 16px;
+  background-color: #313131;
+  display: flex;
+  border-radius: 40px;
+  padding: 15px 10px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  // @include lightButton;
+  &:hover {
+    background-color: #5e5e5e;
+  }
+}
+
+.line-close-1, .line-close-2 {
+  width: 25px;
+  height: 3px;
+  background-color: #e0e0e0;
+  margin: 3px;
+ 
+}
+
+.line-close-1 {
+  transform: rotate(-45deg) translate(0, 6.5px);
+}
+
+.line-close-2 {
+  transform: rotate(45deg) translate(0, -6.5px);
 }
 
 
