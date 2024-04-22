@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer-content">
         <div>
           <a href="/" className="footer-text">
-            &copy; 2018 Alvaro Fernandez (AFR)
+            &copy; 2024 Alvaro Fernandez (AFR)
           </a>
         </div>
 

@@ -25,7 +25,7 @@ function ProjectCard({ project }) {
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
   }, []);
-  
+
   return (
     <div className="card">
       <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />

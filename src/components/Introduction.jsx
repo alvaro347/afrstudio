@@ -10,11 +10,11 @@ function Introduction() {
           {/* <p className="section-title-small blue-text">Achievements</p>
 					<h2 className="section-title">INTRO</h2> */}
           <p className="intro-p">
-            Bringing a <span className="blue-text">unique blend</span> of technical expertise and{" "}
-            <span className="grey-text">
+            Bringing a <span className="text-highlighted">unique blend</span> of technical expertise and{" "}
+            <span className="text-secondary">
               - artistic vision to every project. With a passion for innovation -
             </span>{" "}
-            and a commitment to delivering <span className="blue-text">exceptional results.</span>
+            and a commitment to delivering <span className="text-highlighted">exceptional results.</span>
           </p>
           <div className="intro-sub">
             <button className="intro-button">lolo</button>

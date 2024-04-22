@@ -26,10 +26,14 @@
 }
 
 .intro-button {
-  @include lightButton;
+  @include Button01;
 }
 
 .intro-sub {
   display: flex;
   margin-top: 20px;
+}
+
+.intro-p {
+  color: var(--textColor01)
 }

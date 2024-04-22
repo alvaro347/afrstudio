@@ -7,7 +7,6 @@ function Accordion({ item, isOpen, onClick, activeImg }) {
   const contentHeight2 = useRef(0);
   const [isFull, setIsFull] = useState(window.innerWidth > 1070);
 
-
   // const MOBILE_WIDTH = 1070;
   // const [isMobile, setIsMobile] = useState(window.innerWidth < MOBILE_WIDTH);
   // const prevWidth = useRef(window.innerWidth);
@@ -27,15 +26,13 @@ function Accordion({ item, isOpen, onClick, activeImg }) {
   //   return () => window.removeEventListener("resize", handleResize);
   // }, [isMobile]);
 
-
-
   useEffect(() => {
     const handleResize = () => {
-        setIsFull(window.innerWidth > 1070);
+      setIsFull(window.innerWidth > 1070);
     };
     handleResize();
-    window.addEventListener('resize', handleResize);
-  }, [isFull]); 
+    window.addEventListener("resize", handleResize);
+  }, [isFull]);
 
   return (
     <div
@@ -48,36 +45,35 @@ function Accordion({ item, isOpen, onClick, activeImg }) {
           <h3 className="accordion-header">{item.title}</h3>
           <RiArrowDropDownLine className={`arrow ${isOpen ? "active" : ""}`} />
         </div>
-      
-          <div
-            ref={contentHeight}
-            className="accordion-description-container"
-            style={(isOpen && isFull)? { height: contentHeight.current.scrollHeight } : { height: "0px" }}
-          >
+
+        <div
+          ref={contentHeight}
+          className="accordion-description-container"
+          style={isOpen && isFull ? { height: contentHeight.current.scrollHeight } : { height: "0px" }}
+        >
+          <div className="accordion-item-content">
+            <p className="accordion-description">{item.description}</p>
+          </div>
+        </div>
+
+        <div
+          ref={contentHeight2}
+          className="accordion-description-container"
+          style={isOpen && !isFull ? { height: contentHeight2.current.scrollHeight } : { height: "0px" }}
+        >
+          <div>
             <div className="accordion-item-content">
               <p className="accordion-description">{item.description}</p>
             </div>
-          </div>
-       
-          <div
-            ref={contentHeight2}
-            className="accordion-description-container"
-            style={(isOpen && !isFull) ? { height: contentHeight2.current.scrollHeight } : { height: "0px" }}
-          >
-            <div>
-              <div className="accordion-item-content">
-                <p className="accordion-description">{item.description}</p>
-              </div>
-              <div className="accordion-image-container-extra">
-                <img
-                  src={activeImg}
-                  className={`accordion-image-extra ${isOpen ? "a-img-active" : ""}`}
-                  alt=""
-                />
-              </div>
+            <div className="accordion-image-container-extra">
+              <img
+                src={activeImg}
+                className={`accordion-image-extra ${isOpen ? "a-img-active" : ""}`}
+                alt=""
+              />
             </div>
           </div>
-        
+        </div>
       </div>
     </div>
   );

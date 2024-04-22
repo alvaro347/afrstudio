@@ -11,17 +11,17 @@ const Header = () => {
       </div>
       <div className="header-text">
         <h1 id="header-title">
-          <span className="roboto-bold">AFR-STUDIO</span>
+          <span className="text-title">AFR-STUDIO</span>
           <br />
           <span className="blue-text-outline italic">DEV.</span>
-          <span className="blink-effect">|</span>
-          <span className="text-margin-design">& DESIGN.</span>
+          {/* <span className="blink-effect">|</span> */}
+          <span className="text-title"> & DESIGN.</span>
         </h1>
         <p className="header-paragraph">
           Crafting innovative solutions that bridge{" "}
-          <span className="blue-text">creativity and technology,</span> driving{" "}
-          <span className="blue-text">tangible results and elevating user experiences</span> across diverse
-          industries.
+          <span className="text-highlighted">creativity and technology,</span> driving{" "}
+          <span className="text-highlighted">tangible results and elevating user experiences</span> across
+          diverse industries.
         </p>
       </div>
       {/* <div>

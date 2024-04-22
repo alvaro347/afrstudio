@@ -1,19 +1,17 @@
 @media screen and (max-width: 800px) {
+
 	#introduction {
 		height: 500px;
 		overflow: hidden;
 	}
+  .header-image-container {
+    min-height: 300px;
+  }
 	.intro-img-container {
 		display: none;
 	}
-  #header {
-    height: auto;
-  }
   .header-paragraph {
     font-size: 0.9rem;
-  }
-  #header-img {
-    width: 100%;
   }
   .nav-width {
     padding: 10px 20px;
@@ -60,6 +58,7 @@
 }
 
 @media screen and (min-width: 801px) and (max-width: 1440px) {
+
   .header-paragraph {
     font-size: 1.2rem;
   }
@@ -74,14 +73,17 @@
   }
 
   #header-title {
-    font-size: 10vh;
+    font-size: 15vh;
   }
   .section-title {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
   }
 }
 
+
+
 @media screen and (min-width: 1441px) {
+
   .header-paragraph {
     font-size: 1.3rem;
   }
@@ -112,11 +114,13 @@
 }
 
 @media screen and (min-width: 801px) {
+  #header {
+    height: calc(100vh - 60px);
+  }
+
 	#introduction {
 		height: 700px;
 	}
-  #header {
-    height: 100vh;
-  }
+ 
 
 }
