@@ -2,33 +2,29 @@
 
 body {
   font-family: JetBrains Mono, Arial, sans-serif;
-  background-color: $backgroundColor;
+}
+
+.main-page {
+  background-color: var(--backgroundColor);
 }
 
 .section-container {
   padding: 60px 30px 60px 30px;
   max-width: 1440px;
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 
 #background-image {
   position: absolute;
   background-image: url(../img/backgroundCircles.svg);
   filter: brightness(0.1);
-  /* scale: 60%;
-	width: 100%; */
   transform: translate(30%, 0);
   height: 120%;
   filter: blur(100px);
-  /* filter: saturate(90%); */
   z-index: -1;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* animation-name: MOVE-BG;
-  animation-duration: 100s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite; */
 }
 
 @keyframes animatedBackground {
@@ -58,12 +54,9 @@ body {
 #header-title {
   pointer-events: none;
   margin-bottom: 20px;
-  color: $darkGrey;
-  /* font-size: 7vw; */
-  /* max-width: 900px; */
+  color: var(--textColor01);
   letter-spacing: -5px;
   text-align: left;
-  // font-style: italic;
   font-weight: 900;
   line-height: 1;
 }
@@ -84,31 +77,15 @@ body {
 #about-text {
   width: 40%;
   text-align: left;
-  /* margin: 0 auto; */
 }
 
 
 #header-img {
-  /* opacity: 20%; */
   margin: 0 auto;
-  /* animation:  MOVE-BG 10s linear infinite alternate; */
   transition: 200ms linear;
-  /* z-index: -2; */
   max-width: 1200px;
-  
-  /* text-align: center;  */
-  /* left: 50%; */
-  /* margin-left: -200px; */
-  /* position: absolute; */
-  /* white-space: nowrap; */
-  /* position: absolute; */
-  /* object-fit: cover; */
-  /* top: 50%;
-  left: 50%; 
-
-  transform: translate(-50%, -50%);  */
+  transform: translate(-50%, -50%);
   &:hover {
-    /* z-index: 3; */
     transform: scale(1.05);
   }
 }
@@ -116,10 +93,7 @@ body {
 
 #header-img-container {
   align-content: center;
-  /* overflow: hidden; */
-  /* width: 100%; */
   height: 50%;
-  /* position: relative;  */
 }
 
 .header-logo {
@@ -137,10 +111,7 @@ body {
   margin-left: -5px;
   text-align: left;
   text-transform: uppercase;
- 
-  /* font-weight: bold; */
   max-width: 1600px;
-  /* margin: 0 auto; */
 }
 
 .sorting-icons {
@@ -152,10 +123,8 @@ body {
 .title-text {
   margin: 0 auto;
   justify-self: center;
-  /* padding: 0 5%; */
   max-width: 1440px;
   text-align: left;
-  /* margin-bottom: 40px; */
 }
 
 .blue-text {

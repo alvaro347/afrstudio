@@ -33,14 +33,6 @@ const accordionData = [
 ];
 
 const Skills = () => {
-  const [activeSkill, setActiveSkill] = useState(null);
-  const activeSkillHandle = (index) => {
-    setActiveSkill(index);
-  };
-  const handleMouseLeave = () => {
-    setActiveSkill(null);
-  };
-
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleItemClick = (index) => {
@@ -64,7 +56,7 @@ const Skills = () => {
           </p>
         </div>
         <div className="skills-container">
-          <div className="skill" onMouseEnter={() => activeSkillHandle(0)} onMouseLeave={handleMouseLeave}>
+          <div className="skill">
             <p className="skill-number">_01</p>
             <img src={www} alt="" className="skill-img" />
             <h4 className="skill-title">Web-Development</h4>
@@ -72,13 +64,13 @@ const Skills = () => {
               Crafting responsive and user-friendly websites that leave a lasting impression.
             </p>
           </div>
-          <div className="skill" onMouseEnter={() => activeSkillHandle(1)} onMouseLeave={handleMouseLeave}>
+          <div className="skill">
             <p className="skill-number">_02</p>
             <img src={light} alt="" className="skill-img" />
             <h4 className="skill-title">Concept Art</h4>
             <p className="skill-text">Transforming ideas into visually stunning and captivating designs.</p>
           </div>
-          <div className="skill" onMouseEnter={() => activeSkillHandle(1)} onMouseLeave={handleMouseLeave}>
+          <div className="skill">
             <p className="skill-number">_03</p>
 
             <img src={box} alt="" className="skill-img" />

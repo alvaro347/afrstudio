@@ -21,6 +21,7 @@ function Introduction() {
             <button className="intro-button">lolo</button>
           </div>
         </div>
+
         <div className="intro-img-container">
           <img src={image1} className="intro-img" alt="" />
         </div>

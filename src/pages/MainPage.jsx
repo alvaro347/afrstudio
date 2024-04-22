@@ -6,79 +6,14 @@ import Introduction from "../components/Introduction";
 import Skills from "../components/Skills";
 import Header from "../components/Header";
 
-
 // TODO: Combine themes and variables into one file.
 // NOTE: For Flex elements use the skills section as base
 
 function MainPage({ projects, headerImg, icons }) {
-
-
-
-
-  // const [iconSort, setIconSort] = useState("");
-
-  // function iconSortingHandle() {
-  // 	setIconSort("react");
-  // }
-
   return (
     <div className="main-page">
       {/* <div id="background-image"></div> */}
       <Header />
-      {/* <header id="header">
-        <div id="header-img-container">
-          <img id="header-img" src={headerImg} alt="header" />
-        </div>
-        <div className="header-text">
-          <h1 id="header-title">
-            <span className="roboto-bold">AFR-STUDIO</span>
-            <br />
-            <span className="blue-text-outline italic">DEV.</span>
-            <span className="blink-effect">|</span>
-            <span className="text-margin-design roboto-bold"> & DESIGN.</span>
-          </h1>
-          <p className="header-paragraph">
-            Crafting innovative solutions that bridge{" "}
-            <span className="blue-text">creativity and technology,</span> driving{" "}
-            <span className="blue-text">tangible results and elevating user experiences</span> across diverse
-            industries.
-          </p> */}
-      {/* <p className="header-p-name">Alvaro Fernandez</p> */}
-      {/* <div id="buttons-header">
-            <a href="https://github.com/alvaro347" rel="noreferrer" target="_blank">
-              <button className="button-header">
-                <img className="hero-logo" src={gitHub} alt="github" /> Github
-              </button>
-            </a>
-            <a href="https://www.artstation.com/alvaro347" rel="noreferrer" target="_blank">
-              <button className="button-header">
-                <img className="hero-logo" src={ArtStation} alt="github" /> ArtStation
-              </button>
-            </a>
-          </div>
-          <div className="hero-types">
-            <div className="work-type">
-              <a href="#projects">
-                <h3 className="work-type-title">Web-Development</h3>
-              </a>
-            </div>
-            <div className="work-type">
-              <a href="https://www.artstation.com/alvaro347" rel="noreferrer" target="_blank">
-                <h3 className="work-type-title">Concept Art</h3>
-              </a>
-            </div>
-            <div className="work-type">
-              <a href="https://www.artstation.com/alvaro347" rel="noreferrer" target="_blank">
-                <h3 className="work-type-title">3D Design</h3>
-              </a>
-            </div> 
-          </div>
-          <div className="header-bottom">
-            <p>Based in Europe</p>
-            <p>Freelance available!</p>
-          </div>
-        </div>
-      </header> */}
       <Introduction />
       <section id="projects">
         <div className="section-container">
@@ -97,7 +32,6 @@ function MainPage({ projects, headerImg, icons }) {
           <div className="title-text">
             <p className="text-gray-900 blue-text">Other Projects</p>
             <h2 className="section-title">Other * projects</h2>
-            <div className="sorting-icons">{/* <ProjectCardIcons projectIcons={icons} /> */}</div>
           </div>
           <div>
             <ProjectsListCards projects={projects} />

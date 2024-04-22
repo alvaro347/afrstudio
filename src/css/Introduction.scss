@@ -1,9 +1,7 @@
 @import "./themes.scss";
 
 #introduction {
-
   align-content: center;
-
 }
 
 .intro-container {
@@ -25,7 +23,6 @@
   margin: 0 auto;
   opacity: 0.5;
   border-radius: 10px;
-
 }
 
 .intro-button {
@@ -33,6 +30,6 @@
 }
 
 .intro-sub {
- display: flex;
- margin-top: 20px;
+  display: flex;
+  margin-top: 20px;
 }

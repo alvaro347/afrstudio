@@ -1,24 +1,25 @@
 @use "sass:meta";
 
-// ~ Dark Theme
-// Dark Theme color variables.
-$blue: #3d23da;
-$primaryColor-Dark: #3d23da;
-$textColor01-Dark: #1d1d1d;
-$darkGrey: #3d3d3d;
-$grey: #696969;
-$lightGrey: #cecece;
-$backgroundColor: #e7e7e7;
-$transparent: #ffffff00;
-
 // ~ Light Theme.
 // Light Theme color variables.
 $blue: #3d23da;
-$textColor01-Light: #1d1d1d;
+$primaryColor-light: #3d23da;
+$textColor01-light: #1d1d1d;
 $darkGrey: #3d3d3d;
 $grey: #696969;
 $lightGrey: #cecece;
-$backgroundColor: #e7e7e7;
+$backgroundColor-light: #e7e7e7;
+$transparent: #ffffff00;
+
+// ~ Dark Theme
+// Dark Theme color variables.
+$blue: #3d23da;
+$primaryColor-dark: #3d23da;
+$textColor01-dark: #1d1d1d;
+$darkGrey: #3d3d3d;
+$grey: #696969;
+$lightGrey: #cecece;
+$backgroundColor-dark: #55575a;
 $transparent: #ffffff00;
 
 // Background effects.
@@ -30,12 +31,15 @@ $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
 // ~ Themes
 // Theme variables by class in the App.
 [class="App light"] {
- 
-  --textColor01: #{meta.inspect($textColor01-Light)};
+  --textColor01: #{meta.inspect($textColor01-light)};
+  --primaryColor: #{meta.inspect($primaryColor-light)};
+  --backgroundColor: #{meta.inspect($backgroundColor-light)};
 }
 
 [class="App dark"] {
-  --textColor01: #{meta.inspect($textColor01-Dark)};
+  --textColor01: #{meta.inspect($textColor01-dark)};
+  --backgroundColor: #{meta.inspect($backgroundColor-dark)};
+  --primaryColor: #{meta.inspect($primaryColor-dark)};
 }
 
 

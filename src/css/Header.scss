@@ -1,13 +1,6 @@
 @import "./themes.scss";
-@import "App";
-
-body {
-  font-family: JetBrains Mono, Arial, sans-serif;
-  background-color: $backgroundColor;
-}
 
 .section-container {
-  // padding: 60px 30px 60px 30px;
   max-width: 1440px;
   margin: 0 auto;
 }

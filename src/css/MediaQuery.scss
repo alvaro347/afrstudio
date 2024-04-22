@@ -103,9 +103,11 @@
 }
 
 @media screen and (max-width: 1440px) {
+  #nav-width {
+    padding: 0 15px;
+  }
   #nav-logo {
-
-    margin-left: 10px;
+    
   }
 }
 

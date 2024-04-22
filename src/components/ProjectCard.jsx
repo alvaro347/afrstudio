@@ -1,8 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "../css/ProjectCard.scss";
 import ProjectCardIcons from "./ProjectCardIcons";
 import ProjectPopup from "./ProjectPopup";
-
 
 function ProjectCard({ project }) {
   const [buttonPopup, setButtonPopup] = useState(false);
@@ -26,18 +25,15 @@ function ProjectCard({ project }) {
     window.addEventListener("keydown", close);
     return () => window.removeEventListener("keydown", close);
   }, []);
+  
   return (
     <div className="card">
-          <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />
+      <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />
 
       <div className="card-container" onClick={() => handlePopup(true)}>
         <div className="project-image-container">
           <a href="#projects">
-            <img
-              className="project-image"
-              src={project.img}
-              alt="Card"
-            />
+            <img className="project-image" src={project.img} alt="Card" />
           </a>
         </div>
         <div className="card-description-container">
