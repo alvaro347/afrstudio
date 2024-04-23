@@ -42,6 +42,8 @@ body {
   pointer-events: none;
 }
 
+
+
 .header-paragraph {
   text-align: left;
 }
@@ -152,7 +154,7 @@ body {
 .work-type {
   text-align: center;
   width: 300px;
-  border-right: 1px solid black;
+  border-right: 1px solid var(--grey-100);
 }
 
 .work-type-title {

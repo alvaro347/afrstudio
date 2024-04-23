@@ -42,14 +42,14 @@ const Skills = () => {
     <section id="skills" className="section-container ">
       <div className="dotted-background">
         <div className="section-title-container">
-          <p className="section-title-small blue-text">Professional Services</p>
+          <p className="text-highlighted">Professional Services</p>
           <h2 className="section-title">Skills</h2>
         </div>
         <div className="skills-description">
-          <h3 className="skills-description-title">
+          <h3 className="skills-description-title text-primary">
             Unlocking Creativity Through Web Development and Design
           </h3>
-          <p className="skills-description-text">
+          <p className="text-secondary">
             Welcome to my personal portfolio! I specialize in web development, concept art, and 3D modelling.
             With a passion for creativity and innovation, I strive to bring unique and engaging experiences to
             life.

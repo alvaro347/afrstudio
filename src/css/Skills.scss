@@ -123,32 +123,20 @@
 }
 
 .accordion-image {
- width: 100%;
+  width: 100%;
   margin: 0 auto;
-  // inset: 0;
   grid-area: 1 / 2 / 2 / 3;
-  // position: absolute;
-  // grid-template-columns: auto minmax(500px, 1000px);
 }
-// .accordion-image-extra {
-//   display: none;
-// }
 
-// .a-img-active {
-//   height: 500px;
-//   display: block !important;
-// }
 
 @media screen and (max-width: 1070px) {
   #accordion {
     display: block;
     padding: 60px 30px 60px 30px;
     height: auto;
-    
   }
   .accordion-item {
     width: 100%;
-    
   }
   .accordion-image-container-extra {
     display: block;
@@ -160,7 +148,6 @@
     display: block;
   }
 }
-
 
 @media screen and (min-width: 1071px) {
   #accordion {

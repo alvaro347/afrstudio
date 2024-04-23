@@ -18,8 +18,8 @@ function MainPage({ projects, headerImg, icons }) {
       <section id="projects">
         <div className="section-container">
           <div className="title-text">
-            <p className="text-gray-900 blue-text section-title-small">Selected Projects</p>
-            <h2 className="section-title">Project * Highlights</h2>
+            <p className="text-highlighted">Selected Projects</p>
+            <h2 className="section-title">Project<span className="text-highlighted">*</span>Highlights</h2>
           </div>
           <div id="projects-list-highlights">
             <ProjectShowcase project={projects.project1} />
@@ -30,8 +30,8 @@ function MainPage({ projects, headerImg, icons }) {
       <section>
         <div className="section-container">
           <div className="title-text">
-            <p className="text-gray-900 blue-text">Other Projects</p>
-            <h2 className="section-title">Other * projects</h2>
+            <p className="text-highlighted">Other Projects</p>
+            <h2 className="section-title">Other<span className="text-highlighted">*</span>projects</h2>
           </div>
           <div>
             <ProjectsListCards projects={projects} />
@@ -41,10 +41,10 @@ function MainPage({ projects, headerImg, icons }) {
       <Skills />
       <section id="about" className="developer">
         <div className="section-container">
-          <p className="section-title-small blue-text">Professional Services</p>
+          <p className="text-highlighted">Professional Services</p>
 
           <h2 className="section-title">About</h2>
-          <p id="about-text">
+          <p id="about-text" className="text-secondary">
             I'm a versatile professional with a background in electrical engineering and industrial design.
             Over the years, I've seamlessly blended my engineering expertise with a keen eye for design,
             delivering impactful solutions that have made a difference for numerous companies.

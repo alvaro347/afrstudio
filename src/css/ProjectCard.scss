@@ -6,12 +6,12 @@
   max-width: 440px;
   min-width: 400px;
   margin: 10px 10px;
-  background-color: #f0f0f0;
+  background-color: var(--backgroundColor-50);
   border-radius: 10px;
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: #ffffff;
-    outline: 2px solid rgb(160, 160, 160);
+    background-color: var(--backgroundColor-10);
+    outline: 2px solid var(--primaryColor01-50)
   }
 }
 
@@ -58,8 +58,9 @@
   margin: 0 0 10px 0;
 }
 
-.more-info {
+.card-more-info {
   border-top: 1px solid rgb(175, 175, 175);
+
 }
 
 .more-info-text {
@@ -82,8 +83,8 @@
   padding: 5px;
   margin-top: 5px;
   margin-right: 5px;
-  width: 50px; /* Adjust size as needed */
-  height: auto; /* Adjust size as needed */
+  width: 50px;
+  height: auto; 
   transition: outline 0.1s ease;
   &:hover {
     border-radius: 5px;

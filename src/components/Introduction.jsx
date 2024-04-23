@@ -17,8 +17,8 @@ function Introduction() {
             and a commitment to delivering <span className="text-highlighted">exceptional results.</span>
           </p>
           <div className="intro-sub">
-            <button className="intro-button">lolo</button>
-            <button className="intro-button">lolo</button>
+            <button className="intro-button">Projects</button>
+            <button className="intro-button">GitHub</button>
           </div>
         </div>
 

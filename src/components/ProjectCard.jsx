@@ -43,9 +43,9 @@ function ProjectCard({ project }) {
               <p className="card-description">{project.description}</p>
             </a>
           </div>
-          <div className="more-info flex justify-between">
+          <div className="card-more-info">
             <ProjectCardIcons projectIcons={project.icons} />
-            <div className="self-center more-info-text grid">
+            <div className="more-info-text">
               <a href="#projects">
                 <p className="">More information &#10230;</p>
               </a>

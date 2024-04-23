@@ -11,11 +11,11 @@ const Header = () => {
       </div>
       <div className="header-text">
         <h1 id="header-title">
-          <span className="text-title">AFR-STUDIO</span>
+          <span className="header-title">AFR STUDIO</span>
           <br />
           <span className="blue-text-outline italic">DEV.</span>
           {/* <span className="blink-effect">|</span> */}
-          <span className="text-title"> & DESIGN.</span>
+          <span className="header-title"> & DESIGN.</span>
         </h1>
         <p className="header-paragraph">
           Crafting innovative solutions that bridge{" "}
