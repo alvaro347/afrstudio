@@ -5,7 +5,7 @@ import Github from "../img/github.svg";
 
 const Header = () => {
   return (
-    <section id="header" className="section-container">
+    <section id="header">
       <div className="header-image-container">
         {/* <img className="header-img" src={headerImg} alt="" /> */}
       </div>
@@ -23,9 +23,7 @@ const Header = () => {
           <span className="text-highlighted">tangible results and elevating user experiences</span> across
           diverse industries.
         </p>
-      </div>
-      {/* <div>
-        <div id="buttons-header">
+        {/* <div id="buttons-header">
           <a href="https://github.com/alvaro347" rel="noreferrer" target="_blank">
             <button className="button-header">
               <img className="hero-logo" src={Github} alt="github" /> Github
@@ -36,8 +34,13 @@ const Header = () => {
               <img className="hero-logo" src={ArtStation} alt="github" /> ArtStation
             </button>
           </a>
+        </div> */}
+        <div className="header-bottom">
+          <p>Based in Europe</p>
+          <p>Freelance available!</p>
         </div>
-        <div className="hero-types">
+      <div>
+        {/* <div className="hero-types">
           <div className="work-type">
             <a href="#projects">
               <h3 className="work-type-title">Web-Development</h3>
@@ -53,12 +56,13 @@ const Header = () => {
               <h3 className="work-type-title">3D Design</h3>
             </a>
           </div>
-        </div>
-        <div className="header-bottom">
+        </div> */}
+        {/* <div className="header-bottom">
           <p>Based in Europe</p>
           <p>Freelance available!</p>
-        </div>
-      </div> */}
+        </div> */}
+      </div>
+      </div>
     </section>
   );
 };

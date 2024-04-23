@@ -13,7 +13,7 @@
 
 .skills-description {
   text-align: center;
-  margin: 40px 0 0 0;
+  margin: 40px 0 40px 0;
 }
 
 .skills-description-title {
@@ -116,6 +116,7 @@
   overflow: hidden;
   justify-items: center;
   align-content: center;
+  // height: 400px;
 }
 
 .accordion-image-extra {
@@ -132,7 +133,7 @@
 @media screen and (max-width: 1070px) {
   #accordion {
     display: block;
-    padding: 60px 30px 60px 30px;
+    // padding: 60px 30px 60px 30px;
     height: auto;
   }
   .accordion-item {
@@ -161,9 +162,11 @@
     width: 400px;
   }
   .accordion-description-container {
-    display: block;
+    width: auto;
+    display: inline-block;
   }
   .accordion-image-container-extra {
+   
     display: none;
   }
   .accordion-image-container {

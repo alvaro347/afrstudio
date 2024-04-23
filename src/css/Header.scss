@@ -1,24 +1,24 @@
 @import "./themes.scss";
 
 #header {
-  max-width: 1440px;
+  max-width: 1600px;
+  padding: 10px 20px 40px 20px;
   margin: 0 auto;
-  padding: 0 30px;
-  padding: 20px 20px;
+
 }
 
 #header-title {
   font-family: Anton, JetBrains Mono, Arial, sans-serif;
   pointer-events: none;
-  margin-bottom: 20px;
-  color: var(--textColor02);
+
+  color: var(--textColor01);
   letter-spacing: 0;
   text-align: left;
   font-weight: 500;
   line-height: 1;
 }
 
-.header-title {
+.text-title {
   color: var(--textColor01);
 }
 
@@ -41,6 +41,13 @@
   // letter-spacing: -3px;
 }
 
+.header-bottom {
+  color: var(--textColor02);
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
 @keyframes cursor-blink {
   100% {
   }
@@ -50,7 +57,8 @@
 }
 
 .header-image-container {
-  height: 60%;
+  height: calc(60% - 20px);
+  background-color: var(--backgroundSecondary-50) !important;
   border-radius: 10px;
   align-content: center;
   overflow: hidden;
@@ -66,12 +74,14 @@
 }
 
 .header-text {
-  height: 40%;
+  height: calc(40% - 20px);
+  margin-top: 15px;
   align-items: center;
   align-content: center;
 }
 
 .header-paragraph {
-  width: 80%;
-  color: var(--textColor02);
+
+  margin-bottom: 20px;
+  color: var(--textColor01);
 }

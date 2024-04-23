@@ -4,8 +4,8 @@
   box-shadow: $boxShadowBasic;
   overflow: hidden;
   max-width: 440px;
-  min-width: 400px;
-  margin: 10px 10px;
+  min-width: 300px;
+  height: auto;
   background-color: var(--backgroundColor-50);
   border-radius: 10px;
   transition: background-color 0.3s ease;
@@ -53,6 +53,7 @@
 }
 
 .card-description {
+  height: 65px;
   font-size: 0.75rem;
   color: var(--textColor02);
   margin: 0 0 10px 0;
@@ -60,7 +61,9 @@
 
 .card-more-info {
   border-top: 1px solid rgb(175, 175, 175);
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .more-info-text {

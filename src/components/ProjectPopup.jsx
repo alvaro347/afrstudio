@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ReactDom from "react-dom";
-// import { CSSTransition } from "react-transition-group";
-// import Modal from 'react-modal';
 import "../css/ProjectPopup.scss";
 
 const ProjectPopup = ({ project, trigger, handlePopup }) => {
+  // useState: Set the clase to open or closed for the popup out window.
   const [className, setClassName] = useState(null);
   const onClose = () => {
     setClassName("close");
@@ -13,12 +12,14 @@ const ProjectPopup = ({ project, trigger, handlePopup }) => {
     }, 300);
   };
 
+  // useEffects: Adds a delay to open the window popup so it has time to create the animation.
   useEffect(() => {
     setTimeout(() => {
       setClassName("open");
     }, 200);
   }, [trigger]);
 
+  // Make the window able to close when 'esc' key is pressed.
   useEffect(() => {
     const close = (e) => {
       if (e.keyCode === 27) {
@@ -29,6 +30,8 @@ const ProjectPopup = ({ project, trigger, handlePopup }) => {
     return () => window.removeEventListener("keydown", close);
   });
 
+  // Adds conditional to render if the trigger is set to true.
+  // if true then it will create a portal.
   if (trigger === false) {
     return null;
   } else {
@@ -42,7 +45,6 @@ const ProjectPopup = ({ project, trigger, handlePopup }) => {
             </button>
 
             <div className="slideshow">
-              {/* Slideshow of images */}
               {project.images.map((image, index) => (
                 <img key={index} src={image} className="slideshow-img" alt={`Project ${index}`} />
               ))}

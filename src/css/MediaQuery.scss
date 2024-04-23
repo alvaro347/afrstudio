@@ -1,8 +1,16 @@
 @media screen and (max-width: 800px) {
+  #header {
+    height: auto;
+  }
 	#introduction {
-		height: 500px;
+		height: 350px;
+    
 		overflow: hidden;
 	}
+
+  .header-paragraph {
+    width: auto;
+  }
   .header-image-container {
     min-height: 300px;
   }
@@ -15,20 +23,27 @@
   .nav-width {
     padding: 10px 20px;
   }
+  .card {
+    margin-bottom: 20px;
+  }
   #header-title {
-    font-size: 3.5rem;
+    font-size: 4.5rem;
   }
   .section-title {
     font-size: 3rem;
   }
   .intro-text p {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+  }
+  .header-title {
+    margin-bottom: 0px;
   }
 }
-
+  
 
 @media screen and (max-width: 1200px) {
   .intro-container {
+  align-content: center;
     display: block;
   }
   .intro-text {
@@ -48,7 +63,7 @@
     width: 60%;
   }
   .intro-img-container {
-    width: 40%;
+    width: 45%;
   }
 }
 
@@ -66,7 +81,7 @@
     font-size: 2rem;
   }
   #header-title {
-    font-size: 15vh;
+    font-size: 11vh;
   }
   .section-title {
     font-size: 5.5rem;
@@ -81,7 +96,7 @@
     padding: 10px 0px;
   }
   #header-title {
-    font-size: 10vh;
+    font-size: 15vh;
   }
   #header-img {
     width: 100%;
@@ -96,19 +111,22 @@
 
 @media screen and (max-width: 1440px) {
   #nav-width {
-    padding: 0 15px;
-  }
-  #nav-logo {
-    
+    padding: 0 20px;
   }
 }
 
 @media screen and (min-width: 801px) {
+  .header-title {
+    margin-bottom: 5px;
+  }
   #header {
     height: calc(100vh - 60px);
   }
+  .card {
+    margin: 10px 10px;
+  }
+  .header-paragraph {
+    width: 80%;
+  }
 
-	#introduction {
-		height: 700px;
-	}
 }

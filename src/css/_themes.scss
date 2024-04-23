@@ -41,6 +41,7 @@ $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
 // ~ Themes
 // Theme variables by class in the App.
 [class="App light"] {
+  $test01: grey;
   --textColor01: #{meta.inspect($textColor01-light)};
   --textColor02: #{meta.inspect($textColor02-light)};
   --primaryColor01-100: #{meta.inspect($primaryColor01-100-light)};
@@ -72,6 +73,11 @@ $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
   --transparent: #{meta.inspect($transparent)};
 }
 
+// ~ Background Color for the main App
+.App {
+  background-color: var(--backgroundColor-100);
+}
+
 // ~ Elements
 // Mixin Elements and components to re-use.
 @mixin Button01 {
@@ -92,9 +98,7 @@ $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
     background-color: var(--backgroundSecondary-50);
     box-shadow: inset 0 1px var(--backgroundSecondary-100);
   }
-  &:active {
-    color: var(--primaryColor01-100);
-  }
+
 }
 
 // ~ Classes
@@ -112,11 +116,22 @@ $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
 }
 
 .section-container {
-  padding: 60px 30px 60px 30px;
-  max-width: 1440px;
+  padding: 30px 20px 30px 20px;
+  max-width: 1600px;
   margin: 0 auto;
 }
 
 .section-title {
   color: var(--textColor01);
+  // margin-top: -15px;
+  margin-bottom: 15px;
+  // margin-left: -5px;
+  text-align: left;
+  text-transform: uppercase;
+  line-height: 1;
+  max-width: 1600px;
+}
+
+.section-title-small {
+  text-align: left;
 }

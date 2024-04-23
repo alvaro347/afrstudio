@@ -18,8 +18,10 @@ function MainPage({ projects, headerImg, icons }) {
       <section id="projects">
         <div className="section-container">
           <div className="title-text">
-            <p className="text-highlighted">Selected Projects</p>
-            <h2 className="section-title">Project<span className="text-highlighted">*</span>Highlights</h2>
+            <p className="section-title-small text-highlighted">Selected Projects</p>
+            <h2 className="section-title">
+              Project<span className="text-highlighted"> * </span>Highlights
+            </h2>
           </div>
           <div id="projects-list-highlights">
             <ProjectShowcase project={projects.project1} />
@@ -27,21 +29,20 @@ function MainPage({ projects, headerImg, icons }) {
           </div>
         </div>
       </section>
-      <section>
-        <div className="section-container">
-          <div className="title-text">
-            <p className="text-highlighted">Other Projects</p>
-            <h2 className="section-title">Other<span className="text-highlighted">*</span>projects</h2>
-          </div>
-          <div>
-            <ProjectsListCards projects={projects} />
-          </div>
+      <section id="other-projects" className="section-container">
+        <div className="title-text">
+          <p className="section-title-small text-highlighted">Other Projects</p>
+          <h2 className="section-title">
+            Other<span className="text-highlighted"> * </span>projects
+          </h2>
+
+          <ProjectsListCards projects={projects} />
         </div>
       </section>
       <Skills />
       <section id="about" className="developer">
         <div className="section-container">
-          <p className="text-highlighted">Professional Services</p>
+          <p className="section-title-small text-highlighted">More information</p>
 
           <h2 className="section-title">About</h2>
           <p id="about-text" className="text-secondary">

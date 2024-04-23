@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 // import image1 from "../img/image1.png";
 import "../css/Skills.scss";
-import www from "../img/www.png";
-import light from "../img/light.png";
-import box from "../img/box.png";
 import Accordion from "./Accordion";
 import headerImg from "../img/headerImg.png";
 import image1 from "../img/image1.png";
@@ -33,6 +30,7 @@ const accordionData = [
 ];
 
 const Skills = () => {
+  // Sets which skill is chosen, the first one is pre-selected.
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleItemClick = (index) => {
