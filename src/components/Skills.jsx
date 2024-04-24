@@ -53,10 +53,10 @@ const Skills = () => {
             life.
           </p>
         </div>
-        {/* <div className="skills-container">
+        <div className="skills-container">
           <div className="skill">
             <p className="skill-number">_01</p>
-            <img src={www} alt="" className="skill-img" />
+            <img src="" alt="" className="skill-img" />
             <h4 className="skill-title">Web-Development</h4>
             <p className="skill-text">
               Crafting responsive and user-friendly websites that leave a lasting impression.
@@ -64,20 +64,20 @@ const Skills = () => {
           </div>
           <div className="skill">
             <p className="skill-number">_02</p>
-            <img src={light} alt="" className="skill-img" />
+            <img src="" alt="" className="skill-img" />
             <h4 className="skill-title">Concept Art</h4>
             <p className="skill-text">Transforming ideas into visually stunning and captivating designs.</p>
           </div>
           <div className="skill">
             <p className="skill-number">_03</p>
 
-            <img src={box} alt="" className="skill-img" />
+            <img src="" alt="" className="skill-img" />
             <h4 className="skill-title">3D Design</h4>
             <p className="skill-text">Creating realistic and immersive 3D models for various industries.</p>
           </div>
-        </div> */}
+        </div>
       </div>
-      <div id="accordion">
+      {/* <div id="accordion">
         <div id="accordion-menu">
           {accordionData.map((item, index) => (
             <Accordion
@@ -92,7 +92,7 @@ const Skills = () => {
         <div className="accordion-image-container">
           <img src={accordionData[activeIndex].image} className="accordion-image" alt="" />
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

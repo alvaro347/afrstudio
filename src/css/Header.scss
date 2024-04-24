@@ -74,10 +74,10 @@
 }
 
 .header-text {
-  height: calc(40% - 20px);
+  height: calc(40%);
   margin-top: 15px;
-  align-items: center;
-  align-content: center;
+  align-content: space-around;
+
 }
 
 .header-paragraph {

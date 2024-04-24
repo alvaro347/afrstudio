@@ -14,7 +14,7 @@ function MainPage({ projects, headerImg, icons }) {
     <div className="main-page">
       {/* <div id="background-image"></div> */}
       <Header />
-      <Introduction />
+      {/* <Introduction /> */}
       <section id="projects">
         <div className="section-container">
           <div className="title-text">
