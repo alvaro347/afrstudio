@@ -2,25 +2,26 @@
   #header {
     height: auto;
   }
-	#introduction {
-		height: 350px;
-		overflow: hidden;
-	}
+  #introduction {
+    height: 350px;
+    overflow: hidden;
+  }
   .header-paragraph {
     width: auto;
   }
   .header-image-container {
     min-height: 300px;
   }
-	.intro-img-container {
-		display: none;
-	}
+  .intro-img-container {
+    display: none;
+  }
   .header-paragraph {
-    font-size: 0.9rem;
+    font-size: 1.3vh;
   }
   .nav-width {
     padding: 10px 20px;
   }
+
   .card {
     margin-bottom: 20px;
   }
@@ -37,18 +38,17 @@
     margin-bottom: 0px;
   }
 }
-  
 
 @media screen and (max-width: 1200px) {
   .intro-container {
-  align-content: center;
+    align-content: center;
     display: block;
   }
   .intro-text {
     width: 100%;
   }
   .intro-img-container {
-		margin-top: 30px;
+    margin-top: 30px;
     width: 100%;
   }
 }
@@ -56,8 +56,8 @@
 @media screen and (min-width: 1201px) {
   .intro-container {
     display: flex;
-	}
-	.intro-text {
+  }
+  .intro-text {
     width: 60%;
   }
   .intro-img-container {
@@ -67,7 +67,7 @@
 
 @media screen and (min-width: 801px) and (max-width: 1440px) {
   .header-paragraph {
-    font-size: 1.2rem;
+    font-size: 2vh;
   }
   .nav-width {
     padding: 10px 20px;
@@ -79,7 +79,7 @@
     font-size: 2rem;
   }
   #header-title {
-    font-size: 11vh;
+    font-size: 10vh;
   }
   .section-title {
     font-size: 5.5rem;
@@ -94,7 +94,7 @@
     padding: 10px 0px;
   }
   #header-title {
-    font-size: 15vh;
+    font-size: 13vh;
   }
   #header-img {
     width: 100%;
@@ -109,7 +109,7 @@
 
 @media screen and (max-width: 1440px) {
   #nav-width {
-    padding: 0 20px;
+
   }
 }
 

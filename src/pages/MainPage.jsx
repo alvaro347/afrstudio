@@ -18,7 +18,7 @@ function MainPage({ projects, headerImg, icons }) {
       <section id="projects">
         <div className="section-container">
           <div className="title-text">
-            <p className="section-title-small text-highlighted">Selected Projects</p>
+            <p className="section-title-small text-highlighted">_Selected Projects</p>
             <h2 className="section-title">
               Project<span className="text-highlighted"> * </span>Highlights
             </h2>
@@ -31,7 +31,7 @@ function MainPage({ projects, headerImg, icons }) {
       </section>
       <section id="other-projects" className="section-container">
         <div className="title-text">
-          <p className="section-title-small text-highlighted">Other Projects</p>
+          <p className="section-title-small text-highlighted">_02</p>
           <h2 className="section-title">
             Other<span className="text-highlighted"> * </span>projects
           </h2>
@@ -42,7 +42,7 @@ function MainPage({ projects, headerImg, icons }) {
       <Skills />
       <section id="about" className="developer">
         <div className="section-container">
-          <p className="section-title-small text-highlighted">More information</p>
+          <p className="section-title-small text-highlighted">_More information</p>
 
           <h2 className="section-title">About</h2>
           <p id="about-text" className="text-secondary">

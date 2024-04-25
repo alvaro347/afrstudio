@@ -48,15 +48,12 @@
   height: 450px;
   text-align: center;
   align-content: space-between;
+  transition: box-shadow 0.3s ease;
   &:hover {
     box-shadow: $boxShadow3D;
-    width: 450px;
-    transform: translateY(0);
-    backdrop-filter: blur(10px);
+ 
   }
-  &:hover .skill-image {
-    opacity: 1;
-  }
+
 }
 
 .skill-img {

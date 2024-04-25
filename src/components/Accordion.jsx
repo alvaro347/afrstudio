@@ -31,6 +31,7 @@ function Accordion({ item, isOpen, onClick, activeImg }) {
   // Checks the width to transition to desktop view to mobile/tablet view
   useEffect(() => {
     const handleResize = () => {
+      
       setIsFull(window.innerWidth > 1070);
     };
     handleResize();

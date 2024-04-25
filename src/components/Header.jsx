@@ -10,7 +10,8 @@ const Header = () => {
         {/* <img className="header-img" src={headerImg} alt="" /> */}
       </div>
       <div className="header-text">
-        <div>
+        <div className="header-text-top">
+        <div className="header-title-container">
           <h1 id="header-title">
             <span className="header-title">AFR STUDIO</span>
             <br />
@@ -18,13 +19,14 @@ const Header = () => {
             {/* <span className="blink-effect">|</span> */}
             <span className="header-title"> & DESIGN.</span>
           </h1>
+        {/* <div className="header-title-icon-left"></div> */}
+        </div>
           <p className="header-paragraph">
             Crafting innovative solutions that bridge{" "}
             <span className="text-highlighted">creativity and technology,</span> driving{" "}
             <span className="text-highlighted">tangible results and elevating user experiences</span> across
             diverse industries.
           </p>
-        </div>
         {/* <div id="buttons-header">
           <a href="https://github.com/alvaro347" rel="noreferrer" target="_blank">
             <button className="button-header">
@@ -37,6 +39,7 @@ const Header = () => {
             </button>
           </a>
         </div> */}
+        </div>
         <div className="header-bottom">
           <p>Based in Europe</p>
           <p>Freelance available!</p>

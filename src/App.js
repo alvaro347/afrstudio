@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./css/App.scss";
 import "./css/MediaQuery.scss";
 import MainPage from "./pages/MainPage";
@@ -77,11 +78,13 @@ function App() {
   };
 
   return (
+
     <div className={`App ${isDarkMode ? "dark" : "light"}`}>
       <Navigation toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
       <MainPage projects={projects} headerImg={headerImg} icons={icons} />
       <Footer />
     </div>
+
   );
 }
 

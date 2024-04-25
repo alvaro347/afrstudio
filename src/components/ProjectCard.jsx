@@ -16,39 +16,23 @@ function ProjectCard({ project }) {
     }
   };
 
-  useEffect(() => {
-    const close = (e) => {
-      if (e.keyCode === 27) {
-        handlePopup(false);
-      }
-    };
-    window.addEventListener("keydown", close);
-    return () => window.removeEventListener("keydown", close);
-  }, []);
-
   return (
     <div className="card">
-      <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />
+      {buttonPopup && <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />}
 
       <div className="card-container" onClick={() => handlePopup(true)}>
         <div className="project-image-container">
-          <a href="#projects">
-            <img className="project-image" src={project.img} alt="Card" />
-          </a>
+          <img className="project-image" src={project.img} alt="Card" />
         </div>
         <div className="card-description-container">
           <div className="card-text">
-            <a href="#projects">
-              <h2 className="card-title">{project.title}</h2>
-              <p className="card-description">{project.description}</p>
-            </a>
+            <h2 className="card-title">{project.title}</h2>
+            <p className="card-description">{project.description}</p>
           </div>
           <div className="card-more-info">
             <ProjectCardIcons projectIcons={project.icons} />
             <div className="more-info-text">
-              <a href="#projects">
-                <p className="">More information &#10230;</p>
-              </a>
+              <p className="">More information &#10230;</p>
             </div>
           </div>
         </div>

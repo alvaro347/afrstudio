@@ -19,7 +19,7 @@ $transparent: #ffffff00;
 
 // ~ Dark Theme
 // Dark Theme color variables.
-$primaryColor01-100-dark: rgb(117, 93, 255);
+$primaryColor01-100-dark: #6156ff;
 $primaryColor01-50-dark: #5e73ff85;
 $textColor01-dark: #eeeef0;
 $textColor02-dark: #b2b3bd;
@@ -131,4 +131,6 @@ $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
 
 .section-title-small {
   text-align: left;
+  width: 20%;
+  // border-bottom: 1px solid var(--primaryColor01-100);
 }
