@@ -26,6 +26,7 @@ const icons = {
 const projects = {
   project1: {
     title: "Project 1: A",
+    titleShort: "project1a",
     location: "",
     date: "",
     description:

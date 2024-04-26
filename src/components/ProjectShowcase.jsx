@@ -26,7 +26,7 @@ function ProjectShowcase({ project }) {
         <div className="card-content">
           <h2 className="card-title">{project.title}</h2>
           <p className="card-description">{project.description}</p>
-          <Link to="/project1">More information</Link>
+          {/* <Link to={project.titleShort}>More information</Link> */}
         </div>
       </div>
       {/* {buttonPopup && <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />} */}
