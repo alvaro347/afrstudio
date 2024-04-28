@@ -1,40 +1,77 @@
 @import "./themes.scss";
 
 .card {
-  box-shadow: $boxShadowBasic;
+  // box-shadow: $boxShadowBasic;
+  box-sizing: border-box;
+  flex: 1;
+  cursor: pointer;
   overflow: hidden;
-  max-width: 440px;
-  min-width: 300px;
+  max-width: 800px;
+  min-width: 600px;
   height: auto;
-  background-color: var(--backgroundColor-50);
-  border-radius: 10px;
+  padding: 10px;
+  // background-color: var(--backgroundColor-50);
+  // border-radius: 10px;
   transition: background-color 0.3s ease;
   &:hover {
-    background-color: var(--backgroundColor-10);
-    outline: 2px solid var(--primaryColor01-50);
+    // box-shadow: 1px 0px 0 0 var(--textColor02), -1px 0px 0 0 var(--textColor02);
+    // background-color: var(--backgroundColor-10);
+    // outline: 2px solid var(--primaryColor01-50);
+  }
+  &:hover .card-top {
+    box-shadow: 0 1px 0 0 var(--textColor02);
+    // border-bottom: 1px solid var(--textColor01);
+    // padding-bottom: -1px;
   }
 }
 
-.project-image-container {
-  background-color: #d1d1d1;
+.card-top {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  & .card-top-text {
+    color: var(--textColor02);
+  }
 }
 
-.project-image {
-  opacity: 0.5;
+.card-image-container {
+  position: relative;
+  background-color: #d1d1d1;
+  overflow: hidden;
+  height: 500px;
+  border-radius: 10px;
+}
+
+.card-image {
+  // opacity: 0.5;
   transition: 600ms ease;
   width: 100%;
-  height: auto;
-  max-height: 400px;
+  // width: 100%;
+  height: 100%;
+  // height: auto;
+}
+
+.card-image-tags {
+  text-transform: uppercase;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.25em 0.75em;
+  border-radius: 2em;
+  background-color: var(--primaryColor01-100);
 }
 
 .card-description-container {
-  padding: 15px 15px;
+  // padding: 15px 15px;
 }
 
 .card-title {
   color: var(--textColor01);
+  margin-top: 10px;
   /* margin-bottom: 5px; */
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: bold;
   &:hover {
@@ -91,11 +128,11 @@
 }
 
 @media screen and (max-width: 800px) {
-  .project-image {
+  .card-image {
     opacity: 1;
     filter: saturate(1);
   }
-  .card-container:hover .project-image-container .project-image {
+  .card-container:hover .card-image-container .card-image {
     transition: transform 0.7s ease, opacity 0.7s ease, filter 0.7s ease;
     transform: scale(1.05);
 
@@ -103,13 +140,13 @@
 }
 
 @media screen and (min-width: 801px) {
-  .project-image {
-    filter: saturate(0);
+  .card-image {
+    // filter: saturate(0);
 
   }
-  .card-container:hover .project-image-container .project-image {
+  .card-container:hover .card-image-container .card-image {
     transition: transform 0.7s ease, opacity 0.7s ease, filter 0.7s ease;
-    transform: scale(1.05);
+    transform: scale(1.1);
     filter: saturate(1);
     opacity: 1;
   }

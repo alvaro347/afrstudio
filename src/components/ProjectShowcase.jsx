@@ -23,9 +23,9 @@ function ProjectShowcase({ project }) {
         <div className="project-image-container">
           <img src={project.img} alt="Card" className="project-image" />
         </div>
-        <div className="card-content">
-          <h2 className="card-title">{project.title}</h2>
-          <p className="card-description">{project.description}</p>
+        <div className="project-content">
+          <h2 className="project-title">{project.title}</h2>
+          <p className="project-description">{project.description}</p>
           {/* <Link to={project.titleShort}>More information</Link> */}
         </div>
       </div>

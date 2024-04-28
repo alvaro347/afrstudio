@@ -27,8 +27,9 @@ const projects = {
   project1: {
     title: "Project 1: A",
     titleShort: "project1a",
+    type: "web",
     location: "",
-    date: "",
+    date: "2024",
     description:
       "This is a small description of the card content. This projects it's about this and that.",
     overview: "",
@@ -43,6 +44,7 @@ const projects = {
   },
   project2: {
     title: "Project 2: B",
+    type: "Game",
     location: "",
     date: "",
     description:
@@ -57,6 +59,52 @@ const projects = {
   },
   project3: {
     title: "Project 3: B",
+    type: "Ai",
+    location: "",
+    date: "",
+    description:
+      "This is a small description of the card content. This projects it's about this and that. ",
+    img: image1,
+    images: [image1, image1, image1],
+    icons: [icons.htmlIcon, icons.reactIcon],
+    keywords: {
+      tags: ["web"],
+      link: "",
+    },
+  },
+  project4: {
+    title: "Project 3: B",
+    type: "Ai",
+    location: "",
+    date: "",
+    description:
+      "This is a small description of the card content. This projects it's about this and that. ",
+    img: image1,
+    images: [image1, image1, image1],
+    icons: [icons.htmlIcon, icons.reactIcon],
+    keywords: {
+      tags: ["web"],
+      link: "",
+    },
+  },
+  project5: {
+    title: "Project 3: B",
+    type: "Ai",
+    location: "",
+    date: "",
+    description:
+      "This is a small description of the card content. This projects it's about this and that. ",
+    img: image1,
+    images: [image1, image1, image1],
+    icons: [icons.htmlIcon, icons.reactIcon],
+    keywords: {
+      tags: ["web"],
+      link: "",
+    },
+  },
+  project6: {
+    title: "Project 3: B",
+    type: "Ai",
     location: "",
     date: "",
     description:

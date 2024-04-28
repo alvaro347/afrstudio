@@ -86,13 +86,13 @@
 }
 
 #projects-list-cards {
-  flex-direction: row;
+  // flex-direction: row;
   flex-wrap: wrap;
-  align-content: stretch;
+  // align-content: stretch;
   display: flex;
   max-width: 1600px;
-  flex-grow: 3;
-  flex-shrink: 1;
+  // flex-grow: 3;
+  // flex-shrink: 1;
   justify-content: center;
 }
 

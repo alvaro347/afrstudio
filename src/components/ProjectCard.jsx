@@ -3,7 +3,7 @@ import "../css/ProjectCard.scss";
 import ProjectCardIcons from "./ProjectCardIcons";
 import ProjectPopup from "./ProjectPopup";
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, number }) {
   const [buttonPopup, setButtonPopup] = useState(false);
 
   const handlePopup = (e) => {
@@ -19,22 +19,27 @@ function ProjectCard({ project }) {
   return (
     <div className="card">
       {buttonPopup && <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />}
-
+      
       <div className="card-container" onClick={() => handlePopup(true)}>
-        <div className="project-image-container">
-          <img className="project-image" src={project.img} alt="Card" />
+      <div className="card-top">
+        <p className="card-top-text">{number}</p>
+        <p className="card-top-text">( {project.date} )</p>
+      </div>
+        <div className="card-image-container">
+          <div className="card-image-tags">{project.type}</div>
+          <img className="card-image" src={project.img} alt="Card" />
         </div>
         <div className="card-description-container">
           <div className="card-text">
             <h2 className="card-title">{project.title}</h2>
-            <p className="card-description">{project.description}</p>
+            {/* <p className="card-description">{project.description}</p> */}
           </div>
-          <div className="card-more-info">
+          {/* <div className="card-more-info">
             <ProjectCardIcons projectIcons={project.icons} />
             <div className="more-info-text">
               <p className="">More information &#10230;</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

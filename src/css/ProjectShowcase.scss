@@ -35,11 +35,11 @@
   transition: transform 0.3s ease;
 }
 
-.card-content {
+.project-content {
   padding: 20px 40px;
 }
 
-.card-title {
+.project-title {
   margin-bottom: 5px;
   font-size: 2rem;
   text-transform: uppercase;
@@ -50,7 +50,7 @@
   }
 }
 
-.card-description {
+.project-description {
   font-size: 0.9rem;
   color: var(--textColor02);
   margin-bottom: 10px;

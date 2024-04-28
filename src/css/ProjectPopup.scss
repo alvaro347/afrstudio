@@ -15,6 +15,7 @@
 }
 
 .popup {
+  background-color: var(--backgroundColor-100);
   overflow-y: auto;
   opacity: 0;
   backdrop-filter: unset;
@@ -33,7 +34,7 @@
   align-items: center;
   margin: 20px auto;
   border-radius: 20px;
-  background-color: white;
+  background-color: var(--backgroundColor-100);
   width: 90%;
   max-width: 1200px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.295);
@@ -45,12 +46,13 @@
 
 .popup-close {
   margin: 0 0 10px auto;
-  background-color: var(--grey-100);
+  background-color: grey;
   display: flex;
   border-radius: 40px;
   padding: 15px 10px;
   flex-direction: column;
   align-items: center;
+  
   justify-content: center;
   &:hover {
     background-color: var(--grey-100);

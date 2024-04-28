@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDom from "react-dom";
+import ProjectCardIcons from "./ProjectCardIcons";
+
 import "../css/ProjectPopup.scss";
 
 const ProjectPopup = ({ project, trigger, handlePopup }) => {
@@ -52,6 +54,7 @@ const ProjectPopup = ({ project, trigger, handlePopup }) => {
 
             <div className="popup-details">
               <h2 className="popup-title">{project.title}</h2>
+              <ProjectCardIcons projectIcons={project.icons} />
               <p className="popup-description">{project.description}</p>
               <div className="tags-container">
                 <div className="tag">{project.tags}</div>
