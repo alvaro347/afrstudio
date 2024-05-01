@@ -73,7 +73,7 @@ const projects = {
     },
   },
   project4: {
-    title: "Project 3: B",
+    title: "Project 4: B",
     type: "Ai",
     location: "",
     date: "",
@@ -88,7 +88,7 @@ const projects = {
     },
   },
   project5: {
-    title: "Project 3: B",
+    title: "Project 5: B",
     type: "Ai",
     location: "",
     date: "",
@@ -103,7 +103,7 @@ const projects = {
     },
   },
   project6: {
-    title: "Project 3: B",
+    title: "Project 6: B",
     type: "Ai",
     location: "",
     date: "",
