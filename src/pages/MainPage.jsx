@@ -26,7 +26,7 @@ function MainPage({ projects, headerImg, icons }) {
           <div id="projects-list-highlights">
  
             <ProjectShowcase project={projects.project1} />
-            <ProjectShowcase project={projects.project2} />
+            {/* <ProjectShowcase project={projects.project2} /> */}
           </div>
         </div>
       </section>

@@ -26,10 +26,17 @@ function ProjectShowcase({ project }) {
         <div className="project-content">
           <h2 className="project-title">{project.title}</h2>
           <p className="project-description">{project.description}</p>
-          {/* <Link to={project.titleShort}>More information</Link> */}
+          <ul className="p-list">
+            {/* {Object.keys(project).map(([project, projectData]) => {
+              return (<li className="p-list-item" key={project}>{projectData.keyPoints}</li>);
+            })} */}
+            {project.keyPoints.map((keyPoint, index) => {
+              return (<li className="p-list-item" key={index}>{keyPoint}</li>);
+            })}
+          </ul>
+          <Link to={project.titleShort}>More information</Link>
         </div>
       </div>
-      {/* {buttonPopup && <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />} */}
     </div>
   );
 }

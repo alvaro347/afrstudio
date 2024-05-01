@@ -30,10 +30,9 @@ const projects = {
     type: "web",
     location: "",
     date: "2024",
-    description:
-      "This is a small description of the card content. This projects it's about this and that.",
+    description: "This is a small description of the card content. This projects it's about this and that.",
     overview: "",
-    keyPoints: ["This and that", "and also this"],
+    keyPoints: ["List 1", "List 2"],
     img: image1,
     images: [image1],
     icons: [icons.reactIcon, icons.htmlIcon],
@@ -49,6 +48,7 @@ const projects = {
     date: "",
     description:
       "This is a small description of the card content. This is a small description of the card content.",
+    keyPoints: ["This and that", "and also this"],
     img: image1,
     images: [image1, image1, image1],
     icons: [icons.reactIcon, icons.htmlIcon],
@@ -62,8 +62,7 @@ const projects = {
     type: "Ai",
     location: "",
     date: "",
-    description:
-      "This is a small description of the card content. This projects it's about this and that. ",
+    description: "This is a small description of the card content. This projects it's about this and that. ",
     img: image1,
     images: [image1, image1, image1],
     icons: [icons.htmlIcon, icons.reactIcon],
@@ -77,8 +76,7 @@ const projects = {
     type: "Ai",
     location: "",
     date: "",
-    description:
-      "This is a small description of the card content. This projects it's about this and that. ",
+    description: "This is a small description of the card content. This projects it's about this and that. ",
     img: image1,
     images: [image1, image1, image1],
     icons: [icons.htmlIcon, icons.reactIcon],
@@ -92,8 +90,7 @@ const projects = {
     type: "Ai",
     location: "",
     date: "",
-    description:
-      "This is a small description of the card content. This projects it's about this and that. ",
+    description: "This is a small description of the card content. This projects it's about this and that. ",
     img: image1,
     images: [image1, image1, image1],
     icons: [icons.htmlIcon, icons.reactIcon],
@@ -107,8 +104,7 @@ const projects = {
     type: "Ai",
     location: "",
     date: "",
-    description:
-      "This is a small description of the card content. This projects it's about this and that. ",
+    description: "This is a small description of the card content. This projects it's about this and that. ",
     img: image1,
     images: [image1, image1, image1],
     icons: [icons.htmlIcon, icons.reactIcon],
@@ -127,13 +123,11 @@ function App() {
   };
 
   return (
-
     <div className={`App ${isDarkMode ? "dark" : "light"}`}>
       <Navigation toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
       <MainPage projects={projects} headerImg={headerImg} icons={icons} />
       <Footer />
     </div>
-
   );
 }
 
