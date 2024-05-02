@@ -25,14 +25,15 @@ const icons = {
 
 const projects = {
   project1: {
-    title: "Project 1: A",
+    title: "Restaurant Finder",
     titleShort: "project1a",
+    index: 1,
     type: "web",
     location: "",
     date: "2024",
-    description: "This is a small description of the card content. This projects it's about this and that.",
+    description: "Restaurant website with search-bar. Find a restaurant by type, location or other realted information. It uses the Yelp Api to get HTTP Request and find data about restaurants.",
     overview: "",
-    keyPoints: ["List 1", "List 2"],
+    keyPoints: ["Yelp Api", "Web Design", "HTTP Request"],
     img: image1,
     images: [image1],
     icons: [icons.reactIcon, icons.htmlIcon],
@@ -43,9 +44,10 @@ const projects = {
   },
   project2: {
     title: "Project 2: B",
+    index: 2,
     type: "Game",
     location: "",
-    date: "",
+    date: "2024",
     description:
       "This is a small description of the card content. This is a small description of the card content.",
     keyPoints: ["This and that", "and also this"],

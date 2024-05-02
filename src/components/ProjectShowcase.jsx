@@ -19,23 +19,29 @@ function ProjectShowcase({ project }) {
 
   return (
     <div className="p-showcase">
-      <div className="cursor-pointer">
-        <div className="project-image-container">
-          <img src={project.img} alt="Card" className="project-image" />
-        </div>
-        <div className="project-content">
-          <h2 className="project-title">{project.title}</h2>
-          <p className="project-description">{project.description}</p>
-          <ul className="p-list">
-            {/* {Object.keys(project).map(([project, projectData]) => {
+      <div className="p-content">
+        <div className="p-number">0{project.index}</div>
+        <h2 className="p-title">{project.title}</h2>
+        <p className="p-description">{project.description}</p>
+        <p className="p-date">( {project.date} )</p>
+        <ul className="p-list">
+          {/* {Object.keys(project).map(([project, projectData]) => {
               return (<li className="p-list-item" key={project}>{projectData.keyPoints}</li>);
             })} */}
-            {project.keyPoints.map((keyPoint, index) => {
-              return (<li className="p-list-item" key={index}>{keyPoint}</li>);
-            })}
-          </ul>
-          <Link to={project.titleShort}>More information</Link>
-        </div>
+          {project.keyPoints.map((keyPoint, index) => {
+            return (
+              <li className="p-list-item" key={index}>
+                {keyPoint}
+              </li>
+            );
+          })}
+        </ul>
+        <Link className="p-more-info" to={project.titleShort}>
+          More information ->
+        </Link>
+      </div>
+      <div className="p-image-container">
+        <img src={project.img} alt="Card" className="p-image" />
       </div>
     </div>
   );
