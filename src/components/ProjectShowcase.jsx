@@ -21,7 +21,9 @@ function ProjectShowcase({ project }) {
     <div className="p-showcase">
       <div className="p-content">
         <div className="p-number">0{project.index}</div>
-        <h2 className="p-title">{project.title}</h2>
+        
+        <h2 className="p-title"><Link to={project.titleShort}>{project.title}</Link></h2>
+        
         <p className="p-description">{project.description}</p>
         <p className="p-date">( {project.date} )</p>
         <ul className="p-list">

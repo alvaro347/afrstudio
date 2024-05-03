@@ -11,38 +11,36 @@ import Header from "../components/Header";
 
 function MainPage({ projects, headerImg, icons }) {
   return (
-    <div className="main-page">
+    <main id="main-page">
       {/* <div id="background-image"></div> */}
       <Header />
       <Introduction />
-      <section id="projects">
-        <div className="section-container">
+      <section id="projects" className="section-container">
+        <div className="section-head">
           <div className="title-text">
             <p className="section-title-small text-highlighted">_Selected Projects</p>
             <h2 className="section-title">
               Project<span className="text-highlighted"> * </span>Highlights
             </h2>
           </div>
+        </div>
           <div id="projects-list-highlights">
- 
             <ProjectShowcase project={projects.project1} />
             <ProjectShowcase project={projects.project2} />
           </div>
-        </div>
       </section>
       <section id="other-projects" className="section-container">
-        <div className="title-text">
+        <div className="section-head">
           <p className="section-title-small text-highlighted">_02</p>
           <h2 className="section-title">
             Other<span className="text-highlighted"> * </span>projects
           </h2>
-
-          <ProjectsListCards projects={projects} />
         </div>
+        <ProjectsListCards projects={projects} />
       </section>
       <Skills />
-      <section id="about" className="developer">
-        <div className="section-container">
+      <section id="about" className="section-container">
+        <div className="section-head">
           <p className="section-title-small text-highlighted">_More information</p>
 
           <h2 className="section-title">About</h2>
@@ -59,7 +57,7 @@ function MainPage({ projects, headerImg, icons }) {
           </p>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 

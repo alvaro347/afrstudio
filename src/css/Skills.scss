@@ -11,13 +11,32 @@
   margin: 0 auto;
 }
 
-.skills-description {
+.skill {
+  transition: box-shadow 0.3s ease;
+  transition: width 0.5s ease;
+  border-radius: 10px;
+  background: radial-gradient(circle, rgb(235, 235, 235) 0%, rgba(221, 221, 221, 0.37) 100%),
+    url("../img/noise.svg");
+  margin: 10px 20px;
+  width: 350px;
+  height: 500px;
   text-align: center;
-  margin: 40px 0 40px 0;
+  align-content: space-between;
+  transition: box-shadow 0.3s ease;
+  &:hover {
+    box-shadow: $boxShadow3D;
+  }
+}
+
+.skills-description {
+  width: 60%;
+  text-align: center;
+  margin: 50px auto 70px auto;
 }
 
 .skills-description-title {
-  margin: 0 auto 20px auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
   max-width: 500px;
   font-weight: 800;
   color: var(--textColor01);
@@ -35,25 +54,6 @@
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1600px;
-}
-
-.skill {
-  transition: box-shadow 0.3s ease;
-  transition: width 0.5s ease;
-  border-radius: 10px;
-  background: radial-gradient(circle, rgb(235, 235, 235) 0%, rgba(221, 221, 221, 0.37) 100%),
-    url("../img/noise.svg");
-  margin: 10px 10px;
-  width: 350px;
-  height: 450px;
-  text-align: center;
-  align-content: space-between;
-  transition: box-shadow 0.3s ease;
-  &:hover {
-    box-shadow: $boxShadow3D;
- 
-  }
-
 }
 
 .skill-img {
@@ -126,7 +126,6 @@
   grid-area: 1 / 2 / 2 / 3;
 }
 
-
 @media screen and (max-width: 1070px) {
   #accordion {
     display: block;
@@ -163,7 +162,6 @@
     display: inline-block;
   }
   .accordion-image-container-extra {
-   
     display: none;
   }
   .accordion-image-container {

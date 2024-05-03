@@ -5,7 +5,7 @@ import Github from "../img/github.svg";
 
 const Header = () => {
   return (
-    <section id="header">
+    <header id="header">
       <div className="header-image-container">
         {/* <img className="header-img" src={headerImg} alt="" /> */}
       </div>
@@ -68,7 +68,7 @@ const Header = () => {
         </div> */}
         
       </div>
-    </section>
+    </header>
   );
 };
 
