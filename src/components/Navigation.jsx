@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../css/Navigation.scss";
 import logo from "../img/Logo.png";
 
-const Navigation = ({ toggleTheme, isDarkMode }) => {
+const Navigation = ({ toggleTheme }) => {
   const [showMenu, setShowMenu] = useState(false);
   const [prevMenuState, setPrevMenuState] = useState(false);
 

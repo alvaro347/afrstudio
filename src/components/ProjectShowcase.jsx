@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 // import ProjectPopup from "./ProjectPopup";
 import "../css/ProjectShowcase.scss";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function ProjectShowcase({ project }) {
   // useState: Window popup hook for opening and closing it.

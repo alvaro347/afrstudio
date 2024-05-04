@@ -11,23 +11,23 @@ const Header = () => {
       </div>
       <div className="header-text">
         <div className="header-text-top">
-        <div className="header-title-container">
-          <h1 id="header-title">
-            <span className="header-title">AFR STUDIO</span>
-            <br />
-            <span className="blue-text-outline italic">DEV.</span>
-            {/* <span className="blink-effect">|</span> */}
-            <span className="header-title"> & DESIGN.</span>
-          </h1>
-        {/* <div className="header-title-icon-left"></div> */}
-        </div>
+          <div className="header-title-container">
+            <h1 id="header-title">
+              <span className="header-title">AFR STUDIO</span>
+              <br />
+              <span className="blue-text-outline italic">DEV.</span>
+              {/* <span className="blink-effect">|</span> */}
+              <span className="header-title"> & DESIGN.</span>
+            </h1>
+            {/* <div className="header-title-icon-left"></div> */}
+          </div>
           <p className="header-paragraph">
             Crafting innovative solutions that bridge{" "}
             <span className="text-highlighted">creativity and technology,</span> driving{" "}
             <span className="text-highlighted">tangible results and elevating user experiences</span> across
             diverse industries.
           </p>
-        {/* <div id="buttons-header">
+          {/* <div id="buttons-header">
           <a href="https://github.com/alvaro347" rel="noreferrer" target="_blank">
             <button className="button-header">
               <img className="hero-logo" src={Github} alt="github" /> Github
@@ -44,8 +44,8 @@ const Header = () => {
           <p>Based in Europe</p>
           <p>Freelance available!</p>
         </div>
-        
-          {/* <div className="hero-types">
+
+        {/* <div className="hero-types">
           <div className="work-type">
             <a href="#projects">
               <h3 className="work-type-title">Web-Development</h3>
@@ -62,11 +62,10 @@ const Header = () => {
             </a>
           </div>
         </div> */}
-          {/* <div className="header-bottom">
+        {/* <div className="header-bottom">
           <p>Based in Europe</p>
           <p>Freelance available!</p>
         </div> */}
-        
       </div>
     </header>
   );

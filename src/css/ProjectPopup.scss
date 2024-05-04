@@ -1,21 +1,33 @@
+@use "sass:meta";
 @import "./themes.scss";
+
+[class="popup open light"] {
+  --background01: #{meta.inspect($backgroundSecondary-100-light)};
+  --background02: #{meta.inspect($backgroundColor-100-light)};
+  --textColor01: #{meta.inspect($textColor01-light)};
+}
+
+[class="popup open dark"] {
+  --background01: #{meta.inspect($backgroundColor-50-dark)};
+  --background02: #{meta.inspect($backgroundColor-100-dark)};
+  --textColor01: #{meta.inspect($textColor01-dark)};
+}
 
 .popup.open {
   backdrop-filter: blur(5px);
-  background-color: var(--backgroundColor-100);
+  background-color: var(--background01);
   opacity: 1;
   transition: all 200ms ease-in;
 }
 
 .popup.close {
   backdrop-filter: unset;
-  background-color: var(--transparent);
+
   transition: all 300ms ease;
   opacity: 0;
 }
 
 .popup {
-  background-color: var(--backgroundColor-100);
   overflow-y: auto;
   opacity: 0;
   backdrop-filter: unset;
@@ -34,13 +46,14 @@
   align-items: center;
   margin: 20px auto;
   border-radius: 20px;
-  background-color: var(--backgroundColor-100);
+  background-color: var(--background02);
   width: 90%;
   max-width: 1200px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.295);
 }
 
 .popup-content {
+
   padding: 40px 40px;
 }
 
@@ -52,7 +65,7 @@
   padding: 15px 10px;
   flex-direction: column;
   align-items: center;
-  
+
   justify-content: center;
   &:hover {
     background-color: var(--grey-100);
@@ -88,6 +101,7 @@
 }
 
 .popup-details {
+  color: var(--textColor01);
   margin-top: 20px;
 }
 
@@ -104,8 +118,7 @@
 .tag,
 .date,
 .type {
-  background-color: var(--backgroundColor-100);
-  color: #333;
+
   padding: 5px 10px;
   border-radius: 4px;
   margin-right: 10px;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../css/ProjectCard.scss";
-import ProjectCardIcons from "./ProjectCardIcons";
+// import ProjectCardIcons from "./ProjectCardIcons";
 import ProjectPopup from "./ProjectPopup";
 
-function ProjectCard({ project, number }) {
+function ProjectCard({ project, number, isDarkMode }) {
   const [buttonPopup, setButtonPopup] = useState(false);
 
   const handlePopup = (e) => {
@@ -18,13 +18,13 @@ function ProjectCard({ project, number }) {
 
   return (
     <div className="card">
-      {buttonPopup && <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} />}
-      
+      {buttonPopup && <ProjectPopup trigger={buttonPopup} project={project} handlePopup={handlePopup} isDarkMode={isDarkMode} />}
+
       <div className="card-container" onClick={() => handlePopup(true)}>
-      <div className="card-top">
-        <p className="card-top-text">{number}</p>
-        <p className="card-top-text">( {project.date} )</p>
-      </div>
+        <div className="card-top">
+          <p className="card-top-text">{number}</p>
+          <p className="card-top-text">( {project.date} )</p>
+        </div>
         <div className="card-image-container">
           <div className="card-image-tags">{project.type}</div>
           <img className="card-image" src={project.img} alt="Card" />

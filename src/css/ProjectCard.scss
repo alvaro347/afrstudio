@@ -1,6 +1,5 @@
 @import "./themes.scss";
 
-
 .card {
   // box-shadow: $boxShadowBasic;
   box-sizing: border-box;
@@ -24,7 +23,6 @@
     // border-bottom: 1px solid var(--textColor01);
     // padding-bottom: -1px;
   }
-
 }
 
 .card-top {
@@ -137,14 +135,12 @@
   .card-container:hover .card-image-container .card-image {
     transition: transform 0.7s ease, opacity 0.7s ease, filter 0.7s ease;
     transform: scale(1.05);
-
   }
 }
 
 @media screen and (min-width: 801px) {
   .card-image {
     // filter: saturate(0);
-
   }
   .card-container:hover .card-image-container .card-image {
     transition: transform 0.7s ease, opacity 0.7s ease, filter 0.7s ease;

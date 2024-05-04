@@ -28,6 +28,7 @@
 }
 
 .p-image-container {
+  border-radius: 15px;
   overflow: hidden;
 }
 
@@ -50,12 +51,12 @@
   display: inline-block;
   // box-sizing: content-box;
   // height: 100%;
-  top: -65px;
+  top: -110px;
   left: 0px;
  z-index: 0;
-  font-size: 15rem;
+  font-size: 20rem;
   position: absolute;
-  color: var(--backgroundSecondary-50);
+  color: var(--textColor03);
 }
 
 .p-title {

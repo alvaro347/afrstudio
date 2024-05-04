@@ -4,7 +4,7 @@ import ProjectCardIcons from "./ProjectCardIcons";
 
 import "../css/ProjectPopup.scss";
 
-const ProjectPopup = ({ project, trigger, handlePopup }) => {
+const ProjectPopup = ({ project, trigger, handlePopup, isDarkMode }) => {
   // useState: Set the clase to open or closed for the popup out window.
   const [className, setClassName] = useState(null);
   const onClose = () => {
@@ -38,7 +38,7 @@ const ProjectPopup = ({ project, trigger, handlePopup }) => {
     return null;
   } else {
     return ReactDom.createPortal(
-      <div className={`popup ${className}`} onClick={() => onClose()}>
+      <div className={`popup ${className} ${isDarkMode ? "dark" : "light"}`} onClick={() => onClose()}>
         <div className="popup-container" onClick={(e) => e.stopPropagation()}>
           <div className="popup-content">
             <button className="popup-close" onClick={() => onClose()}>

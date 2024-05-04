@@ -7,6 +7,7 @@ $primaryColor01-50-light: #8d9dff;
 $secondaryColor02-light: #19849d;
 $textColor01-light: #303238;
 $textColor02-light: #62636c;
+$textColor03-light: #b9b9c075;
 $grey-100-light: #3d3d3d;
 $grey-50-light: #696969;
 $grey-10-light: #cecece;
@@ -23,6 +24,7 @@ $primaryColor01-100-dark: #6156ff;
 $primaryColor01-50-dark: #5e73ff85;
 $textColor01-dark: #eeeef0;
 $textColor02-dark: #b2b3bd;
+$textColor03-dark: #27282b80;
 $grey-100-dark: #3d3d3d;
 $grey-50-dark: #696969;
 $grey-10-dark: #cecece;
@@ -41,9 +43,9 @@ $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
 // ~ Themes
 // Theme variables by class in the App.
 [class="App light"] {
-  $test01: grey;
   --textColor01: #{meta.inspect($textColor01-light)};
   --textColor02: #{meta.inspect($textColor02-light)};
+  --textColor03: #{meta.inspect($textColor03-light)};
   --primaryColor01-100: #{meta.inspect($primaryColor01-100-light)};
   --primaryColor01-50: #{meta.inspect($primaryColor01-50-light)};
   --backgroundColor-100: #{meta.inspect($backgroundColor-100-light)};
@@ -60,6 +62,7 @@ $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
 [class="App dark"] {
   --textColor01: #{meta.inspect($textColor01-dark)};
   --textColor02: #{meta.inspect($textColor02-dark)};
+  --textColor03: #{meta.inspect($textColor03-dark)};
   --primaryColor01-100: #{meta.inspect($primaryColor01-100-dark)};
   --primaryColor01-50: #{meta.inspect($primaryColor01-50-dark)};
   --backgroundColor-100: #{meta.inspect($backgroundColor-100-dark)};
@@ -137,13 +140,13 @@ $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
 }
 
 .section-container {
-  padding: 30px 50px 30px 50px;
+  padding: 30px 50px 100px 50px;
   max-width: 1600px;
   margin: 0 auto;
 }
 
 .section-head {
-  margin: 0 auto 70px auto;
+  margin: 0 auto 80px auto;
   max-width: 1600px;
   text-align: left;
   width: 100%;
