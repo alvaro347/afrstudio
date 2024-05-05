@@ -46,7 +46,7 @@ const Navigation = ({ toggleTheme }) => {
         </div>
         <div id="nav-links" className={`${showMenu ? "show" : ""}`}>
           <a href="#projects" className="nav-link" onClick={closeMenu}>Projects</a>
-          <a href="#Skills" className="nav-link" onClick={closeMenu}>Skills</a>
+          <a href="#skills" className="nav-link" onClick={closeMenu}>Skills</a>
           <a href="#about" className="nav-link" onClick={closeMenu}>About</a>
           <a href="#contact" className="nav-link" onClick={closeMenu}>Contact</a>
         </div>

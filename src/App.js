@@ -36,7 +36,7 @@ const projects = {
     overview: "",
     keyPoints: ["Yelp Api", "Web Design", "HTTP Request"],
     img: image1,
-    images: [image1],
+    images: [image1, headerImg],
     icons: [icons.reactIcon, icons.htmlIcon],
     keywords: {
       tags: ["web", "server"],
@@ -53,7 +53,7 @@ const projects = {
       "This is a small description of the card content. This is a small description of the card content.",
     keyPoints: ["This and that", "and also this"],
     img: image1,
-    images: [image1, image1, image1],
+    images: [image1],
     icons: [icons.reactIcon, icons.htmlIcon],
     keywords: {
       tags: ["web", "server"],
@@ -67,7 +67,7 @@ const projects = {
     date: "",
     description: "This is a small description of the card content. This projects it's about this and that. ",
     img: image1,
-    images: [image1, image1, image1],
+    images: [image1],
     icons: [icons.htmlIcon, icons.reactIcon],
     keywords: {
       tags: ["web"],
@@ -81,7 +81,7 @@ const projects = {
     date: "",
     description: "This is a small description of the card content. This projects it's about this and that. ",
     img: image1,
-    images: [image1, image1, image1],
+    images: [image1],
     icons: [icons.htmlIcon, icons.reactIcon],
     keywords: {
       tags: ["web"],
@@ -95,7 +95,7 @@ const projects = {
     date: "",
     description: "This is a small description of the card content. This projects it's about this and that. ",
     img: image1,
-    images: [image1, image1, image1],
+    images: [image1],
     icons: [icons.htmlIcon, icons.reactIcon],
     keywords: {
       tags: ["web"],

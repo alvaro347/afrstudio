@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Slide } from "react-slideshow-image";
 import ReactDom from "react-dom";
 import ProjectCardIcons from "./ProjectCardIcons";
+import 'react-slideshow-image/dist/styles.css'
+
 
 import "../css/ProjectPopup.scss";
 
@@ -46,10 +49,15 @@ const ProjectPopup = ({ project, trigger, handlePopup, isDarkMode }) => {
               <div className="line-close-2"></div>
             </button>
 
+            {/* <img key={index} src={image} className="slideshow-img" alt={`Project ${index}`} /> */}
             <div className="slideshow">
-              {project.images.map((image, index) => (
-                <img key={index} src={image} className="slideshow-img" alt={`Project ${index}`} />
-              ))}
+              <Slide easing="ease">
+                {project.images.map((image, index) => (
+                  <div className="each-slide-effect" key={index}>
+                    <div style={{ backgroundImage: `url(${project.images[index]})` }}></div>
+                  </div>
+                ))}
+              </Slide>
             </div>
 
             <div className="popup-details">
