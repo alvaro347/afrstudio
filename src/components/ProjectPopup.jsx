@@ -54,7 +54,8 @@ const ProjectPopup = ({ project, trigger, handlePopup, isDarkMode }) => {
               <Slide easing="ease">
                 {project.images.map((image, index) => (
                   <div className="each-slide-effect" key={index}>
-                    <div style={{ backgroundImage: `url(${project.images[index]})` }}></div>
+                  <img  src={image} className="slideshow-img" alt={`Project ${index}`} />
+                    {/* <div style={{ backgroundImage: `url(${project.images[index]})` }}></div> */}
                   </div>
                 ))}
               </Slide>

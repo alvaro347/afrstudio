@@ -7,9 +7,9 @@
   cursor: pointer;
   overflow: hidden;
   max-width: 800px;
-  min-width: 400px;
+  min-width: 370px;
   height: auto;
-  margin: 15px;
+  
   // background-color: var(--backgroundColor-50);
   // border-radius: 10px;
   transition: background-color 0.3s ease;
@@ -128,6 +128,9 @@
 }
 
 @media screen and (max-width: 800px) {
+  .card {
+    margin: 10px 0px;
+  }
   .card-image {
     opacity: 1;
     filter: saturate(1);
@@ -139,6 +142,9 @@
 }
 
 @media screen and (min-width: 801px) {
+  .card {
+    margin: 15px;
+  }
   .card-image {
     // filter: saturate(0);
   }

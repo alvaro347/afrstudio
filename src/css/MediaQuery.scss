@@ -49,11 +49,31 @@
   }
   .intro-img-container {
     margin-top: 30px;
+    max-height: 500px;
     width: 100%;
+  }
+  #about-text {
+    // width: 40%;
+    margin-bottom: 30px;
+
+    text-align: left;
+  }
+  .about-content {
+    align-content: center;
+    align-items: center;
+    display: block;
+  }
+
+  .about-image {
+    margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 1201px) {
+  #about-text {
+    width: 40%;
+    // text-align: left;
+  }
   .intro-container {
     display: flex;
   }
@@ -62,6 +82,17 @@
   }
   .intro-img-container {
     width: 45%;
+  }
+  .about-content {
+    align-content: center;
+    align-items: center;
+    display: flex;
+  }
+ 
+  .about-image {
+
+ max-height: 500px;
+    margin: 0 auto;
   }
 }
 

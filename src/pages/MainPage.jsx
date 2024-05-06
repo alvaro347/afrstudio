@@ -5,6 +5,7 @@ import ProjectShowcase from "../components/ProjectShowcase";
 import Introduction from "../components/Introduction";
 import Skills from "../components/Skills";
 import Header from "../components/Header";
+import image1 from '../img/image1.png';
 
 // TODO: Combine themes and variables into one file.
 // NOTE: For Flex elements use the skills section as base
@@ -43,6 +44,9 @@ function MainPage({ projects, headerImg, icons, isDarkMode }) {
         <div className="section-head">
           <p className="section-title-small text-highlighted">_More information</p>
           <h2 className="section-title">About</h2>
+        </div>
+
+        <div className="about-content">
           <p id="about-text" className="text-secondary">
             I'm a versatile professional with a background in electrical engineering and industrial design.
             Over the years, I've seamlessly blended my engineering expertise with a keen eye for design,
@@ -54,7 +58,9 @@ function MainPage({ projects, headerImg, icons, isDarkMode }) {
             skills and design sensibility allows me to create innovative solutions that not only captivate
             users but also drive business growth.
           </p>
+          <img className="about-image" src={image1} alt="" />
         </div>
+
       </section>
     </main>
   );

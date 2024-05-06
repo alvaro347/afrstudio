@@ -1,9 +1,9 @@
 @import "./themes.scss";
 
 #introduction {
-  margin: 10px 0;
+
   align-content: center;
-  min-height: 80vh;
+ 
 }
 
 .intro-container {
@@ -40,4 +40,18 @@
 
 .intro-p {
   color: var(--textColor01);
+}
+
+
+@media screen and (min-width: 1200px) {
+  #introduction {
+    min-height: 80vh;
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  #introduction {
+    min-height: 30vh;
+  }
 }

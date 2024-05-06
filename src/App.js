@@ -45,6 +45,7 @@ const projects = {
   },
   project2: {
     title: "Project 2: B",
+    titleShort: "project2b",
     index: 2,
     type: "Game",
     location: "",
