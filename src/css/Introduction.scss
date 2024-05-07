@@ -24,9 +24,10 @@
 
 .intro-img {
   margin: 0 auto;
-
   border-radius: 10px;
   height: 100%;
+
+  object-fit: cover;
 }
 
 .intro-button {

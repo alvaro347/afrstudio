@@ -43,6 +43,10 @@
 }
 
 .card-image {
+  height: 100%;
+  object-fit: cover;
+
+
   // opacity: 0.5;
   transition: 600ms ease;
   width: 100%;

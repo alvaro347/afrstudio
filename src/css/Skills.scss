@@ -29,9 +29,8 @@
 }
 
 .skills-description {
-  width: 60%;
+
   text-align: center;
-  margin: 50px auto 70px auto;
 }
 
 .skills-description-title {
@@ -127,6 +126,7 @@
 }
 
 @media screen and (max-width: 1070px) {
+  
   #accordion {
     display: block;
     // padding: 60px 30px 60px 30px;

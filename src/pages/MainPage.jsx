@@ -5,7 +5,7 @@ import ProjectShowcase from "../components/ProjectShowcase";
 import Introduction from "../components/Introduction";
 import Skills from "../components/Skills";
 import Header from "../components/Header";
-import image1 from '../img/image1.png';
+import image1 from "../img/image1.png";
 
 // TODO: Combine themes and variables into one file.
 // NOTE: For Flex elements use the skills section as base
@@ -47,20 +47,31 @@ function MainPage({ projects, headerImg, icons, isDarkMode }) {
         </div>
 
         <div className="about-content">
-          <p id="about-text" className="text-secondary">
-            I'm a versatile professional with a background in electrical engineering and industrial design.
-            Over the years, I've seamlessly blended my engineering expertise with a keen eye for design,
-            delivering impactful solutions that have made a difference for numerous companies.
-            <br />
-            <br />
-            Specializing in software engineering and web development, I'm passionate about crafting seamless
-            user experiences and building visually stunning applications. My unique combination of technical
-            skills and design sensibility allows me to create innovative solutions that not only captivate
-            users but also drive business growth.
-          </p>
+          <div class="about-text-container">
+            <p id="about-text" className="text-secondary">
+              I'm a versatile professional with a background in electrical engineering and industrial design.
+              Over the years, I've seamlessly blended my engineering expertise with a keen eye for design,
+              delivering impactful solutions that have made a difference for numerous companies.
+              <br />
+              <br />
+              Specializing in software engineering and web development, I'm passionate about crafting seamless
+              user experiences and building visually stunning applications. My unique combination of technical
+              skills and design sensibility allows me to create innovative solutions that not only captivate
+              users but also drive business growth.
+            </p>
+            <div>
+              {/* <ul class="p-list">
+                <li class="p-list-item">This and that</li>
+                <li class="p-list-item">and also this</li>
+              </ul> */}
+            </div>
+            <div className="about-text-bottom">
+              <p>Based in Europe</p>
+              <p>Freelance available!</p>
+            </div>
+          </div>
           <img className="about-image" src={image1} alt="" />
         </div>
-
       </section>
     </main>
   );
