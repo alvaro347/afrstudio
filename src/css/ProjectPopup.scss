@@ -88,22 +88,13 @@
   direction: ltr;
   width: 100%;
   margin: auto;
-
 }
-
-// .each-slide-effect > img {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   background-size: cover;
-//   height: 350px;
-// }
 
 .each-slide-effect {
   // height: 100%;
   height: 100%;
   align-items: center;
-align-content: center;
+  align-content: center;
 }
 
 .each-slide-effect > img {
@@ -116,7 +107,6 @@ align-content: center;
   overflow: hidden;
 }
 
-
 .slideshow-img {
   margin: 0 auto;
   width: 100%;
@@ -128,7 +118,6 @@ align-content: center;
   // max-height: 400px;
   // display: block;
   // margin-bottom: 10px;
-
 }
 
 .popup-details {

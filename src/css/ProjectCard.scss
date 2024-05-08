@@ -1,27 +1,24 @@
 @import "./themes.scss";
 
 .card {
-  // box-shadow: $boxShadowBasic;
   box-sizing: border-box;
   flex: 1;
   cursor: pointer;
   overflow: hidden;
-  max-width: 800px;
-  min-width: 370px;
+  max-width: 700px;
+  min-width: 450px;
   height: auto;
-  
-  // background-color: var(--backgroundColor-50);
-  // border-radius: 10px;
+  padding: 15px;
+  border-radius: 10px;
   transition: background-color 0.3s ease;
   &:hover {
-    // box-shadow: 1px 0px 0 0 var(--textColor02), -1px 0px 0 0 var(--textColor02);
-    // background-color: var(--backgroundColor-10);
-    // outline: 2px solid var(--primaryColor01-50);
+    box-shadow: 1px 0px 0 0 var(--textColor02), -1px 0px 0 0 var(--textColor02);
+    background-color: var(--backgroundColor-50);
+    outline: 2px solid var(--primaryColor01-50);
   }
   &:hover .card-top {
-    box-shadow: 0 1px 0 0 var(--textColor02);
-    // border-bottom: 1px solid var(--textColor01);
-    // padding-bottom: -1px;
+    box-shadow: 0 1px 0 0 var(--grey-50);
+
   }
 }
 
@@ -65,10 +62,6 @@
   padding: 0.25em 0.75em;
   border-radius: 2em;
   background-color: var(--primaryColor01-100);
-}
-
-.card-description-container {
-  // padding: 15px 15px;
 }
 
 .card-title {
@@ -133,7 +126,7 @@
 
 @media screen and (max-width: 800px) {
   .card {
-    margin: 10px 0px;
+    margin: 20px 0px;
   }
   .card-image {
     opacity: 1;
@@ -147,7 +140,7 @@
 
 @media screen and (min-width: 801px) {
   .card {
-    margin: 15px;
+    // margin: 15px;
   }
   .card-image {
     // filter: saturate(0);

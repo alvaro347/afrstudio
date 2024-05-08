@@ -22,9 +22,6 @@
     padding: 10px 20px;
   }
 
-  .card {
-    margin-bottom: 15px;
-  }
   #header-title {
     font-size: 4.5rem;
   }
@@ -83,13 +80,8 @@ display: none;
 }
 
 @media screen and (min-width: 1201px) {
-  #about-text {
 
-    // text-align: left;
-  }
   #about-text {
-    // margin-bottom: 30px;
-
     text-align: left;
   }
   .skills-description {
@@ -179,8 +171,7 @@ margin-top: 20px;
 }
 
 @media screen and (max-width: 1440px) {
-  #nav-width {
-  }
+
 }
 
 @media screen and (min-width: 801px) {
@@ -191,9 +182,7 @@ margin-top: 20px;
     height: calc(100vh - 60px);
     // height: 100vh;
   }
-  .card {
-    // margin: 10px 10px;
-  }
+
   .header-paragraph {
     width: 80%;
   }

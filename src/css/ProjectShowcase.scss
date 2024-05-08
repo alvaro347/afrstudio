@@ -33,6 +33,10 @@
   width: 100%;
   height: auto;
   transition: transform 0.3s ease;
+  &:hover {
+    transition: transform 0.7s ease, opacity 0.7s ease, filter 0.7s ease;
+    transform: scale(1.05);
+  }
 }
 
 .p-content {
@@ -53,7 +57,7 @@
   z-index: 0;
   font-size: 20rem;
   position: absolute;
-  color: var(--textColor03);
+  color: var(--grey-10);
 }
 
 .p-title {

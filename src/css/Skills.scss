@@ -15,8 +15,7 @@
   transition: box-shadow 0.3s ease;
   transition: width 0.5s ease;
   border-radius: 10px;
-  background: radial-gradient(circle, rgb(235, 235, 235) 0%, rgba(221, 221, 221, 0.37) 100%),
-    url("../img/noise.svg");
+  background: var(--backgroundRadialNoise);
   margin: 10px 20px;
   width: 350px;
   height: 500px;
@@ -24,12 +23,11 @@
   align-content: space-between;
   transition: box-shadow 0.3s ease;
   &:hover {
-    box-shadow: $boxShadow3D;
+    box-shadow: var(--boxShadow3D);
   }
 }
 
 .skills-description {
-
   text-align: center;
 }
 
@@ -69,7 +67,7 @@
 .skill-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
+  color: var(--textColor01);
 }
 
 .skill-text {
@@ -126,7 +124,6 @@
 }
 
 @media screen and (max-width: 1070px) {
-  
   #accordion {
     display: block;
     // padding: 60px 30px 60px 30px;

@@ -51,8 +51,14 @@
 }
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (mind-width: 801px) and (max-width: 1200px) {
   #introduction {
-    min-height: 30vh;
+    min-height: 70vh;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #introduction {
+    min-height: 35vh;
   }
 }

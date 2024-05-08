@@ -32,7 +32,7 @@ function MainPage({ projects, headerImg, icons, isDarkMode }) {
       </section>
       <section id="other-projects" className="section-container">
         <div className="section-head">
-          <p className="section-title-small text-highlighted">_02</p>
+          <p className="section-title-small text-highlighted">_Personal & Small Projects</p>
           <h2 className="section-title">
             Other<span className="text-highlighted"> * </span>projects
           </h2>
@@ -43,11 +43,11 @@ function MainPage({ projects, headerImg, icons, isDarkMode }) {
       <section id="about" className="section-container">
         <div className="section-head">
           <p className="section-title-small text-highlighted">_More information</p>
-          <h2 className="section-title">About</h2>
+          <h2 className="section-title">Our <span className="text-highlighted">*</span> Story</h2>
         </div>
 
         <div className="about-content">
-          <div class="about-text-container">
+          <div className="about-text-container">
             <p id="about-text" className="text-secondary">
               I'm a versatile professional with a background in electrical engineering and industrial design.
               Over the years, I've seamlessly blended my engineering expertise with a keen eye for design,

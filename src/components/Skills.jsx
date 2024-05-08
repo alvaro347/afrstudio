@@ -40,8 +40,8 @@ const Skills = () => {
     <section id="skills" className="section-container ">
       <div className="dotted-background">
         <div className="section-title-container">
-          <p className="text-highlighted">Professional Services</p>
-          <h2 className="section-title">Skills</h2>
+          <p className="text-highlighted">_Professional Services</p>
+          <h2 className="section-title">Services <span className="text-highlighted">*</span> Areas</h2>
         </div>
         <div className="skills-description">
           <h3 className="skills-description-title text-primary">

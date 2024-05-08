@@ -2,7 +2,7 @@
 
 #header {
   max-width: 1600px;
-  padding: 10px 20px 40px 20px;
+  padding: 10px 20px 20px 20px;
   margin: 0 auto;
 }
 
@@ -14,7 +14,6 @@
 #header-title {
   font-family: Anton, JetBrains Mono, Arial, sans-serif;
   pointer-events: none;
-
   color: var(--textColor01);
   letter-spacing: 0;
   text-align: left;
@@ -35,7 +34,6 @@
 .blink-effect {
   animation: blink 1.5s steps(1) infinite;
   // margin-left: 0;
-
   animation-delay: 0s;
   animation-fill-mode: none;
   -webkit-text-stroke-width: 2px;
