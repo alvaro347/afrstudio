@@ -8,6 +8,11 @@ import 'react-slideshow-image/dist/styles.css'
 import "../css/ProjectPopup.scss";
 
 const ProjectPopup = ({ project, trigger, handlePopup, isDarkMode }) => {
+  const properties = {
+    easing: 'ease',
+    autoplay: false,
+    indicators: true
+  }
   // useState: Set the clase to open or closed for the popup out window.
   const [className, setClassName] = useState(null);
   const onClose = () => {
@@ -35,6 +40,7 @@ const ProjectPopup = ({ project, trigger, handlePopup, isDarkMode }) => {
     return () => window.removeEventListener("keydown", close);
   });
 
+  
   // Adds conditional to render if the trigger is set to true.
   // if true then it will create a portal.
   if (trigger === false) {
@@ -44,14 +50,16 @@ const ProjectPopup = ({ project, trigger, handlePopup, isDarkMode }) => {
       <div className={`popup ${className} ${isDarkMode ? "dark" : "light"}`} onClick={() => onClose()}>
         <div className="popup-container" onClick={(e) => e.stopPropagation()}>
           <div className="popup-content">
-            <button className="popup-close" onClick={() => onClose()}>
-              <div className="line-close-1"></div>
-              <div className="line-close-2"></div>
+          <button className="popup-close2" onClick={() => onClose()}>
+            <span class="icon-cross"></span>
+            {/* <span class="visually-hidden">Close</span> */}
+              {/* <div className="line-close-1"></div>
+              <div className="line-close-2"></div> */}
             </button>
 
             {/* <img key={index} src={image} className="slideshow-img" alt={`Project ${index}`} /> */}
             <div className="slideshow">
-              <Slide easing="ease">
+              <Slide {...properties}>
                 {project.images.map((image, index) => (
                   <div className="each-slide-effect" key={index}>
                   <img  src={image} className="slideshow-img" alt={`Project ${index}`} />
@@ -62,6 +70,7 @@ const ProjectPopup = ({ project, trigger, handlePopup, isDarkMode }) => {
             </div>
 
             <div className="popup-details">
+    
               <h2 className="popup-title">{project.title}</h2>
               <ProjectCardIcons projectIcons={project.icons} />
               <p className="popup-description">{project.description}</p>
@@ -71,6 +80,7 @@ const ProjectPopup = ({ project, trigger, handlePopup, isDarkMode }) => {
                 <div className="type">{project.type}</div>
               </div>
             </div>
+       
           </div>
         </div>
       </div>,

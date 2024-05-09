@@ -41,8 +41,8 @@
 }
 
 .popup-container {
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
+
   margin: 20px auto;
   border-radius: 20px;
   background-color: var(--background02);
@@ -63,6 +63,18 @@
   &:hover {
     background-color: blue;
   }
+}
+
+.popup-content {
+  position: relative;
+}
+
+.popup-close2 {
+  position: absolute;
+  top:  10px;
+  right: 10px;
+  z-index: 10000;
+  @include Button03Close;
 }
 
 .line-close-1,
@@ -87,24 +99,43 @@
   // flex-wrap: wrap;
   direction: ltr;
   width: 100%;
+  overflow: hidden;
   margin: auto;
+  position: relative;
+}
+
+.react-slideshow-container .nav:last-of-type {
+background-color: #e4e4e441;
+  right: 10px;
+}
+
+.react-slideshow-container .nav:first-of-type {
+  background-color: #e4e4e441;
+  left:10px;
 }
 
 .each-slide-effect {
   // height: 100%;
+
   height: 100%;
-  align-items: center;
   align-content: center;
 }
 
 .each-slide-effect > img {
+  // border-radius: 10px;
   display: flex;
   // align-items: center;
   // justify-content: center;
   background-size: cover;
   // max-height: 600px;
   // height: 100%;
-  overflow: hidden;
+}
+
+.indicators {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10px;
 }
 
 .slideshow-img {
@@ -122,11 +153,10 @@
 
 .popup-details {
   color: var(--textColor01);
-  margin-top: 20px;
+  // margin-top: 20px;
 }
 
 .popup-title {
-  font-size: 24px;
   margin-bottom: 10px;
 }
 
@@ -145,12 +175,18 @@
 }
 
 @media screen and (max-width: 800px) {
-  .popup-content {
-    padding: 20px 20px;
+  .popup-title {
+    font-size: 2.4rem;
+  }
+  .popup-details {
+    padding: 20px 30px;
   }
 }
 @media screen and (min-width: 800px) {
-  .popup-content {
-    padding: 40px 40px;
+  .popup-title {
+    font-size: 3rem;
+  }
+  .popup-details {
+    padding: 40px 40px 40px 40px;
   }
 }
