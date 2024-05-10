@@ -5,12 +5,14 @@
   --background01: #{meta.inspect($backgroundSecondary-100-light)};
   --background02: #{meta.inspect($backgroundColor-100-light)};
   --textColor01: #{meta.inspect($textColor01-light)};
+  --primaryColor01-100: #{meta.inspect($primaryColor01-100-light)};
 }
 
 [class="popup open dark"] {
   --background01: #{meta.inspect($backgroundColor-50-dark)};
   --background02: #{meta.inspect($backgroundColor-100-dark)};
   --textColor01: #{meta.inspect($textColor01-dark)};
+  --primaryColor01-100: #{meta.inspect($primaryColor01-100-dark)};
 }
 
 .popup.open {
@@ -51,27 +53,13 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.295);
 }
 
-.popup-close {
-  margin: 0 0 0 auto;
-  background-color: grey;
-  display: flex;
-  border-radius: 40px;
-  padding: 15px 15px;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  &:hover {
-    background-color: blue;
-  }
-}
-
 .popup-content {
   position: relative;
 }
 
-.popup-close2 {
+.popup-close {
   position: absolute;
-  top:  10px;
+  top: 10px;
   right: 10px;
   z-index: 10000;
   @include Button03Close;
@@ -95,6 +83,7 @@
 
 .slideshow {
   // width: 100%;
+
   // display: flex;
   // flex-wrap: wrap;
   direction: ltr;
@@ -104,14 +93,18 @@
   position: relative;
 }
 
+.react-slideshow-container {
+  max-height: 900px;
+}
+
 .react-slideshow-container .nav:last-of-type {
-background-color: #e4e4e441;
+  background-color: #e4e4e441;
   right: 10px;
 }
 
 .react-slideshow-container .nav:first-of-type {
   background-color: #e4e4e441;
-  left:10px;
+  left: 10px;
 }
 
 .each-slide-effect {
@@ -153,11 +146,19 @@ background-color: #e4e4e441;
 
 .popup-details {
   color: var(--textColor01);
+
   // margin-top: 20px;
+}
+
+.popup-text {
+}
+
+.popup-side-info {
 }
 
 .popup-title {
   margin-bottom: 10px;
+  color: var(--textColor01)
 }
 
 .popup-description {
@@ -165,28 +166,88 @@ background-color: #e4e4e441;
   margin-bottom: 10px;
 }
 
-.tag,
-.date,
+.popup-info-table {
+  // border-radius: 10px;
+  // outline: 1px solid black;
+
+  
+  font-size: 0.9rem;
+  table-layout: fixed;
+  width: 100%;
+  // text-align: center;
+  & td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 3px;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+}
+
 .type {
-  padding: 5px 10px;
-  border-radius: 4px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: white;
+
+  padding: 0.25rem 0.75rem;
+  border-radius: 2em;
+  background-color: var(--primaryColor01-100);
+}
+
+.popup-list {
+  color: var(--textColor02);
+  margin: 20px 0 20px 40px;
+  & .popup-list-item {
+    padding: 5px 0;
+    list-style: circle;
+  }
 }
 
 @media screen and (max-width: 800px) {
+  .popup-info-table {
+    margin: 20px 0px;
+  }
+
   .popup-title {
     font-size: 2.4rem;
   }
-  .popup-details {
+  .popup-bottom {
     padding: 20px 30px;
+  }
+  .popup-details {
+    display: block;
+
+    margin: 0;
+  }
+  .popup-text {
+    width: 100%;
+  }
+  .popup-side-info {
+    width: 100%;
   }
 }
 @media screen and (min-width: 800px) {
+  .popup-info-table {
+    margin: 0px 0px;
+  }
   .popup-title {
+
     font-size: 3rem;
   }
+  .popup-bottom {
+    padding: 20px 40px 20px 40px;
+  }
   .popup-details {
-    padding: 40px 40px 40px 40px;
+    display: flex;
+  }
+  .popup-text {
+    width: 65%;
+    padding-right: 35px;
+  }
+
+  .popup-side-info {
+    width: 35%;
   }
 }

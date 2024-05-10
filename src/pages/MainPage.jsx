@@ -43,7 +43,7 @@ function MainPage({ projects, headerImg, icons, isDarkMode }) {
       <section id="about" className="section-container">
         <div className="section-head">
           <p className="section-title-small text-highlighted">_More information</p>
-          <h2 className="section-title">Our <span className="text-highlighted">*</span> Story</h2>
+          <h2 className="section-title">The <span className="text-highlighted">*</span> Story</h2>
         </div>
 
         <div className="about-content">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // import ProjectPopup from "./ProjectPopup";
 import "../css/ProjectShowcase.scss";
 import { Link } from "react-router-dom";
@@ -41,7 +41,7 @@ function ProjectShowcase({ project }) {
           })}
         </ul>
         <Link className="p-more-info" to={project.titleShort}>
-          More information ->
+          More information...
         </Link>
       </div>
       <div className="p-image-container">

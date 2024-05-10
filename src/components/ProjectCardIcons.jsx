@@ -9,12 +9,13 @@ function ProjectCardIcons({ projectIcons }) {
       return projectIcons.map((icon) => {
         return (
           <a href={icon.link} key={icon.name + "link"}>
-            <img key={icon.name} src={icon.img} alt={icon.name} className="" />
+            {/* <img key={icon.name} src={icon.img} alt={icon.name} className="" /> */}
+            <p className="uppercase mr-1 font-semibold">{icon.name}</p>
           </a>
         );
       });
     }
-    return <div className="icons flex">{ShowIcons()}</div>;
+    return <div className="icons">{ShowIcons()}</div>;
   } else {
     function ShowIcons() {
       return Object.entries(projectIcons).map(([icon, iconData]) => {
@@ -26,7 +27,7 @@ function ProjectCardIcons({ projectIcons }) {
       });
     }
 
-    return <div className="icons flex">{ShowIcons()}</div>;
+    return <div className="icons">{ShowIcons()}</div>;
   }
 }
 
