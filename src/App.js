@@ -30,10 +30,12 @@ const projects = {
     index: 1,
     type: "web",
     location: "",
+    company: "",
     date: "2024",
     description:
-      "Restaurant website with search-bar. Find a restaurant by type, location or other realted information. It uses the Yelp Api to get HTTP Request and find data about restaurants. Restaurant website with search-bar. Find a restaurant by type, location or other realted information. It uses the Yelp Api to get HTTP Request and find data about restaurants.",
-    overview: "",
+      "Restaurant website with search-bar. Find a restaurant by type, location or other related information. It uses the Yelp Api to get HTTP Request and find data about restaurants.",
+    overview:
+      "Restaurant website with search-bar. Find a restaurant by type, location or other related information. It uses the Yelp Api to get HTTP Request and find data about restaurants. Restaurant website with search-bar. Find a restaurant by type, location or other related information. It uses the Yelp Api to get HTTP Request and find data about restaurants.",
     keyPoints: ["Yelp Api", "Web Design", "HTTP Request"],
     img: image1,
     images: [image1, headerImg],

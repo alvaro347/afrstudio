@@ -1,8 +1,8 @@
 @import "./themes.scss";
 
 #header {
-  max-width: 1600px;
-  padding: 10px 20px 20px 20px;
+  // max-width: 1600px;
+  // padding: 10px 20px 20px 20px;
   margin: 0 auto;
 }
 
@@ -14,15 +14,22 @@
 #header-title {
   font-family: Anton, JetBrains Mono, Arial, sans-serif;
   pointer-events: none;
-  color: var(--textColor01);
+  // color: var(--textColor01);
+  color: white;
   letter-spacing: 0;
-  text-align: left;
   font-weight: 500;
   line-height: 1;
 }
 
+// .header-text-top {
+//   bottom: 0;
+//   justify-items: center;
+//   position: absolute;
+// }
+
 .text-title {
-  color: var(--textColor01);
+  // color: var(--textColor01);
+
 }
 
 .blue-text-outline {
@@ -44,6 +51,7 @@
 }
 
 .header-bottom {
+  // margin-bottom: 15px;
   color: var(--textColor02);
   font-size: 0.8rem;
   display: flex;
@@ -62,18 +70,17 @@
 }
 
 .header-image-container {
-  height: calc(60% - 20px);
-  background-color: var(--backgroundSecondary-50) !important;
-  border-radius: 10px;
+  height: calc(100%);
+  // background-color: var(--backgroundSecondary-50) !important;
   align-content: center;
   overflow: hidden;
-  background: url("../img/headerImg.png") transparent no-repeat center;
+  // background: url("../img/headerImg.png") transparent no-repeat center;
   background-size: contain;
 }
 
 .header-title-container {
-  display: flex;
-  justify-content: space-between;
+  text-align: center;
+  justify-content: center;
 }
 
 .header-title-icon-left {
@@ -81,22 +88,29 @@
   background-color: gray;
 }
 
-.header-img {
+.header-image {
   // width: 90%;
   height: 100%;
-
+  object-fit: cover;
   margin: 0 auto;
 }
 
 .header-text {
-  height: calc(40%);
-  margin-top: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  // height: calc(40%);
+  // margin-top: 15px;
+  padding: 0 20px 20px 20px;
+  bottom: 0;
+  justify-items: center;
+  position: absolute;
 }
 
 .header-paragraph {
-  margin-bottom: 10px;
+  margin: 20px auto 30px auto;
+  text-align: center;
   color: var(--textColor01);
 }
