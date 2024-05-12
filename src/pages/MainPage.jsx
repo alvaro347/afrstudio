@@ -16,18 +16,20 @@ function MainPage({ projects, headerImg, icons, isDarkMode }) {
       {/* <div id="background-image"></div> */}
       <Header />
       <Introduction />
-      <section id="projects" className="section-container">
-        <div className="section-head">
-          <div className="title-text">
-            <p className="section-title-small text-highlighted">_Selected Projects</p>
-            <h2 className="section-title">
-              Project<span className="text-highlighted"> * </span>Highlights
-            </h2>
+      <section id="projects" className="dotted-background">
+        <div className="section-container">
+          <div className="section-head">
+            <div className="title-text">
+              <p className="section-title-small text-highlighted">_Selected Projects</p>
+              <h2 className="section-title">
+                Project<span className="text-highlighted"> * </span>Highlights
+              </h2>
+            </div>
           </div>
-        </div>
-        <div id="projects-list-highlights">
-          <ProjectShowcase project={projects.project1} />
-          <ProjectShowcase project={projects.project2} />
+          <div id="projects-list-highlights" className="dotted-background">
+            <ProjectShowcase project={projects.project1} />
+            <ProjectShowcase project={projects.project2} />
+          </div>
         </div>
       </section>
       <section id="other-projects" className="section-container">

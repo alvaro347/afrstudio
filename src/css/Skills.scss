@@ -1,8 +1,7 @@
 @import "./themes.scss";
 
 #skills {
-  background-image: $backgroundDotted;
-  background-size: 40px 40px;
+  @include BackgroundDotted;
 }
 
 #skills-main {

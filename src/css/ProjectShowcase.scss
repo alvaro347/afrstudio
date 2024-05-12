@@ -1,7 +1,6 @@
 @import "./themes.scss";
 
 .p-showcase {
-
   gap: 0px 0px;
   // box-shadow: $boxShadowBasic;
   overflow: hidden;
@@ -41,8 +40,6 @@
 
 .p-content {
   position: relative;
-
-
 }
 
 .p-number {
@@ -110,9 +107,20 @@
   @include Button01;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
+  .p-showcase {
+    height: 700px;
+  }
+}
+
+@media screen and (min-width: 801px) {
   .p-showcase {
     height: 800px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .p-showcase {
     margin: 20px 0;
     grid-template-columns: 1fr;
     grid-template-rows: 2.5fr 1fr;
@@ -139,7 +147,7 @@
     left: 0;
   }
   .p-more-info {
-    display: none;
+    // display: none;
     margin: 5px auto;
   }
   .p-number {
@@ -152,8 +160,7 @@
 
 @media screen and (min-width: 1200px) {
   .p-showcase {
-  height: 700px;
-  margin: 60px 0;
+    margin: 60px 0;
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
 

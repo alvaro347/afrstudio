@@ -8,13 +8,15 @@ import headerRadio from "../img/headerRadio.jpg";
 import headerSunset from "../img/headerSunset.jpg";
 import header01 from "../img/header01.jpg";
 import header02 from "../img/header02.png";
+import header03 from "../img/header03.png";
+
 import video01 from "../img/video01.mp4";
 
 const Header = () => {
   return (
     <header id="header">
       <div className="header-image-container">
-        <img className="header-image" src={header01} alt=""/>
+        <img className="header-image" src={headerImg} alt=""/>
         {/* <video autoplay muted loop className="header-image">
           <source src={video01} type="video/mp4" />
         </video> */}

@@ -8,10 +8,10 @@ function ProjectCardIcons({ projectIcons }) {
     function ShowIcons() {
       return projectIcons.map((icon) => {
         return (
-          <a href={icon.link} key={icon.name + "link"}>
-            {/* <img key={icon.name} src={icon.img} alt={icon.name} className="" /> */}
-            <p className="uppercase mr-1 font-semibold">{icon.name}</p>
-          </a>
+          // <a href={icon.link} key={icon.name + "link"}>
+          // </a>
+          //   <img key={icon.name} src={icon.img} alt={icon.name} className="" />
+            <p key={icon.name} className="card-technology">{icon.name}</p>
         );
       });
     }

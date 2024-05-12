@@ -37,8 +37,8 @@ const Skills = () => {
     setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
   };
   return (
-    <section id="skills" className="section-container ">
-      <div className="dotted-background">
+    <section id="skills" >
+      <div className="dotted-background section-container" >
         <div className="section-title-container">
           <p className="text-highlighted">_Professional Services</p>
           <h2 className="section-title">Services <span className="text-highlighted">*</span> Areas</h2>

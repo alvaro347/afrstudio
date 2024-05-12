@@ -5,8 +5,7 @@
   flex: 1;
   cursor: pointer;
   overflow: hidden;
-  max-width: 700px;
-  min-width: 450px;
+ 
   height: auto;
   padding: 15px;
   border-radius: 10px;
@@ -35,7 +34,7 @@
   position: relative;
   background-color: #d1d1d1;
   overflow: hidden;
-  height: 500px;
+
   border-radius: 10px;
 }
 
@@ -107,6 +106,11 @@
   }
 }
 
+.card-technology {
+  text-transform: uppercase;
+  padding: 0 4px;
+}
+
 .icons img {
   padding: 5px;
   margin-top: 5px;
@@ -126,11 +130,22 @@
 
 @media screen and (max-width: 800px) {
   .card {
-    // margin: 20px 0px;
+    max-width: 700px;
+    min-width: 380px;
+    padding: 0px;
+    margin: 10px 0px;
+    &:hover {
+      outline: none;
+      box-shadow:none;
+      background-color: transparent;
+    }
   }
   .card-image {
     opacity: 1;
     filter: saturate(1);
+  }
+  .card-image-container {
+    height: 400px;
   }
   .card-container:hover .card-image-container .card-image {
     transition: transform 0.7s ease, opacity 0.7s ease, filter 0.7s ease;
@@ -140,10 +155,14 @@
 
 @media screen and (min-width: 801px) {
   .card {
-    // margin: 15px;
+    max-width: 700px;
+    min-width: 450px;
   }
   .card-image {
     // filter: saturate(0);
+  }
+  .card-image-container {
+    height: 500px;
   }
   .card-container:hover .card-image-container .card-image {
     transition: transform 0.7s ease, opacity 0.7s ease, filter 0.7s ease;

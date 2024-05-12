@@ -39,7 +39,12 @@ $backgroundSecondary-10-dark: #111111d2;
 $transparent: #ffffff00;
 
 // Background effects.
-$backgroundDotted: radial-gradient(circle at 5px 5px, rgba(117, 117, 117, 0.116) 5px, transparent 0);
+@mixin BackgroundDotted {
+  background-image: radial-gradient(circle at 5px 5px, rgba(117, 117, 117, 0.116) 5px, transparent 0);
+  background-size: 40px 40px;
+}
+
+
 $boxShadow3D-light: 5px -5px 7px 0px $backgroundColor-50-light, -5px 4px 9px 0px $backgroundSecondary-50-light;
 $boxShadow3D-dark: 5px -5px 7px 0px $backgroundColor-50-dark, -5px 4px 9px 0px $backgroundColor-70-dark;
 $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
@@ -161,7 +166,7 @@ $backgroundRadialNoise-dark: radial-gradient(
   transition: all 150ms;
 
   .icon-cross {
-    @include cross(30px, #ebebeb, 3px);  
+    @include cross(30px, #ebebeb, 3px);
   }
 
   &:hover,
@@ -182,7 +187,7 @@ $backgroundRadialNoise-dark: radial-gradient(
 
   &:before,
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     top: ($size - $thickness) / 2;
     left: 0;
@@ -203,7 +208,6 @@ $backgroundRadialNoise-dark: radial-gradient(
   span {
     display: block;
   }
-
 }
 
 // ~ Classes

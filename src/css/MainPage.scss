@@ -70,6 +70,14 @@
   position: relative;
 }
 
+#projects {
+  @include BackgroundDotted;
+}
+
+#projects-list-highlights {
+
+}
+
 #projects-list-cards {
   // flex-direction: row;
   flex-wrap: wrap;
