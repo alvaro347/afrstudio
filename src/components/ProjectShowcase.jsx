@@ -1,5 +1,6 @@
 import React from "react";
 // import ProjectPopup from "./ProjectPopup";
+import ProjectCardIcons from "./ProjectCardIcons";
 import "../css/ProjectShowcase.scss";
 import { Link } from "react-router-dom";
 
@@ -20,14 +21,17 @@ function ProjectShowcase({ project }) {
   return (
     <div className="p-showcase">
       <div className="p-content">
-        <div className="p-number">0{project.index}</div>
+        <div className="p-number">#0{project.index}</div>
 
         <h2 className="p-title">
           <Link to={project.titleShort}>{project.title}</Link>
         </h2>
 
         <p className="p-description">{project.description}</p>
-        <p className="p-date">( {project.date} )</p>
+        <div className="p-tags">
+          <div className="p-tag">{project.type}</div>
+          <p className="p-date">( {project.date} )</p>
+        </div>
         <ul className="p-list">
           {/* {Object.keys(project).map(([project, projectData]) => {
               return (<li className="p-list-item" key={project}>{projectData.keyPoints}</li>);

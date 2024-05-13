@@ -44,7 +44,6 @@ $transparent: #ffffff00;
   background-size: 40px 40px;
 }
 
-
 $boxShadow3D-light: 5px -5px 7px 0px $backgroundColor-50-light, -5px 4px 9px 0px $backgroundSecondary-50-light;
 $boxShadow3D-dark: 5px -5px 7px 0px $backgroundColor-50-dark, -5px 4px 9px 0px $backgroundColor-70-dark;
 $boxShadowBasic: 0 0 20px 5px rgba(0, 0, 0, 0.15);
@@ -64,6 +63,7 @@ $backgroundRadialNoise-dark: radial-gradient(
 // ~ Themes
 // Theme variables by class in the App.
 [class="App light"] {
+  --invert: invert(0%);
   --textColor01: #{meta.inspect($textColor01-light)};
   --textColor02: #{meta.inspect($textColor02-light)};
   --textColor03: #{meta.inspect($textColor03-light)};
@@ -83,6 +83,7 @@ $backgroundRadialNoise-dark: radial-gradient(
 }
 
 [class="App dark"] {
+  --invert: invert(100%);
   --textColor01: #{meta.inspect($textColor01-dark)};
   --textColor02: #{meta.inspect($textColor02-dark)};
   --textColor03: #{meta.inspect($textColor03-dark)};
@@ -208,6 +209,27 @@ $backgroundRadialNoise-dark: radial-gradient(
   span {
     display: block;
   }
+}
+
+@mixin Tag01 {
+  text-transform: uppercase;
+  color: white;
+  z-index: 2;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0.25em 0.75em;
+  border-radius: 2em;
+  background-color: var(--primaryColor01-100);
+}
+
+@mixin Tag02 {
+  text-transform: uppercase;
+  color: white;
+
+  padding: 0.25em 0.75em;
+  border-radius: 2em;
+  background-color: var(--primaryColor01-100);
 }
 
 // ~ Classes

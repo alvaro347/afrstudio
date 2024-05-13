@@ -4,6 +4,9 @@ import "../css/Skills.scss";
 import Accordion from "./Accordion";
 import headerImg from "../img/headerImg.png";
 import image1 from "../img/image1.png";
+import conceptIcon from '../img/skills/conceptIcon2.png';
+import modellingIcon from '../img/skills/3dIcon2.png';
+import programmingIcon from '../img/skills/programmingIcon2.png';
 
 const accordionData = [
   {
@@ -55,23 +58,23 @@ const Skills = () => {
         </div>
         <div className="skills-container">
           <div className="skill">
-            <p className="skill-number">_01</p>
-            <img src="" alt="" className="skill-img" />
+            <p className="skill-number">#01</p>
+            <img src={programmingIcon} alt="" className="skill-img" />
             <h4 className="skill-title">Web-Development</h4>
             <p className="skill-text">
               Crafting responsive and user-friendly websites that leave a lasting impression.
             </p>
           </div>
           <div className="skill">
-            <p className="skill-number">_02</p>
-            <img src="" alt="" className="skill-img" />
+            <p className="skill-number">#02</p>
+            <img src={conceptIcon} alt="" className="skill-img" />
             <h4 className="skill-title">Concept Art</h4>
             <p className="skill-text">Transforming ideas into visually stunning and captivating designs.</p>
           </div>
           <div className="skill">
-            <p className="skill-number">_03</p>
+            <p className="skill-number">#03</p>
 
-            <img src="" alt="" className="skill-img" />
+            <img src={modellingIcon} alt="" className="skill-img" />
             <h4 className="skill-title">3D Design</h4>
             <p className="skill-text">Creating realistic and immersive 3D models for various industries.</p>
           </div>
