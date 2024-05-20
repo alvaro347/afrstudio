@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./css/App.scss";
 import "./css/MediaQuery.scss";
+import "./css/_animation.scss";
 import MainPage from "./pages/MainPage";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";

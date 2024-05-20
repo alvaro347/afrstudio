@@ -1,4 +1,5 @@
 @import "./themes.scss";
+@import "./animation.scss";
 
 #header {
   // max-width: 1600px;
@@ -60,15 +61,10 @@
   }
 }
 
-@keyframes cursor-blink {
-  100% {
-  }
-  0% {
-    -webkit-text-stroke-color: #3f23da00;
-  }
-}
+
 
 .header-image-container {
+
   height: 100%;
   // background-color: var(--backgroundSecondary-50) !important;
   align-content: center;
@@ -89,12 +85,17 @@
 }
 
 .header-image {
+  animation: MOVE-BG 1.5s ease;
   filter: var(--invert);
   opacity: 0.7;
   // width: 90%;
   height: 80%;
   object-fit: cover;
   margin: 0 auto;
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.02);
+  }
 }
 
 .header-text {

@@ -1,4 +1,5 @@
 @import "./themes.scss";
+@import "./animation.scss";
 
 #root {
   font-family: JetBrains Mono, Arial, sans-serif;
@@ -17,22 +18,7 @@
   background-size: cover;
 }
 
-@keyframes animatedBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 100% 0;
-  }
-}
-@keyframes MOVE-BG {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-187%);
-  }
-}
+
 
 .header-title:hover {
   pointer-events: none;

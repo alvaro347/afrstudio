@@ -1,0 +1,77 @@
+@import "./themes.scss";
+
+@media (prefers-reduced-motion: no-preference) {
+  .header-paragraph {
+    animation: top-bottom 1s ease-out;
+  }
+  #header-title {
+    animation: bottom-top 1s ease-out;
+  }
+  #nav-links {
+    animation: navigation-drop 1s ease;
+  }
+  .show {
+    animation: navigation-drop-bg 1s ease;
+  }
+}
+
+@keyframes bottom-top {
+  0% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(-0);
+  }
+}
+
+@keyframes top-bottom {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(-0);
+  }
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes MOVE-BG {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes cursor-blink {
+  100% {
+  }
+  0% {
+    -webkit-text-stroke-color: #3f23da00;
+  }
+}
+
+@keyframes navigation-drop {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes navigation-drop-bg {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
