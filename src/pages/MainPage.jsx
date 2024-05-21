@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/MainPage.scss";
 import ProjectsListCards from "../components/ProjectsListCards";
 import ProjectShowcase from "../components/ProjectShowcase";
@@ -6,14 +6,18 @@ import Introduction from "../components/Introduction";
 import Skills from "../components/Skills";
 import Header from "../components/Header";
 import image1 from "../img/image1.png";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 // TODO: Combine themes and variables into one file.
 // NOTE: For Flex elements use the skills section as base
 
-function MainPage({ projects, headerImg, icons, isDarkMode }) {
+function MainPage({ projects, headerImg, icons, isDarkMode, toggleTheme }) {
+
   return (
-    <main id="main-page">
-      {/* <div id="background-image"></div> */}
+    <>
+      <Navigation toggleTheme={toggleTheme} isDarkMode={isDarkMode} />
+      <main id="main-page">
       <Header />
       <Introduction />
       <section id="projects" className="dotted-background">
@@ -76,6 +80,9 @@ function MainPage({ projects, headerImg, icons, isDarkMode }) {
         </div>
       </section>
     </main>
+    <Footer />
+    </>
+    
   );
 }
 

@@ -1,25 +1,41 @@
 @import "./themes.scss";
 
 @media (prefers-reduced-motion: no-preference) {
+  .header-image {
+    animation: MOVE-BG 1s ease;
+    // animation-timeline: scroll();
+    // animation-range: entry;
+  }
   .header-paragraph {
-    animation: top-bottom 1s ease-out;
+    animation-timeline: view();
+    animation-range: exit;
+    animation: top-bottom 1s linear;
   }
   #header-title {
+    animation-timeline: view();
+    animation-range: exit;
     animation: bottom-top 1s ease-out;
   }
   #nav-links {
-    animation: navigation-drop 1s ease;
+    // animation: navigation-drop 1s ease;
   }
   .show {
     animation: navigation-drop-bg 1s ease;
+  }
+  .intro-image {
+    animation: bottom-top linear;
+    animation-timeline: view();
+    // animation-range: entry;
   }
 }
 
 @keyframes bottom-top {
   0% {
+    opacity: 0;
     transform: translateY(-50px);
   }
   100% {
+    opacity: 1;
     transform: translateY(-0);
   }
 }
@@ -43,9 +59,11 @@
 }
 @keyframes MOVE-BG {
   from {
+    opacity: 0;
     transform: translateY(-20px);
   }
   to {
+    opacity: 0.7;
     transform: translateY(0px);
   }
 }

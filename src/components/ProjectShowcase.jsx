@@ -1,8 +1,9 @@
 import React from "react";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 // import ProjectPopup from "./ProjectPopup";
 import ProjectCardIcons from "./ProjectCardIcons";
 import "../css/ProjectShowcase.scss";
-import { Link } from "react-router-dom";
+
 
 function ProjectShowcase({ project }) {
   // useState: Window popup hook for opening and closing it.
@@ -19,6 +20,7 @@ function ProjectShowcase({ project }) {
   // };
 
   return (
+
     <div className="p-showcase">
       <div className="p-content">
         <div className="p-number">#0{project.index}</div>
@@ -49,11 +51,12 @@ function ProjectShowcase({ project }) {
         </Link>
       </div>
       <div className="p-image-container">
-        <Link to={project.titleShort}>
+        <Link to={`/${project.titleShort}`}>
           <img src={project.img} alt="Card" className="p-image" />
         </Link>
       </div>
     </div>
+
   );
 }
 
