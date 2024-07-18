@@ -1,4 +1,4 @@
-# AFRStudio Personal Portfolio Website
+# [AFRStudio](https://alvaro347.github.io/afrstudio/) Personal Portfolio Website
 
 Welcome to my personal portfolio website! This project showcases my skills as a web developer, built with React, and is published on GitHub Pages.
 
@@ -20,7 +20,7 @@ Welcome to my personal portfolio website! This project showcases my skills as a 
 
 This portfolio website serves as a platform to display my projects, skills, and experiences. It is designed to provide visitors with a comprehensive understanding of my work and capabilities as a web developer.
 
-You can visit the live site [here](https://your-github-username.github.io/your-repo-name/).
+You can visit the live site [here](https://alvaro347.github.io/afrstudio/).
 
 ## Features
 
