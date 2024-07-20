@@ -13,8 +13,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}></Route>
-        <Route path="/:projectName" element={<ProjectPage />}/>
+        <Route path="/afrstudio" element={<App />}></Route>
+        <Route path="/afrstudio/:projectName" element={<ProjectPage />}/>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
