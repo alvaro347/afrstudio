@@ -1,6 +1,6 @@
 {
   "name": "afr-portfolio-website",
-  "homepage": "https://alvaro347.github.io/afrstudio"
+  "homepage": "https://alvaro347.github.io/afrstudio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
