@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/afrstudio/static/css/main.c349d005.css",
-    "main.js": "/afrstudio/static/js/main.7866d59a.js",
+    "main.js": "/afrstudio/static/js/main.1f8b30da.js",
     "static/media/video01.mp4": "/afrstudio/static/media/video01.631c281230a6c3b034d8.mp4",
     "static/media/headerImg.png": "/afrstudio/static/media/headerImg.5a0eea50f480b9991e80.png",
     "static/media/header02.png": "/afrstudio/static/media/header02.c41e87155434e91df9e3.png",
@@ -22,10 +22,10 @@
     "static/media/github.svg": "/afrstudio/static/media/github.45de8549a3737c1a82e1f163a2be2bd6.svg",
     "static/media/noise.svg": "/afrstudio/static/media/noise.33b94308ef8a048d368f.svg",
     "main.c349d005.css.map": "/afrstudio/static/css/main.c349d005.css.map",
-    "main.7866d59a.js.map": "/afrstudio/static/js/main.7866d59a.js.map"
+    "main.1f8b30da.js.map": "/afrstudio/static/js/main.1f8b30da.js.map"
   },
   "entrypoints": [
     "static/css/main.c349d005.css",
-    "static/js/main.7866d59a.js"
+    "static/js/main.1f8b30da.js"
   ]
 }
