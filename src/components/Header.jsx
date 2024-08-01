@@ -1,16 +1,7 @@
 import React from "react";
 import "../css/Header.scss";
-import ArtStation from "../img/artstationoriginal.svg";
-import Github from "../img/github.svg";
 import headerImg from "../img/headerImg.png";
-import headerArt from "../img/headerArt.jpg";
-import headerRadio from "../img/headerRadio.jpg";
-import headerSunset from "../img/headerSunset.jpg";
-import header01 from "../img/header01.jpg";
-import header02 from "../img/header02.png";
-import header03 from "../img/header03.png";
 
-import video01 from "../img/video01.mp4";
 
 const Header = () => {
   return (

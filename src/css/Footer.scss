@@ -75,13 +75,15 @@
 }
 
 .footer-title-logo {
-  color: beige;
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
   text-align: center;
 }
 
 .footer-button {
   @include Button02-Footer;
   display: inline-block;
+  width: 200px;
   
 }
 

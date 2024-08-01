@@ -1,5 +1,5 @@
 import React from "react";
-import image1 from "../img/image1.png";
+import intro from "../img/intro6.png";
 import "../css/Introduction.scss";
 
 function Introduction() {
@@ -17,13 +17,14 @@ function Introduction() {
             and a commitment to delivering <span className="text-highlighted">exceptional results.</span>
           </p>
           <div className="intro-sub">
-            <a href="#projects" className="intro-button">Projects</a>
+            {/* <a href="#projects" className="intro-button">Projects</a> */}
             <a href="https://github.com/alvaro347" className="intro-button">GitHub</a>
+            <a href="https://www.linkedin.com/in/alvaro-fernandez-rodriguez" className="intro-button">LinkedIn</a>
           </div>
         </div>
 
         <div className="intro-img-container">
-          <img src={image1} className="intro-img" alt="" />
+          <img src={intro} className="intro-img" alt="" />
         </div>
       </div>
     </section>

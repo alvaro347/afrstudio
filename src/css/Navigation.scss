@@ -1,6 +1,7 @@
 @import "./themes.scss";
 
 nav {
+  z-index: 1;
   height: 60px;
   position: absolute;
   top: 0;

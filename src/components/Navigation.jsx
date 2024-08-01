@@ -51,8 +51,8 @@ const Navigation = ({ toggleTheme }) => {
           <a href="#footer" className="nav-link" onClick={closeMenu}>Contact</a>
         </div>
         <div id="nav-right">
-          {/* <button className="button-theme" onClick={toggleTheme}>&#9728;</button> */}
-          <a className="icon-search-link" href="#header">
+          <button className="button-theme" onClick={toggleTheme}>&#9728;</button>
+          <a className="icon-search-link" href="mailto:alvarofrdesign@gmail.com">
             <button className="button-theme">&#9993;</button>
           </a>
           <div className="burger-menu" onClick={toggleMenu}>
