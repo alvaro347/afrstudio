@@ -26,7 +26,7 @@ function ProjectShowcase({ project }) {
         <div className="p-number">#0{project.index}</div>
 
         <h2 className="p-title">
-          <Link to={project.titleShort}>{project.title}</Link>
+          <Link to={project.link}>{project.title}</Link>
         </h2>
 
         <p className="p-description">{project.description}</p>
@@ -46,12 +46,12 @@ function ProjectShowcase({ project }) {
             );
           })}
         </ul>
-        <Link className="p-more-info" to={project.titleShort}>
+        <Link className="p-more-info" to={project.link}>
           More information...
         </Link>
       </div>
       <div className="p-image-container">
-        <Link to={`/${project.titleShort}`}>
+        <Link to={project.link}>
           <img src={project.img} alt="Card" className="p-image" />
         </Link>
       </div>

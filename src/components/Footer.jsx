@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer-content">
         <div className="footer-contact">
           <h3 className="footer-title-contact">Contact Information</h3>
-          <button className="footer-button">Email</button>
+          <a href="mailto:alvarofrdesign@gmail.com"><button className="footer-button">Email</button></a>
           {/* <button className="footer-button">Telegram</button> */}
         </div>
         <div className="footer-links-section">
@@ -59,9 +59,9 @@ function Footer() {
                 </a>
               </li>
               <li className="footer-link">
-                <a href="https://www.instagram.com/alvarogna/">
+                <a href="https://www.artstation.com/alvaro347">
                   <i className="footer-icon"></i>
-                  <p>Instagram</p>
+                  <p>ArtStation</p>
                 </a>
               </li>
             </ul>

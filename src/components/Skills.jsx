@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 // import image1 from "../img/image1.png";
 import "../css/Skills.scss";
-import Accordion from "./Accordion";
+
 import headerImg from "../img/headerImg.png";
-import image1 from "../img/image1.png";
 import conceptIcon from '../img/skills/conceptIcon2.png';
 import modellingIcon from '../img/skills/3dIcon2.png';
 import programmingIcon from '../img/skills/programmingIcon2.png';
@@ -18,17 +17,17 @@ const accordionData = [
   {
     title: "Art Direction",
     description: " goes here. Description of skill 2 goes here.Description of skill 2 goes here.",
-    image: image1,
+    // image: image1,
   },
   {
     title: "Concept Art",
     description: "Transforming ideas into visually stunning and captivating designs.",
-    image: headerImg,
+    // image: headerImg,
   },
   {
     title: "3D Design",
     description: "Creating realistic and immersive 3D models for various industries.",
-    image: image1,
+    // image: image1,
   },
 ];
 
@@ -57,27 +56,32 @@ const Skills = () => {
           </p>
         </div>
         <div className="skills-container">
-          <div className="skill">
-            <p className="skill-number">#01</p>
-            <img src={programmingIcon} alt="" className="skill-img" />
-            <h4 className="skill-title">Web-Development</h4>
-            <p className="skill-text">
-              Crafting responsive and user-friendly websites that leave a lasting impression.
-            </p>
-          </div>
-          <div className="skill">
-            <p className="skill-number">#02</p>
-            <img src={conceptIcon} alt="" className="skill-img" />
-            <h4 className="skill-title">Concept Art</h4>
-            <p className="skill-text">Transforming ideas into visually stunning and captivating designs.</p>
-          </div>
-          <div className="skill">
-            <p className="skill-number">#03</p>
-
-            <img src={modellingIcon} alt="" className="skill-img" />
-            <h4 className="skill-title">3D Design</h4>
-            <p className="skill-text">Creating realistic and immersive 3D models for various industries.</p>
-          </div>
+          <a href="https://github.com/alvaro347">
+            <div className="skill">
+              <p className="skill-number">#01</p>
+              <img src={programmingIcon} alt="" className="skill-img" />
+              <h4 className="skill-title">Software Development</h4>
+              <p className="skill-text">
+                Crafting responsive and user-friendly websites that leave a lasting impression.
+              </p>
+            </div>
+          </a>
+          <a href="https://www.artstation.com/alvaro347">
+            <div className="skill">
+              <p className="skill-number">#02</p>
+              <img src={conceptIcon} alt="" className="skill-img" />
+              <h4 className="skill-title">Concept Design</h4>
+              <p className="skill-text">Transforming ideas into visually stunning and captivating designs. Specialized in web design and game concept art</p>
+            </div>
+          </a>
+          <a href="https://www.artstation.com/alvaro347">
+            <div className="skill">
+              <p className="skill-number">#03</p>
+              <img src={modellingIcon} alt="" className="skill-img" />
+              <h4 className="skill-title">3D Design</h4>
+              <p className="skill-text">Creating realistic and immersive 3D models for various industries. Props, products and sceneries.</p>
+            </div>
+          </a>
         </div>
       </div>
       {/* <div id="accordion">

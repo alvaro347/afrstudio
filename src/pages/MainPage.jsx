@@ -5,7 +5,7 @@ import ProjectShowcase from "../components/ProjectShowcase";
 import Introduction from "../components/Introduction";
 import Skills from "../components/Skills";
 import Header from "../components/Header";
-import image1 from "../img/image1.png";
+import profile from "../img/profile.jpg";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 
@@ -76,7 +76,7 @@ function MainPage({ projects, headerImg, icons, isDarkMode, toggleTheme }) {
               <p>Freelance available!</p>
             </div>
           </div>
-          <img className="about-image" src={image1} alt="" />
+          <img className="about-image" src={profile} alt="" />
         </div>
       </section>
     </main>

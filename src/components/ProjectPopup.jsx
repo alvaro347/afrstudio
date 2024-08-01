@@ -71,7 +71,7 @@ const ProjectPopup = ({ project, trigger, handlePopup, isDarkMode }) => {
               <h2 className="popup-title">{project.title}</h2>
               <div className="popup-details">
                 <div className="popup-text">
-                  <p className="popup-description">{project.overview}</p>
+                  <p className="popup-description">{project.description}</p>
                 </div>
 
                 <div className="popup-side-info">
