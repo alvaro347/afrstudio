@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../css/MainPage.scss";
 import ProjectsListCards from "../components/ProjectsListCards";
 import ProjectShowcase from "../components/ProjectShowcase";
@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 // TODO: Combine themes and variables into one file.
 // NOTE: For Flex elements use the skills section as base
 
-function MainPage({ projects, headerImg, icons, isDarkMode, toggleTheme }) {
+function MainPage({ projects, isDarkMode, toggleTheme }) {
 
   return (
     <>
