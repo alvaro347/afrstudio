@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../css/ProjectCard.scss";
 // import ProjectCardIcons from "./ProjectCardIcons";
 import ProjectPopup from "./ProjectPopup";

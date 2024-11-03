@@ -45,6 +45,7 @@ function ProjectShowcase({ project }) {
               </li>
             );
           })}
+          
         </ul>
         <Link className="p-more-info" to={project.link}>
           More information...

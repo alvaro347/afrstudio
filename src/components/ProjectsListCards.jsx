@@ -7,12 +7,16 @@ function ProjectsListCards({ projects, isDarkMode }) {
       // Find the index number of each project entry to pass it as a text
       const number = "#0" + (Object.keys(projects).indexOf(project) + -1).toString();
       // Return each project card with the necessary props.
-      if ((Object.keys(projects).indexOf(project) + 1) > 2) {
+      if (Object.keys(projects).indexOf(project) + 1 > 2) {
         return (
-          <ProjectCard project={projectData} number={number} key={projectData.title} isDarkMode={isDarkMode} />
+          <ProjectCard
+            project={projectData}
+            number={number}
+            key={projectData.title}
+            isDarkMode={isDarkMode}
+          />
         );
       }
-
     });
     return ShowProjects;
   }

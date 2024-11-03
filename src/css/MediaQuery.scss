@@ -74,13 +74,11 @@
     max-height: 500px;
   }
   .about-text-bottom {
-display: none;
+    display: none;
   }
-
 }
 
 @media screen and (min-width: 1201px) {
-
   #about-text {
     text-align: left;
   }
@@ -121,7 +119,7 @@ display: none;
     font-size: 0.8rem;
     display: flex;
     justify-content: space-between;
-margin-top: 20px;
+    margin-top: 20px;
     & p:last-child {
       text-align: right;
     }
@@ -171,7 +169,6 @@ margin-top: 20px;
 }
 
 @media screen and (max-width: 1440px) {
-
 }
 
 @media screen and (min-width: 801px) {
