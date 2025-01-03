@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/afrstudio/static/css/main.20f833a1.css",
-    "main.js": "/afrstudio/static/js/main.98703fc9.js",
+    "main.css": "/afrstudio/static/css/main.4d1fc172.css",
+    "main.js": "/afrstudio/static/js/main.8966b468.js",
     "static/media/project4c.png": "/afrstudio/static/media/project4c.afcb451bf7b4d11038d9.png",
     "static/media/headerImg.png": "/afrstudio/static/media/headerImg.5a0eea50f480b9991e80.png",
     "static/media/project1.png": "/afrstudio/static/media/project1.a93ba989a4f877b97c6e.png",
     "static/media/project2.png": "/afrstudio/static/media/project2.c5f3ba5bc090ec5e39b8.png",
     "static/media/intro6.png": "/afrstudio/static/media/intro6.dc92369eceaa91587a12.png",
     "static/media/profile.jpg": "/afrstudio/static/media/profile.6b2de55a07cfb239af1b.jpg",
+    "static/media/godotGame1.jpg": "/afrstudio/static/media/godotGame1.ae2eee91a3bd88c51e12.jpg",
+    "static/media/godotGame2.jpg": "/afrstudio/static/media/godotGame2.a61d5301bb790f505a41.jpg",
     "static/media/project5c.png": "/afrstudio/static/media/project5c.1e6b518258e0a43184e8.png",
+    "static/media/godotGame3.jpg": "/afrstudio/static/media/godotGame3.cf1456e735b6a414baae.jpg",
     "static/media/project3b.png": "/afrstudio/static/media/project3b.23137883de7c134760c8.png",
     "static/media/project3.png": "/afrstudio/static/media/project3.616353e0dfbe77a7353c.png",
     "static/media/project5.png": "/afrstudio/static/media/project5.be35d71b850d9175414b.png",
@@ -19,14 +22,15 @@
     "static/media/3dIcon2.png": "/afrstudio/static/media/3dIcon2.fd2bada84737b88fcf7d.png",
     "static/media/conceptIcon2.png": "/afrstudio/static/media/conceptIcon2.9a1d6a75447947fc2d07.png",
     "static/media/react.svg": "/afrstudio/static/media/react.86dfc20e58300b09ca9cf8c7a82024c3.svg",
+    "static/media/godot.svg": "/afrstudio/static/media/godot.47230d9135c8338abafaa7c5d8af1c9b.svg",
+    "static/media/html2.svg": "/afrstudio/static/media/html2.01aeba21cc4116f5b5459a36a41cc3f3.svg",
     "index.html": "/afrstudio/index.html",
-    "static/media/html2.svg": "/afrstudio/static/media/html2.f6ffeb094a50e28f4d4548a25904c6f2.svg",
-    "static/media/noise.svg": "/afrstudio/static/media/noise.33b94308ef8a048d368f.svg",
-    "main.20f833a1.css.map": "/afrstudio/static/css/main.20f833a1.css.map",
-    "main.98703fc9.js.map": "/afrstudio/static/js/main.98703fc9.js.map"
+    "static/media/noise.svg": "/afrstudio/static/media/noise.60ff043674bf10527a49.svg",
+    "main.4d1fc172.css.map": "/afrstudio/static/css/main.4d1fc172.css.map",
+    "main.8966b468.js.map": "/afrstudio/static/js/main.8966b468.js.map"
   },
   "entrypoints": [
-    "static/css/main.20f833a1.css",
-    "static/js/main.98703fc9.js"
+    "static/css/main.4d1fc172.css",
+    "static/js/main.8966b468.js"
   ]
 }
