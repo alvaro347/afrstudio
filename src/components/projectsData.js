@@ -11,6 +11,10 @@ import project5c from "../img/project5c.png";
 import reactLogo from "../img/react.svg";
 import headerImg from "../img/headerImg.png";
 import htmlLogo from "../img/html2.svg";
+import godotLogo from "../img/godot.svg";
+import godotGame1 from "../img/godotGame1.jpg";
+import godotGame2 from "../img/godotGame2.jpg";
+import godotGame3 from "../img/godotGame3.jpg";
 
 const icons = {
   reactIcon: {
@@ -33,6 +37,11 @@ const icons = {
     img: htmlLogo,
     link: "#javascript",
   },
+  godot: {
+    name: "godot",
+    img: godotLogo,
+    link: "#godot"
+  }
 };
 
 const projects = {
@@ -78,9 +87,28 @@ const projects = {
     },
   },
   project3: {
-    title: "Frogger Type Game",
+    title: "Vampire Survivor Style Game",
     titleShort: "project3b",
     index: 3,
+    type: "GAME",
+    link: "https://github.com/alvaro347/vampire-survivor-style-game",
+    location: "",
+    date: "2024",
+    description:
+      "A 2D arena survival rogue-like game built using the Godot Engine (v4.3) and GDScript, inspired by the popular Vampire Survivors game. In this game, players fight off waves of enemies in a survival-based gameplay loop, leveling up, and collecting upgrades to enhance their abilities and powers.",
+    keyPoints: ["Game Logic", "GDScript", "Personal Project"],
+    img: godotGame1,
+    images: [godotGame1, godotGame2, godotGame3],
+    icons: [icons.godot],
+    keywords: {
+      tags: ["Game Development", "Godot"],
+      link: "",
+    },
+  },  
+  project4: {
+    title: "Frogger Type Game",
+    titleShort: "project4b",
+    index: 4,
     type: "GAME",
     link: "https://github.com/alvaro347/frogger-type-game",
     location: "",
@@ -92,14 +120,14 @@ const projects = {
     images: [project3, project3b],
     icons: [icons.javascript, icons.htmlIcon],
     keywords: {
-      tags: ["web", "server"],
+      tags: ["Game Development", "Javascript"],
       link: "",
     },
   },  
-  project4: {
+  project5: {
     title: "Connect 4 Game in Java",
-    titleShort: "project4b",
-    index: 4,
+    titleShort: "project5b",
+    index: 5,
     type: "GAME",
     link: "https://github.com/alvaro347/connect4-game",
     location: "",
@@ -115,10 +143,10 @@ const projects = {
       link: "",
     },
   }, 
-  project5: {
+  project6: {
     title: "Obstruction Game in Java",
-    titleShort: "project5b",
-    index: 5,
+    titleShort: "project6b",
+    index: 6,
     type: "GAME",
     link: "https://github.com/alvaro347/obstruction-game",
     location: "",
