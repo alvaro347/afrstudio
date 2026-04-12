@@ -1,0 +1,68 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Crafting innovative solutions that bridge creativity and technology — driving tangible results and elevating user experiences.",
+    "cta": "View Projects"
+  },
+  "sections": {
+    "featured": {
+      "label": "Selected Work",
+      "title": "Featured*Projects"
+    },
+    "projects": {
+      "label": "More Work",
+      "title": "Other*Projects"
+    },
+    "skills": {
+      "label": "What I Do",
+      "title": "Services*Expertise",
+      "description": "Bringing a unique blend of technical expertise and artistic vision to every project."
+    },
+    "about": {
+      "label": "About Me",
+      "title": "The*Story",
+      "bio1": "I'm a versatile professional with a background in electrical engineering and industrial design. Over the years, I've blended engineering expertise with a keen eye for design, delivering impactful solutions across multiple industries.",
+      "bio2": "Specializing in software engineering and web development, I'm passionate about crafting seamless user experiences and building visually stunning applications. My combination of technical skills and design sensibility allows me to create innovative solutions that captivate users and drive growth.",
+      "location": "Based in Europe",
+      "availability": "Software Engineer & Designer"
+    }
+  },
+  "skills": {
+    "dev": {
+      "title": "Software Development",
+      "description": "Full-stack development with modern frameworks. From cross-platform apps to web applications and APIs."
+    },
+    "design": {
+      "title": "Concept Design",
+      "description": "Transforming ideas into visually stunning designs. Specialized in web design, UI/UX, and game concept art."
+    },
+    "3d": {
+      "title": "3D Design",
+      "description": "Creating realistic and immersive 3D models for various industries. Props, products, and sceneries."
+    }
+  },
+  "footer": {
+    "contactLabel": "Say Hello",
+    "contact": "Let's Work Together",
+    "ctaText": "Have a project in mind? I'd love to hear about it.",
+    "email": "Send an Email",
+    "navigation": "Navigation",
+    "social": "Social",
+    "tagline": "Software engineer & designer crafting digital experiences at the intersection of code and creativity.",
+    "copyright": "© 2025 AFR Studio",
+    "backToTop": "Back to top ↑"
+  },
+  "project": {
+    "viewProject": "View Project",
+    "viewCode": "Source Code",
+    "liveSite": "Live Site",
+    "technologies": "Technologies",
+    "highlights": "Highlights",
+    "close": "Close"
+  }
+}

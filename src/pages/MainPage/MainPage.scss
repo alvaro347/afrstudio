@@ -1,0 +1,103 @@
+@use "../../css/variables" as *;
+@use "../../css/mixins" as *;
+
+// -- Skills section
+.skills-grid {
+  display: grid;
+  gap: $space-lg;
+  grid-template-columns: 1fr;
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+// -- Contact CTA section
+.contact-section {
+  padding: $space-3xl 0;
+
+  @include md {
+    padding: $space-4xl 0;
+  }
+}
+
+.contact-inner {
+  @include container;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+  padding-top: $space-3xl;
+
+  @include md {
+    padding-top: $space-4xl;
+  }
+}
+
+.contact-label {
+  display: block;
+  color: var(--color-accent);
+  font-size: $text-sm;
+  margin-bottom: $space-sm;
+}
+
+.contact-heading {
+  @include heading-lg;
+  color: var(--color-text-primary);
+  margin-bottom: $space-sm;
+}
+
+.contact-text {
+  font-family: $font-mono;
+  font-size: $text-sm;
+  color: var(--color-text-secondary);
+  margin-bottom: $space-lg;
+}
+
+// -- About section
+.about-layout {
+  display: grid;
+  gap: $space-2xl;
+  align-items: center;
+
+  @include md {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+
+  p {
+    @include body-text;
+  }
+}
+
+.about-meta {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+  margin-top: $space-sm;
+  font-family: $font-mono;
+  font-size: $text-sm;
+  letter-spacing: -0.02em;
+  color: var(--color-text-secondary);
+}
+
+.about-divider {
+  width: 1px;
+  height: 14px;
+  background: var(--color-border);
+}
+
+.about-image {
+  border-radius: $radius-lg;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+
+  img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+}

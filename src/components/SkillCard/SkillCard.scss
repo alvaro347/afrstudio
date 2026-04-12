@@ -1,0 +1,197 @@
+@use "../../css/variables" as *;
+@use "../../css/mixins" as *;
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius-lg;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  transition: all $transition-base;
+
+  &:hover {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 30px var(--color-accent-glow);
+
+    .skill-visual-code .code-line {
+      opacity: 1;
+    }
+    .skill-visual-design .design-frame {
+      transform: scale(1.05);
+    }
+    .cube {
+      animation-play-state: running;
+    }
+  }
+}
+
+.skill-card-body {
+  padding: $space-lg;
+}
+
+.skill-card-number {
+  font-size: $text-xs;
+  color: var(--color-text-tertiary);
+  display: block;
+  margin-bottom: $space-sm;
+}
+
+.skill-card-title {
+  font-size: $text-lg;
+  font-weight: $weight-semibold;
+  color: var(--color-text-primary);
+  margin-bottom: $space-sm;
+}
+
+.skill-card-desc {
+  font-size: $text-sm;
+  color: var(--color-text-secondary);
+  line-height: $leading-relaxed;
+}
+
+// ============================================
+// Visuals
+// ============================================
+
+.skill-visual {
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-elevated);
+  border-bottom: 1px solid var(--color-border-subtle);
+  overflow: hidden;
+}
+
+// -- Code visual
+.skill-visual-code {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: $space-lg $space-xl;
+  font-family: $font-mono;
+  font-size: $text-sm;
+  gap: 4px;
+}
+
+.code-line {
+  opacity: 0.5;
+  transition: opacity $transition-slow;
+  white-space: nowrap;
+}
+
+.code-indent {
+  padding-left: $space-lg;
+}
+
+.code-kw {
+  color: var(--color-accent);
+}
+
+.code-fn {
+  color: var(--color-accent-secondary);
+}
+
+// -- Design visual
+.skill-visual-design {
+  padding: $space-xl;
+}
+
+.design-frame {
+  width: 100%;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform $transition-base;
+}
+
+.design-nav {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-border);
+}
+
+.design-hero {
+  height: 40px;
+  border-radius: $radius-sm;
+  background: var(--gradient-card-hover);
+  border: 1px solid var(--color-border);
+}
+
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.design-card {
+  height: 50px;
+  border-radius: $radius-sm;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  transition: border-color $transition-base;
+
+  .skill-card:hover & {
+    border-color: var(--color-accent);
+
+    &:nth-child(2) {
+      transition-delay: 80ms;
+    }
+    &:nth-child(3) {
+      transition-delay: 160ms;
+    }
+  }
+}
+
+// -- 3D visual
+.cube-scene {
+  width: 80px;
+  height: 80px;
+  perspective: 300px;
+}
+
+.cube {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cube-spin 8s linear infinite;
+  animation-play-state: paused;
+}
+
+.cube-face {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--color-accent);
+  background: var(--color-accent-glow);
+  opacity: 0.6;
+}
+
+.cube-front  { transform: translateZ(40px); }
+.cube-back   { transform: rotateY(180deg) translateZ(40px); }
+.cube-right  { transform: rotateY(90deg) translateZ(40px); }
+.cube-left   { transform: rotateY(-90deg) translateZ(40px); }
+.cube-top    { transform: rotateX(90deg) translateZ(40px); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(40px); }
+
+@keyframes cube-spin {
+  from { transform: rotateX(-20deg) rotateY(0deg); }
+  to   { transform: rotateX(-20deg) rotateY(360deg); }
+}
+
+// On mobile (no hover), auto-play animations
+@media (max-width: #{$bp-md - 1}) {
+  .code-line {
+    opacity: 1;
+  }
+  .design-card {
+    border-color: var(--color-accent);
+  }
+  .cube {
+    animation-play-state: running;
+  }
+}

@@ -1,0 +1,219 @@
+@use "../../css/variables" as *;
+@use "../../css/mixins" as *;
+
+// ============================================
+// Overlay
+// ============================================
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  background: var(--overlay-bg);
+  backdrop-filter: blur(8px);
+  overflow-y: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: $space-xl $space-md;
+  animation: fade-in 0.2s ease;
+}
+
+// ============================================
+// Modal card
+// ============================================
+
+.popup {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: $radius-xl;
+  overflow: hidden;
+  box-shadow: var(--shadow-popup);
+  margin: auto 0;
+}
+
+.popup-close {
+  position: absolute;
+  top: $space-md;
+  right: $space-md;
+  z-index: 10;
+  width: $btn-height-sm;
+  height: $btn-height-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-full;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: $text-lg;
+  transition: all $transition-fast;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--color-text-primary);
+    border-color: var(--color-text-tertiary);
+  }
+}
+
+// ============================================
+// Media / Slideshow
+// ============================================
+
+.popup-media {
+  position: relative;
+  width: 100%;
+  background: var(--color-surface-elevated);
+}
+
+// Override react-slideshow arrows to sit inside the image
+.popup-media .react-slideshow-container {
+  position: relative;
+
+  .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: $btn-height-sm;
+    height: $btn-height-sm;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: $radius-full;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+
+    &:hover { opacity: 1; }
+
+    &:first-of-type { left: $space-md; }
+    &:last-of-type { right: $space-md; }
+  }
+}
+
+.popup-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-surface-elevated);
+
+  img {
+    width: 100%;
+    max-height: 450px;
+    object-fit: contain;
+  }
+}
+
+// ============================================
+// Body — two columns
+// ============================================
+
+.popup-body {
+  padding: $space-xl;
+
+  @include md {
+    padding: $space-2xl;
+  }
+}
+
+.popup-columns {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xl;
+
+  @include md {
+    flex-direction: row;
+    gap: $space-2xl;
+  }
+}
+
+// -- Left: title, meta, description, buttons
+.popup-left {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  min-width: 0;
+}
+
+.popup-title {
+  @include heading-lg;
+  color: var(--color-text-primary);
+}
+
+.popup-meta {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+}
+
+.popup-year {
+  font-size: $text-xs;
+  color: var(--color-text-tertiary);
+}
+
+.popup-desc {
+  @include body-text;
+  white-space: pre-line;
+}
+
+.popup-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-sm;
+  margin-top: $space-sm;
+}
+
+// -- Right: technologies, highlights
+.popup-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+  min-width: 0;
+
+  @include md {
+    border-left: 1px solid var(--color-border-subtle);
+    padding-left: $space-2xl;
+  }
+}
+
+.popup-section {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.popup-section-label {
+  font-size: $text-xs;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.popup-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-xs;
+}
+
+.popup-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+  padding-left: $space-md;
+  font-size: $text-sm;
+  color: var(--color-text-secondary);
+
+  li {
+    list-style: disc;
+    &::marker {
+      color: var(--color-accent);
+    }
+  }
+}

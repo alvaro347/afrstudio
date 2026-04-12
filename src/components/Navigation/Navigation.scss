@@ -1,0 +1,147 @@
+@use "../../css/variables" as *;
+@use "../../css/mixins" as *;
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $z-overlay + 1;
+  transition: background-color $transition-base, box-shadow $transition-base,
+    backdrop-filter $transition-base, -webkit-backdrop-filter $transition-base;
+}
+
+.nav-scrolled {
+  background-color: var(--color-bg-glass);
+  backdrop-filter: blur(16px) saturate(1.8);
+  -webkit-backdrop-filter: blur(16px) saturate(1.8);
+  box-shadow: var(--shadow-nav);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.nav-inner {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $nav-height;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+
+  img {
+    height: 28px;
+    filter: var(--invert);
+    opacity: 0.8;
+    transition: opacity $transition-base;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.nav-menu {
+  display: none;
+
+  @include md {
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+  }
+}
+
+.nav-link {
+  @include mono-text;
+  color: var(--color-text-secondary);
+  padding: $space-sm $space-md;
+  border-radius: $radius-md;
+  border: 1px solid transparent;
+  transition: color $transition-fast, background-color $transition-fast,
+    border-color $transition-fast;
+
+  &:hover {
+    color: var(--color-text-primary);
+    background: var(--color-glass-hover);
+    border-color: var(--color-border-subtle);
+  }
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  position: relative;
+}
+
+.nav-burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: $btn-height-sm;
+  height: $btn-height-sm;
+  padding: $space-sm;
+  border-radius: $radius-md;
+  border: 1px solid var(--color-border);
+  transition: all $transition-base;
+
+  @include md {
+    display: none;
+  }
+
+  span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--color-text-secondary);
+    border-radius: 1px;
+    transition: transform $transition-base;
+  }
+
+  &:hover {
+    border-color: var(--color-text-tertiary);
+  }
+}
+
+.nav-burger-open {
+  span:first-child {
+    transform: rotate(45deg) translate(2px, 3px);
+  }
+  span:last-child {
+    transform: rotate(-45deg) translate(2px, -3px);
+  }
+}
+
+// Mobile overlay — rendered outside <nav> to avoid stacking context issues
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: $z-overlay;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: $space-lg;
+  background: var(--color-bg-glass-solid);
+  backdrop-filter: blur(32px) saturate(1.8);
+  -webkit-backdrop-filter: blur(32px) saturate(1.8);
+  animation: fade-in 0.2s ease;
+}
+
+.nav-overlay-link {
+  @include mono-text;
+  font-size: $text-2xl;
+  color: var(--color-text-secondary);
+  padding: $space-sm $space-lg;
+  border-radius: $radius-md;
+  transition: color $transition-fast;
+
+  &:hover {
+    color: var(--color-text-primary);
+  }
+}

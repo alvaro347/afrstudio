@@ -1,0 +1,115 @@
+@use "../../css/variables" as *;
+@use "../../css/mixins" as *;
+
+.footer {
+  border-top: 1px solid var(--color-border);
+  padding: $space-2xl 0 $space-md;
+}
+
+.footer-inner {
+  @include container;
+}
+
+// -- Grid: brand left, nav+social pushed right
+.footer-grid {
+  display: grid;
+  gap: $space-xl;
+  margin-bottom: $space-xl;
+
+  @include md {
+    grid-template-columns: 1fr auto;
+    align-items: start;
+  }
+}
+
+// -- Brand block
+.footer-brand-block {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+}
+
+.footer-logo {
+  height: 28px;
+  width: auto;
+  align-self: flex-start;
+  filter: var(--invert);
+  opacity: 0.8;
+}
+
+.footer-tagline {
+  font-size: $text-sm;
+  color: var(--color-text-secondary);
+  line-height: $leading-relaxed;
+  max-width: 460px;
+}
+
+// -- Nav group: navigation + social side by side, pushed right
+.footer-nav-group {
+  display: flex;
+  gap: $space-2xl;
+}
+
+// -- Columns (shared by nav & social)
+.footer-column {
+  min-width: 120px;
+}
+
+.footer-column-title {
+  font-size: $text-xs;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: $space-sm;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xs;
+
+  button, a {
+    display: inline-flex;
+    align-items: center;
+    gap: $space-xs;
+    font-size: $text-sm;
+    color: var(--color-text-secondary);
+    text-align: left;
+    text-decoration: none;
+    transition: color $transition-fast;
+
+    &:hover {
+      color: var(--color-text-primary);
+    }
+  }
+}
+
+.footer-link-icon {
+  font-size: $text-base;
+  flex-shrink: 0;
+}
+
+// -- Bottom bar
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: $space-md;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.footer-copy {
+  font-size: $text-xs;
+  color: var(--color-text-tertiary);
+}
+
+.footer-back-top {
+  font-family: $font-mono;
+  font-size: $text-xs;
+  color: var(--color-text-tertiary);
+  transition: color $transition-fast;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}

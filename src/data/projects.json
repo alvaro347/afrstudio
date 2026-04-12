@@ -1,0 +1,113 @@
+{
+  "featured": [
+    {
+      "id": "cohub",
+      "title": "Cohub",
+      "category": "Desktop App",
+      "year": "2025",
+      "description": "Desktop collaboration tool built on Excalidraw. Real-time visual design with multi-view tabs, AI terminal, and board management.",
+      "overview": "Cohub extends Excalidraw with a production Electron shell — multi-view architecture, typed IPC channels, and a custom Vite plugin for the Excalidraw submodule.\n\nMonorepo with packages for the app shell, SQLite data layer, shared utilities, auth/onboarding, and a dashboard.",
+      "technologies": ["TypeScript", "React", "Electron", "SQLite", "Vite", "xterm.js"],
+      "highlights": ["Yarn monorepo with Excalidraw fork", "Multi-view Electron architecture", "AI terminal integration", "SQLite JSON storage"],
+      "links": { "github": "https://github.com/cohub-space/cohub-monorepo", "live": "https://cohub.space" },
+      "image": "images/projects/cohub-main.webp",
+      "gallery": [],
+      "tags": ["desktop", "collaboration", "electron"]
+    },
+    {
+      "id": "tassku",
+      "title": "Tassku",
+      "category": "Cross-Platform App",
+      "year": "2025",
+      "description": "Cross-platform task manager for Web, Android, iOS, and Desktop. Kotlin Multiplatform shared logic, React web frontend, Ktor API with PostgreSQL.",
+      "overview": "Kotlin Multiplatform shares models, repositories, and sync across all platforms. Ktor backend with Exposed ORM and Flyway migrations. Compose Multiplatform for native UI.\n\nTerraform-managed GCP infrastructure with Docker multi-stage builds.",
+      "technologies": ["Kotlin", "React", "Ktor", "PostgreSQL", "Compose", "Terraform"],
+      "highlights": ["Shared logic across 4 platforms", "Ktor REST API + PostgreSQL", "Terraform GCP deployment", "Compose Multiplatform UI"],
+      "links": { "github": null, "live": null },
+      "image": "images/projects/tassku.png",
+      "gallery": [],
+      "tags": ["cross-platform", "mobile", "kotlin"]
+    },
+    {
+      "id": "aluna",
+      "title": "Aluna",
+      "category": "Cross-Platform App",
+      "year": "2025",
+      "description": "Pet health ecosystem — mobile app for owners and web-based vet practice management. Shared Kotlin Multiplatform backend.",
+      "technologies": ["Kotlin", "Compose", "SwiftUI", "Ktor", "PostgreSQL"],
+      "highlights": ["Dual product architecture", "Offline-first SQLDelight", "JWT role-based auth"],
+      "links": { "github": null, "live": null },
+      "image": "images/projects/aluna.png",
+      "gallery": [],
+      "tags": ["cross-platform", "mobile"]
+    }
+  ],
+  "small": [
+    {
+      "id": "conceptgen",
+      "title": "ConceptGen",
+      "category": "ML Project",
+      "year": "2025",
+      "description": "Concept art generation with attribute-specific LoRA adapters on SDXL. Per-attribute perceptual losses for color, lighting, and composition.",
+      "technologies": ["Python", "PyTorch", "SDXL", "FastAPI", "LoRA"],
+      "highlights": ["LoRA adapters per attribute", "Custom losses", "FastAPI serving"],
+      "links": { "github": null, "live": null },
+      "image": "images/projects/conceptgen.png",
+      "gallery": [],
+      "tags": ["machine-learning", "generative-ai"]
+    },
+    {
+      "id": "llmconcept",
+      "title": "LLMConcept",
+      "category": "ML Research",
+      "year": "2025",
+      "description": "Few-shot image classification with DINOv2 features, FiLM-conditioned CVAE, and a from-scratch transformer language model.",
+      "overview": "DINOv2 ViT-B/14 frozen features with memory-mapped caching. CVAE with 4-term composite loss. Custom BPE tokenizer + transformer LM built without the transformers library.\n\n36 test files, full ablation suite, and Gradio demo. All tests run in under 90s on CPU.",
+      "technologies": ["Python", "PyTorch", "DINOv2", "Transformer", "Gradio"],
+      "highlights": ["From-scratch transformer LM", "FiLM-conditioned CVAE", "36 tests across 4 tiers", "NeurIPS-style paper"],
+      "links": { "github": null, "live": null },
+      "image": "images/projects/llmconcept.png",
+      "gallery": [],
+      "tags": ["machine-learning", "research", "python"]
+    },
+    {
+      "id": "aluna-web",
+      "title": "Aluna Web",
+      "category": "Website",
+      "year": "2025",
+      "description": "Marketing site for Aluna pet health platform. Theme system with OS preference detection and design tokens.",
+      "technologies": ["React", "TypeScript", "Vite"],
+      "highlights": ["OS theme detection", "Design tokens", "GitHub Pages CI/CD"],
+      "links": { "github": null, "live": null },
+      "image": "images/projects/aluna-web.png",
+      "gallery": [],
+      "tags": ["web", "marketing"]
+    },
+    {
+      "id": "tassku-web",
+      "title": "Tassku Web",
+      "category": "Website",
+      "year": "2025",
+      "description": "Marketing site for Tassku. Technical aesthetic inspired by Obsidian and Vercel with CSS Modules.",
+      "technologies": ["React", "TypeScript", "Vite"],
+      "highlights": ["Modern aesthetic", "CSS Modules", "Component system"],
+      "links": { "github": null, "live": null },
+      "image": "images/projects/tassku-web-main.webp",
+      "gallery": [],
+      "tags": ["web", "marketing"]
+    },
+    {
+      "id": "cohub-space",
+      "title": "cohub.space",
+      "category": "Website",
+      "year": "2025",
+      "description": "Website for the Cohub collaboration platform. Product showcase and download links.",
+      "technologies": ["React", "TypeScript", "Vite"],
+      "highlights": ["Product landing page", "Responsive design", "Download links"],
+      "links": { "github": null, "live": "https://cohub.space" },
+      "image": "images/projects/cohub-web.png",
+      "gallery": [],
+      "tags": ["web"]
+    }
+  ]
+}

@@ -1,51 +1,30 @@
 {
   "name": "afr-portfolio-website",
   "homepage": "https://alvaro347.github.io/afrstudio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
+  "type": "module",
   "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^5.1.0",
-    "react-modal": "^3.16.1",
-    "react-scripts": "5.0.1",
-    "react-slideshow-image": "^4.3.1",
-    "react-transition-group": "^4.4.5",
-    "sass": "^1.75.0",
-    "styled-components": "^6.1.8",
-    "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "i18next": "^26.0.4",
+    "i18next-browser-languagedetector": "^8.2.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-i18next": "^17.0.2",
+    "react-icons": "^5.4.0",
+    "react-router-dom": "^7.1.0",
+    "react-slideshow-image": "^4.3.2",
+    "sass": "^1.83.0"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1",
-    "react-router-dom": "^6.23.0"
+    "@vitejs/plugin-react": "^4.3.4",
+    "gh-pages": "^6.3.0",
+    "vite": "^6.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }

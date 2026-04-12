@@ -1,0 +1,64 @@
+@use "../../css/variables" as *;
+@use "../../css/mixins" as *;
+
+.section {
+  padding: $space-2xl 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+
+  &.revealed {
+    opacity: 1;
+  }
+
+  @include md {
+    padding: $space-3xl 0;
+  }
+}
+
+.section-inner {
+  @include container;
+}
+
+.section-header {
+  margin-bottom: $space-lg;
+
+  @include md {
+    margin-bottom: $space-2xl;
+  }
+}
+
+.section-label {
+  display: block;
+  color: var(--color-accent);
+  font-size: $text-sm;
+  margin-bottom: $space-sm;
+}
+
+.section-title {
+  font-family: $font-display;
+  font-size: $text-4xl;
+  font-weight: $weight-semibold;
+  line-height: $leading-tight;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+
+  @include md {
+    font-size: $text-5xl;
+  }
+
+  @include lg {
+    font-size: $text-6xl;
+  }
+}
+
+.section-title-star {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  color: var(--color-accent);
+  padding: 0 0.15em;
+  line-height: 1;
+  position: relative;
+  top: -0.05em;
+}

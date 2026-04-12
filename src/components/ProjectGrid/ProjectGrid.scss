@@ -1,0 +1,16 @@
+@use "../../css/variables" as *;
+@use "../../css/mixins" as *;
+
+.project-grid {
+  display: grid;
+  gap: $space-lg;
+  grid-template-columns: 1fr;
+
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "about": "Sobre Mí",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "subtitle": "Creando soluciones innovadoras que unen creatividad y tecnología — generando resultados tangibles y elevando la experiencia del usuario.",
+    "cta": "Ver Proyectos"
+  },
+  "sections": {
+    "featured": {
+      "label": "Trabajo Seleccionado",
+      "title": "Proyectos*Destacados"
+    },
+    "projects": {
+      "label": "Más Trabajo",
+      "title": "Otros*Proyectos"
+    },
+    "skills": {
+      "label": "Qué Hago",
+      "title": "Servicios*Experiencia",
+      "description": "Aportando una combinación única de experiencia técnica y visión artística a cada proyecto."
+    },
+    "about": {
+      "label": "Sobre Mí",
+      "title": "La*Historia",
+      "bio1": "Soy un profesional versátil con formación en ingeniería eléctrica y diseño industrial. A lo largo de los años, he combinado mi experiencia en ingeniería con un ojo agudo para el diseño, entregando soluciones impactantes en múltiples industrias.",
+      "bio2": "Especializado en ingeniería de software y desarrollo web, me apasiona crear experiencias de usuario fluidas y aplicaciones visualmente impresionantes. Mi combinación de habilidades técnicas y sensibilidad para el diseño me permite crear soluciones innovadoras que cautivan a los usuarios e impulsan el crecimiento.",
+      "location": "Con base en Europa",
+      "availability": "Ingeniero de Software y Diseñador"
+    }
+  },
+  "skills": {
+    "dev": {
+      "title": "Desarrollo de Software",
+      "description": "Desarrollo full-stack con frameworks modernos. Desde aplicaciones multiplataforma hasta aplicaciones web y APIs."
+    },
+    "design": {
+      "title": "Diseño Conceptual",
+      "description": "Transformando ideas en diseños visualmente impresionantes. Especializado en diseño web, UI/UX y arte conceptual para juegos."
+    },
+    "3d": {
+      "title": "Diseño 3D",
+      "description": "Creando modelos 3D realistas e inmersivos para diversas industrias. Props, productos y escenarios."
+    }
+  },
+  "footer": {
+    "contact": "Contacto",
+    "email": "Email",
+    "content": "Contenido",
+    "social": "Social",
+    "copyright": "© 2025 AFR Studio"
+  },
+  "project": {
+    "viewProject": "Ver Proyecto",
+    "viewCode": "Código Fuente",
+    "liveSite": "Sitio Web",
+    "technologies": "Tecnologías",
+    "highlights": "Destacados",
+    "close": "Cerrar"
+  }
+}
