@@ -7,7 +7,12 @@
   },
   "hero": {
     "subtitle": "Crafting innovative solutions that bridge creativity and technology — driving tangible results and elevating user experiences.",
-    "cta": "View Projects"
+    "cta": "View Projects",
+    "stats": {
+      "projects": { "value": "5+", "label": "Projects" },
+      "experience": { "value": "3+", "label": "Years Exp" },
+      "role": { "value": "Full Stack", "label": "Dev & Design" }
+    }
   },
   "sections": {
     "featured": {

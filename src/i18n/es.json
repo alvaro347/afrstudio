@@ -7,7 +7,12 @@
   },
   "hero": {
     "subtitle": "Creando soluciones innovadoras que unen creatividad y tecnología — generando resultados tangibles y elevando la experiencia del usuario.",
-    "cta": "Ver Proyectos"
+    "cta": "Ver Proyectos",
+    "stats": {
+      "projects": { "value": "5+", "label": "Proyectos" },
+      "experience": { "value": "3+", "label": "Años Exp" },
+      "role": { "value": "Full Stack", "label": "Dev & Diseño" }
+    }
   },
   "sections": {
     "featured": {

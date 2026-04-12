@@ -4,9 +4,11 @@
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
   position: relative;
   padding-top: $nav-height;
+  padding-bottom: $space-xl;
   overflow: hidden;
 }
 
@@ -15,28 +17,74 @@
   inset: 0;
   z-index: -1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   overflow: hidden;
 
   img {
-    width: 120%;
+    width: 100%;
     height: auto;
-    object-fit: cover;
     filter: var(--invert);
-    opacity: 0.15;
+    opacity: 0.5;
+    margin-top: 18vh;
+
+    @media (min-width: $bp-sm) {
+      margin-top: 24vh;
+    }
+
+    @media (min-width: $bp-md) {
+      margin-top: 18vh;
+    }
   }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, var(--color-text-tertiary) 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+    opacity: 0.2;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+  }
+}
+
+// -- Tron grid canvas layers
+.hero-tron {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-tron canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-inner {
   @include container;
   max-width: 900px;
   position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: auto;
+  padding-top: 32vh;
+
+  @include sm {
+    padding-top: 38vh;
+  }
+
+  @include md {
+    padding-top: 50vh;
+  }
 }
 
 .hero-title {
   font-family: 'Anton', sans-serif;
-  font-size: clamp(3rem, 10vw, 7rem);
+  font-size: clamp(3.5rem, 12vw, 8.5rem);
   font-weight: $weight-normal;
   line-height: 0.92;
   letter-spacing: -0.04em;
@@ -64,6 +112,8 @@
   letter-spacing: -0.01em;
   color: var(--color-text-secondary);
   max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: $space-xl;
 
   @include md {
@@ -74,6 +124,53 @@
 .hero-actions {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: $space-lg;
   flex-wrap: wrap;
+}
+
+// -- Stats strip (pinned near bottom)
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: $space-2xl;
+  position: relative;
+  z-index: 1;
+  padding: 0 $space-lg;
+
+  @include sm {
+    gap: $space-4xl;
+  }
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-xs;
+}
+
+.hero-stat-value {
+  font-family: $font-mono;
+  font-size: $text-base;
+  font-weight: $weight-bold;
+  color: var(--color-text-tertiary);
+  line-height: 1;
+
+  @include sm {
+    font-size: $text-lg;
+  }
+}
+
+.hero-stat-label {
+  font-family: $font-mono;
+  font-size: 0.65rem;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0.7;
+
+  @include sm {
+    font-size: $text-xs;
+  }
 }
