@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { assetPath } from "../../utils/assetPath";
+import { FiGithub } from "react-icons/fi";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import "./Navigation.scss";
 
@@ -55,6 +56,9 @@ function Navigation() {
           </div>
 
           <div className="nav-actions">
+            <a href="https://github.com/alvaro347" target="_blank" rel="noopener noreferrer" className="nav-icon" aria-label="GitHub">
+              <FiGithub />
+            </a>
             <ThemeToggle />
             <button className={`nav-burger ${open ? "nav-burger-open" : ""}`} onClick={() => setOpen(!open)} aria-label="Menu">
               <span />

@@ -30,7 +30,18 @@
 
 // Alternate: text left, image right
 .showcase-reverse {
+  background: var(--color-surface-elevated);
+  border-radius: $radius-lg;
+  padding: $space-lg;
+
+  @include md {
+    padding: $space-2xl;
+  }
+
   @include lg {
+    background: none;
+    border-radius: 0;
+    padding: $space-2xl 0;
     grid-template-columns: 2fr 3fr;
 
     .showcase-image { order: 2; }

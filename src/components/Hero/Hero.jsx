@@ -91,7 +91,7 @@ function drawGrid(ctx, w, h, dots, accentColor) {
   // Main grid — always faintly visible
   ctx.strokeStyle = accentColor;
   ctx.lineWidth = 0.5;
-  ctx.globalAlpha = 0.06;
+  ctx.globalAlpha = 0.03;
 
   ctx.beginPath();
   for (let x = 0; x <= w; x += GRID_MAIN) {
@@ -111,7 +111,7 @@ function drawGrid(ctx, w, h, dots, accentColor) {
 
   for (const dot of dots) {
     const grad = ctx.createRadialGradient(dot.x, dot.y, 0, dot.x, dot.y, REVEAL_RADIUS);
-    grad.addColorStop(0, `rgba(${cr},${cg},${cb},0.4)`);
+    grad.addColorStop(0, `rgba(${cr},${cg},${cb},0.2)`);
     grad.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
     ctx.strokeStyle = grad;
 
@@ -138,7 +138,7 @@ function drawGrid(ctx, w, h, dots, accentColor) {
 
     // Sub-grid lines in range
     const subGrad = ctx.createRadialGradient(dot.x, dot.y, 0, dot.x, dot.y, REVEAL_RADIUS);
-    subGrad.addColorStop(0, `rgba(${cr},${cg},${cb},0.12)`);
+    subGrad.addColorStop(0, `rgba(${cr},${cg},${cb},0.06)`);
     subGrad.addColorStop(1, `rgba(${cr},${cg},${cb},0)`);
     ctx.strokeStyle = subGrad;
     ctx.lineWidth = 0.3;
@@ -174,7 +174,7 @@ function drawDots(ctx, w, h, dots, accentColor) {
     // Trail
     for (let i = 0; i < dot.trail.length; i++) {
       const t = dot.trail[i];
-      const alpha = (i / dot.trail.length) * 0.4;
+      const alpha = (i / dot.trail.length) * 0.2;
       ctx.globalAlpha = alpha;
       ctx.fillStyle = accentColor;
       ctx.beginPath();
@@ -183,14 +183,14 @@ function drawDots(ctx, w, h, dots, accentColor) {
     }
 
     // Dot head
-    ctx.globalAlpha = 0.9;
+    ctx.globalAlpha = 0.5;
     ctx.fillStyle = accentColor;
     ctx.beginPath();
     ctx.arc(dot.x, dot.y, 2.5, 0, Math.PI * 2);
     ctx.fill();
 
     // Glow
-    ctx.globalAlpha = 0.15;
+    ctx.globalAlpha = 0.08;
     ctx.beginPath();
     ctx.arc(dot.x, dot.y, 8, 0, Math.PI * 2);
     ctx.fill();

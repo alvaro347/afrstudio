@@ -124,3 +124,17 @@ ul, ol {
 .accent {
   color: var(--color-accent);
 }
+
+// ============================================
+// Main layout
+// ============================================
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3xl;
+
+  @media (min-width: $bp-lg) {
+    gap: $space-4xl;
+  }
+}
