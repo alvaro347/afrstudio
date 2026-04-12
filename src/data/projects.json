@@ -9,8 +9,8 @@
       "overview": "Cohub extends Excalidraw with a production Electron shell — multi-view architecture, typed IPC channels, and a custom Vite plugin for the Excalidraw submodule.\n\nMonorepo with packages for the app shell, SQLite data layer, shared utilities, auth/onboarding, and a dashboard.",
       "technologies": ["TypeScript", "React", "Electron", "SQLite", "Vite", "xterm.js"],
       "highlights": ["Yarn monorepo with Excalidraw fork", "Multi-view Electron architecture", "AI terminal integration", "SQLite JSON storage"],
-      "links": { "github": "https://github.com/cohub-space/cohub-monorepo", "live": "https://cohub.space" },
-      "image": "images/projects/cohub-main.webp",
+      "links": { "github": null, "live": "https://cohub.space" },
+      "image": "images/projects/cohub.png",
       "gallery": [],
       "tags": ["desktop", "collaboration", "electron"]
     },
@@ -23,7 +23,7 @@
       "overview": "Kotlin Multiplatform shares models, repositories, and sync across all platforms. Ktor backend with Exposed ORM and Flyway migrations. Compose Multiplatform for native UI.\n\nTerraform-managed GCP infrastructure with Docker multi-stage builds.",
       "technologies": ["Kotlin", "React", "Ktor", "PostgreSQL", "Compose", "Terraform"],
       "highlights": ["Shared logic across 4 platforms", "Ktor REST API + PostgreSQL", "Terraform GCP deployment", "Compose Multiplatform UI"],
-      "links": { "github": null, "live": null },
+      "links": { "github": "https://github.com/alvaro347/tassku", "live": "https://tassku.app/" },
       "image": "images/projects/tassku.png",
       "gallery": [],
       "tags": ["cross-platform", "mobile", "kotlin"]
@@ -36,40 +36,13 @@
       "description": "Pet health ecosystem — mobile app for owners and web-based vet practice management. Shared Kotlin Multiplatform backend.",
       "technologies": ["Kotlin", "Compose", "SwiftUI", "Ktor", "PostgreSQL"],
       "highlights": ["Dual product architecture", "Offline-first SQLDelight", "JWT role-based auth"],
-      "links": { "github": null, "live": null },
+      "links": { "github": "https://github.com/alvaro347/aluna", "live": "https://alunapet.com/" },
       "image": "images/projects/aluna.png",
       "gallery": [],
       "tags": ["cross-platform", "mobile"]
     }
   ],
   "small": [
-    {
-      "id": "conceptgen",
-      "title": "ConceptGen",
-      "category": "ML Project",
-      "year": "2025",
-      "description": "Concept art generation with attribute-specific LoRA adapters on SDXL. Per-attribute perceptual losses for color, lighting, and composition.",
-      "technologies": ["Python", "PyTorch", "SDXL", "FastAPI", "LoRA"],
-      "highlights": ["LoRA adapters per attribute", "Custom losses", "FastAPI serving"],
-      "links": { "github": null, "live": null },
-      "image": "images/projects/conceptgen.png",
-      "gallery": [],
-      "tags": ["machine-learning", "generative-ai"]
-    },
-    {
-      "id": "llmconcept",
-      "title": "LLMConcept",
-      "category": "ML Research",
-      "year": "2025",
-      "description": "Few-shot image classification with DINOv2 features, FiLM-conditioned CVAE, and a from-scratch transformer language model.",
-      "overview": "DINOv2 ViT-B/14 frozen features with memory-mapped caching. CVAE with 4-term composite loss. Custom BPE tokenizer + transformer LM built without the transformers library.\n\n36 test files, full ablation suite, and Gradio demo. All tests run in under 90s on CPU.",
-      "technologies": ["Python", "PyTorch", "DINOv2", "Transformer", "Gradio"],
-      "highlights": ["From-scratch transformer LM", "FiLM-conditioned CVAE", "36 tests across 4 tiers", "NeurIPS-style paper"],
-      "links": { "github": null, "live": null },
-      "image": "images/projects/llmconcept.png",
-      "gallery": [],
-      "tags": ["machine-learning", "research", "python"]
-    },
     {
       "id": "aluna-web",
       "title": "Aluna Web",
@@ -79,7 +52,7 @@
       "technologies": ["React", "TypeScript", "Vite"],
       "highlights": ["OS theme detection", "Design tokens", "GitHub Pages CI/CD"],
       "links": { "github": null, "live": null },
-      "image": "images/projects/aluna-web.png",
+      "image": "images/projects/aluna.png",
       "gallery": [],
       "tags": ["web", "marketing"]
     },
@@ -91,8 +64,8 @@
       "description": "Marketing site for Tassku. Technical aesthetic inspired by Obsidian and Vercel with CSS Modules.",
       "technologies": ["React", "TypeScript", "Vite"],
       "highlights": ["Modern aesthetic", "CSS Modules", "Component system"],
-      "links": { "github": null, "live": null },
-      "image": "images/projects/tassku-web-main.webp",
+      "links": { "github": "https://github.com/alvaro347/tassku", "live": "https://tassku.app/" },
+      "image": "images/projects/tassku-web.png",
       "gallery": [],
       "tags": ["web", "marketing"]
     },
@@ -108,6 +81,33 @@
       "image": "images/projects/cohub-web.png",
       "gallery": [],
       "tags": ["web"]
+    },
+    {
+      "id": "conceptgen",
+      "title": "ConceptGen",
+      "category": "ML Project",
+      "year": "2025",
+      "description": "Concept art generation with attribute-specific LoRA adapters on SDXL. Per-attribute perceptual losses for color, lighting, and composition.",
+      "technologies": ["Python", "PyTorch", "SDXL", "FastAPI", "LoRA"],
+      "highlights": ["LoRA adapters per attribute", "Custom losses", "FastAPI serving"],
+      "links": { "github": null, "live": null },
+      "image": "images/projects/conceptgen.png",
+      "gallery": [],
+      "tags": ["machine-learning", "generative-ai"]
+    },
+    {
+      "id": "few-shot-cdvae",
+      "title": "FiLM-Conditioned CVAE for CD-FSL",
+      "category": "MSc Dissertation",
+      "year": "2025",
+      "description": "Domain-aware feature hallucination via FiLM-conditioned VAE on frozen DINOv2 features for cross-domain few-shot classification.",
+      "overview": "Lightweight CVAE (~100K params) generating synthetic DINOv2 ViT-B/14 features conditioned on class identity and domain style descriptors via FiLM layers. Trained with a 4-term composite loss (reconstruction, KL, multi-scale MMD, prototype consistency). Evaluated on the BSCD-FSL benchmark across CropDisease, EuroSAT, ISIC, and ChestX domains.\n\nFull ablation suite, EMD-based domain gap analysis, and t-SNE visualisations.",
+      "technologies": ["Python", "PyTorch", "DINOv2", "VAE", "FiLM"],
+      "highlights": ["FiLM-conditioned CVAE", "DINOv2 frozen features", "4-domain BSCD-FSL benchmark", "Full ablation suite"],
+      "links": { "github": null, "live": null },
+      "image": "images/projects/fewshot.png",
+      "gallery": ["images/projects/fewshot1.png","images/projects/fewshot2.png"],
+      "tags": ["machine-learning", "research", "python", "few-shot-learning"]
     }
   ]
 }
