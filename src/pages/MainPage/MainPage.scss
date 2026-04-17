@@ -21,9 +21,11 @@
   text-align: center;
   border-top: 1px solid var(--color-border);
   padding-top: $space-3xl;
+  padding-bottom: $space-3xl;
 
   @include md {
     padding-top: $space-4xl;
+    padding-bottom: $space-4xl;
   }
 }
 
