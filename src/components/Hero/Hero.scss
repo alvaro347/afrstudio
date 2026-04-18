@@ -17,47 +17,6 @@
   }
 }
 
-// LEGACY — the original hero background. Kept as a backup.
-// Active only when HERO_BG_VARIANT='legacy' in Hero.jsx.
-/*
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  overflow: hidden;
-
-  img {
-    width: 100%;
-    height: auto;
-    filter: var(--invert);
-    opacity: 0.5;
-    margin-top: 18vh;
-
-    @media (min-width: $bp-sm) {
-      margin-top: 24vh;
-    }
-
-    @media (min-width: $bp-md) {
-      margin-top: 18vh;
-    }
-  }
-
-  &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle, var(--color-text-tertiary) 1.5px, transparent 1.5px);
-    background-size: 30px 30px;
-    opacity: 0.2;
-    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
-  }
-}
-*/
-
 // -- Tron grid canvas layers
 .hero-tron {
   position: absolute;

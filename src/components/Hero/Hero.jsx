@@ -1,18 +1,9 @@
 import { useEffect, useRef, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-import { assetPath } from "../../utils/assetPath";
 import Button from "../Button/Button";
 import SocialLinks from "../SocialLinks/SocialLinks";
-import HeroCodeWindow from "./backgrounds/HeroCodeWindow";
-import HeroCodeStream from "./backgrounds/HeroCodeStream";
 import HeroBlueprint from "./backgrounds/HeroBlueprint";
-import HeroBlueprintTurbine from "./backgrounds/HeroBlueprintTurbine";
-import HeroMissionControl from "./backgrounds/HeroMissionControl";
 import "./Hero.scss";
-
-// Swap the hero background by changing this value.
-// 'codeWindow' | 'codeStream' | 'blueprint' | 'blueprintTurbine' | 'missionControl' | 'legacy'
-const HERO_BG_VARIANT = "blueprint";
 
 // -- Color helper for radial gradients
 function parseRGB(color) {
@@ -281,31 +272,9 @@ function Hero() {
         { value: t("hero.stats.role.value"), label: t("hero.stats.role.label") },
     ];
 
-    const renderBackground = () => {
-        switch (HERO_BG_VARIANT) {
-            case "codeWindow":
-                return <HeroCodeWindow />;
-            case "codeStream":
-                return <HeroCodeStream />;
-            case "blueprint":
-                return <HeroBlueprint />;
-            case "blueprintTurbine":
-                return <HeroBlueprintTurbine />;
-            case "missionControl":
-                return <HeroMissionControl />;
-            case "legacy":
-            default:
-                return (
-                    <div className="hero-bg">
-                        <img src={assetPath("images/heroImg.png")} alt="" />
-                    </div>
-                );
-        }
-    };
-
     return (
         <header className="hero">
-            {renderBackground()}
+            <HeroBlueprint />
 
             <div className="hero-tron">
                 <canvas ref={gridCanvasRef} />
