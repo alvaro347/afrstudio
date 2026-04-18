@@ -1,0 +1,417 @@
+@use "../../../css/variables" as *;
+
+.hero-mission-control {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  color: var(--color-accent);
+  font-family: $font-mono;
+  opacity: 0.85;
+}
+
+.hmc-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-accent) 14%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-accent) 14%, transparent) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0.5;
+}
+
+// Banner — thin strip at top
+.hmc-banner {
+  position: absolute;
+  top: calc($nav-height + 8px);
+  left: 3vw;
+  right: 3vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-accent) 80%, var(--color-text-tertiary));
+  border-top: 1px solid color-mix(in srgb, var(--color-accent) 40%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 40%, transparent);
+  padding: 5px 10px;
+  background: color-mix(in srgb, var(--color-bg) 70%, transparent);
+  border-radius: 2px;
+
+  @media (max-width: $bp-md) {
+    .hmc-banner-mid { display: none; }
+  }
+}
+
+.hmc-pip {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  margin-right: 8px;
+  box-shadow: 0 0 8px var(--color-accent);
+  animation: hmc-pip-blink 1.6s steps(2, start) infinite;
+}
+
+@keyframes hmc-pip-blink { to { opacity: 0.4; } }
+
+// -- Connector SVG spans the whole hero, drawing lines between corner panels
+.hmc-connectors {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.9;
+
+  @media (max-width: $bp-lg) {
+    display: none;
+  }
+}
+
+.hmc-conn path {
+  fill: none;
+  stroke: color-mix(in srgb, var(--color-accent) 50%, transparent);
+  stroke-width: 1;
+  stroke-dasharray: 4 3;
+  vector-effect: non-scaling-stroke;
+  animation: hmc-conn-dash 8s linear infinite;
+}
+
+.hmc-conn circle {
+  fill: var(--color-accent);
+  stroke: none;
+  opacity: 0.9;
+}
+
+@keyframes hmc-conn-dash {
+  from { stroke-dashoffset: 0; }
+  to   { stroke-dashoffset: -56; }
+}
+
+// -- Shared panel styling
+.hmc-panel {
+  position: absolute;
+  padding: 10px;
+  background: color-mix(in srgb, var(--color-bg) 65%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 35%, transparent);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 18px -8px var(--color-accent) inset;
+}
+
+.hmc-rounded       { border-radius: 12px; }
+.hmc-rounded-full  { border-radius: 18px; }
+
+.hmc-panel-hdr {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-accent) 80%, var(--color-text-tertiary));
+  border-bottom: 1px dashed color-mix(in srgb, var(--color-accent) 30%, transparent);
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+}
+
+.hmc-hdr-right {
+  color: var(--color-accent);
+  opacity: 0.85;
+}
+
+.hmc-panel-ftr {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--color-accent) 75%, var(--color-text-tertiary));
+  margin-top: 6px;
+  border-top: 1px dashed color-mix(in srgb, var(--color-accent) 30%, transparent);
+  padding-top: 4px;
+  text-transform: uppercase;
+}
+
+.hmc-blink {
+  animation: hmc-blink 1s steps(2, start) infinite;
+  color: var(--color-accent);
+}
+
+@keyframes hmc-blink { to { opacity: 0.3; } }
+
+// -- Corner brackets
+.hmc-bracket {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: var(--color-accent);
+  border-style: solid;
+  border-width: 0;
+  opacity: 0.75;
+}
+.hmc-bracket-tl { top: -1px;    left: -1px;   border-top-width: 1px;    border-left-width: 1px;  }
+.hmc-bracket-tr { top: -1px;    right: -1px;  border-top-width: 1px;    border-right-width: 1px; }
+.hmc-bracket-bl { bottom: -1px; left: -1px;   border-bottom-width: 1px; border-left-width: 1px;  }
+.hmc-bracket-br { bottom: -1px; right: -1px;  border-bottom-width: 1px; border-right-width: 1px; }
+
+// -- Voice loop (top, wide — main element above the title)
+.hmc-panel-log {
+  top: calc($nav-height + 44px);
+  left: 20vw;
+  right: 20vw;
+
+  @media (max-width: $bp-lg) {
+    left: 6vw;
+    right: 6vw;
+  }
+}
+
+.hmc-log-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  font-size: 10px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+.hmc-log-line {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0.75;
+}
+
+.hmc-log-time {
+  color: color-mix(in srgb, var(--color-accent) 70%, var(--color-text-tertiary));
+  min-width: 62px;
+}
+
+.hmc-log-who {
+  color: var(--color-accent);
+  min-width: 36px;
+  font-weight: $weight-semibold;
+}
+
+.hmc-log-msg {
+  color: var(--color-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hmc-log-active {
+  color: var(--color-accent);
+  opacity: 1;
+  font-weight: $weight-semibold;
+
+  .hmc-log-msg { color: var(--color-accent); }
+}
+
+.hmc-log-prompt {
+  color: var(--color-accent);
+  min-width: 62px;
+}
+
+.hmc-caret {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background: var(--color-accent);
+  vertical-align: -2px;
+  box-shadow: 0 0 6px var(--color-accent);
+  animation: hmc-caret-blink 1s steps(2, start) infinite;
+}
+
+@keyframes hmc-caret-blink { to { opacity: 0; } }
+
+// -- Telemetry (upper-left, flanks the title)
+.hmc-panel-tel {
+  top: 28vh;
+  left: 3vw;
+  width: 210px;
+
+  @media (max-width: $bp-md) {
+    top: 30vh;
+    left: 4vw;
+    width: 190px;
+  }
+}
+
+.hmc-tel { display: flex; flex-direction: column; gap: 2px; }
+
+.hmc-tel-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+}
+
+.hmc-tel-key { color: color-mix(in srgb, var(--color-accent) 85%, var(--color-text-tertiary)); min-width: 46px; }
+.hmc-tel-sep {
+  flex: 1;
+  border-bottom: 1px dotted color-mix(in srgb, var(--color-accent) 30%, transparent);
+  color: transparent;
+  min-width: 10px;
+  transform: translateY(-4px);
+}
+.hmc-tel-val { color: var(--color-accent); font-weight: $weight-semibold; }
+
+// -- Radar (upper-right)
+.hmc-panel-radar {
+  top: 28vh;
+  right: 3vw;
+  width: 210px;
+
+  @media (max-width: $bp-md) { display: none; }
+}
+
+.hmc-radar { display: block; width: 100%; height: auto; color: var(--color-accent); }
+
+.hmc-svg-stroke         { fill: none; stroke: currentColor; stroke-width: 1; vector-effect: non-scaling-stroke; }
+.hmc-svg-stroke-thin    { stroke-width: 0.75; opacity: 0.7; }
+.hmc-svg-stroke-thinner { stroke-width: 0.5;  opacity: 0.45; }
+.hmc-svg-stroke-dashed  { stroke-dasharray: 4 3; opacity: 0.55; }
+
+.hmc-svg-text {
+  fill: color-mix(in srgb, var(--color-accent) 80%, var(--color-text-tertiary));
+  font-family: $font-mono;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.hmc-radar-sweep { animation: hmc-sweep 4s linear infinite; transform-origin: 110px 110px; }
+
+@keyframes hmc-sweep {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.hmc-radar-blip {
+  fill: var(--color-accent);
+  animation: hmc-blip 3.5s ease-in-out infinite;
+  filter: drop-shadow(0 0 4px var(--color-accent));
+}
+
+@keyframes hmc-blip {
+  0%, 30%, 100% { opacity: 0; }
+  10%, 20%      { opacity: 1; }
+}
+
+// -- Code panel (lower-center, below the CTA)
+.hmc-panel-code {
+  bottom: 12vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+
+  @media (max-width: $bp-lg) { display: none; }
+}
+
+.hmc-code {
+  margin: 0;
+  font-family: $font-mono;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.hmc-code-line { display: flex; gap: 8px; white-space: pre; }
+.hmc-code-gutter {
+  color: color-mix(in srgb, var(--color-accent) 45%, var(--color-text-tertiary));
+  opacity: 0.55;
+  min-width: 2ch;
+  text-align: right;
+}
+
+.hmc-code-t-k { color: var(--color-accent); font-weight: $weight-semibold; }
+.hmc-code-t-f { color: color-mix(in srgb, var(--color-accent) 80%, #fff); }
+.hmc-code-t-v { color: var(--color-text-primary); }
+.hmc-code-t-c { color: var(--color-text-tertiary); font-style: italic; opacity: 0.75; }
+.hmc-code-t-p { color: var(--color-text-tertiary); }
+
+// -- Bars (lower-left corner)
+.hmc-panel-bars {
+  bottom: 16vh;
+  left: 3vw;
+  width: 240px;
+
+  @media (max-width: $bp-lg) { display: none; }
+}
+
+.hmc-bars { display: flex; flex-direction: column; gap: 4px; font-size: 11px; }
+
+.hmc-bar-row { display: flex; align-items: baseline; gap: 8px; color: var(--color-text-secondary); }
+.hmc-bar-k { color: color-mix(in srgb, var(--color-accent) 80%, var(--color-text-tertiary)); min-width: 44px; }
+.hmc-bar-v {
+  color: var(--color-accent);
+  letter-spacing: -0.05em;
+  filter: drop-shadow(0 0 3px color-mix(in srgb, var(--color-accent) 50%, transparent));
+}
+.hmc-bar-p { color: var(--color-accent); font-weight: $weight-semibold; }
+
+// -- Moon (lower-right corner)
+.hmc-panel-moon {
+  bottom: 16vh;
+  right: 3vw;
+  width: 210px;
+
+  @media (max-width: $bp-lg) { display: none; }
+}
+
+.hmc-moon { display: block; width: 100%; height: auto; color: var(--color-accent); }
+
+.hmc-moon-spin { animation: hmc-moon-spin 40s linear infinite; transform-origin: center; }
+
+@keyframes hmc-moon-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.hmc-moon-orbiter {
+  fill: var(--color-accent);
+  transform-origin: 0 0;
+  animation: hmc-orbit 12s linear infinite;
+  filter: drop-shadow(0 0 4px var(--color-accent));
+}
+
+@keyframes hmc-orbit {
+  from { transform: rotate(0deg)   translateX(116px) rotate(0deg);   }
+  to   { transform: rotate(360deg) translateX(116px) rotate(-360deg); }
+}
+
+// CRT scanlines
+.hmc-scan {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    color-mix(in srgb, var(--color-accent) 7%, transparent) 2px,
+    color-mix(in srgb, var(--color-accent) 7%, transparent) 3px
+  );
+  mix-blend-mode: screen;
+  opacity: 0.45;
+  animation: hmc-scan-drift 8s linear infinite;
+}
+
+@keyframes hmc-scan-drift {
+  from { background-position: 0 0; }
+  to   { background-position: 0 40px; }
+}
+
+.hmc-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    transparent 55%,
+    color-mix(in srgb, var(--color-bg) 75%, transparent) 100%
+  );
+}
+
+.hero-mission-control ~ .hero-tron {
+  display: none;
+}

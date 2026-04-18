@@ -17,6 +17,9 @@
   }
 }
 
+// LEGACY — the original hero background. Kept as a backup.
+// Active only when HERO_BG_VARIANT='legacy' in Hero.jsx.
+/*
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -53,6 +56,7 @@
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
   }
 }
+*/
 
 // -- Tron grid canvas layers
 .hero-tron {

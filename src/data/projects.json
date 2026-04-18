@@ -36,7 +36,7 @@
       "description": "Pet health ecosystem — mobile app for owners and web-based vet practice management. Shared Kotlin Multiplatform backend.",
       "technologies": ["Kotlin", "Compose", "SwiftUI", "Ktor", "PostgreSQL"],
       "highlights": ["Dual product architecture", "Offline-first SQLDelight", "JWT role-based auth"],
-      "links": { "github": "https://github.com/alvaro347/aluna", "live": "https://alunapet.com/" },
+      "links": { "github": "https://github.com/alvaro347/aluna-releases", "live": "https://alunapet.com/" },
       "image": "images/projects/aluna.png",
       "gallery": [],
       "tags": ["cross-platform", "mobile"]
@@ -51,7 +51,7 @@
       "description": "Marketing site for Aluna pet health platform. Theme system with OS preference detection and design tokens.",
       "technologies": ["React", "TypeScript", "Vite"],
       "highlights": ["OS theme detection", "Design tokens", "GitHub Pages CI/CD"],
-      "links": { "github": null, "live": null },
+      "links": { "github": "https://github.com/alvaro347/aluna-web", "live": "https://alunapet.com/" },
       "image": "images/projects/aluna.png",
       "gallery": [],
       "tags": ["web", "marketing"]

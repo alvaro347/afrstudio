@@ -1,0 +1,232 @@
+@use "../../../css/variables" as *;
+
+.hero-blueprint {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+// Fine grid — full section, dim baseline
+.hbp-paper {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-accent) 18%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-accent) 18%, transparent) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.12;
+}
+
+// Major grid — full section, dim baseline
+.hbp-paper-major {
+  background-size: 100px 100px;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-accent) 35%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-accent) 35%, transparent) 1px, transparent 1px);
+  opacity: 0.2;
+}
+
+// Bright grid patches revealed only where the gears + code panels sit.
+// Mirrors the Tron effect: faint grid everywhere, stronger grid near features.
+// Feature positions approximated as container %; radii are generous so they
+// remain near the gears across aspect ratios.
+.hbp-spotlights {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, color-mix(in srgb, var(--color-accent) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-accent) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(to right, color-mix(in srgb, var(--color-accent) 30%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-accent) 30%, transparent) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  opacity: 0.55;
+  -webkit-mask-image:
+    radial-gradient(circle at 52% 40%, black 180px, transparent 380px),
+    radial-gradient(circle at 72% 22%, black 100px, transparent 240px),
+    radial-gradient(circle at 27% 52%, black 130px, transparent 280px),
+    radial-gradient(circle at 8% 23%, black 150px, transparent 300px),
+    radial-gradient(circle at 98% 44%, black 130px, transparent 260px),
+    radial-gradient(circle at 7% 85%, black 150px, transparent 300px);
+  mask-image:
+    radial-gradient(circle at 52% 40%, black 180px, transparent 380px),
+    radial-gradient(circle at 72% 22%, black 100px, transparent 240px),
+    radial-gradient(circle at 27% 52%, black 130px, transparent 280px),
+    radial-gradient(circle at 8% 23%, black 150px, transparent 300px),
+    radial-gradient(circle at 98% 44%, black 130px, transparent 260px),
+    radial-gradient(circle at 7% 85%, black 150px, transparent 300px);
+}
+
+.hbp-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  // Push the SVG content down just enough so the frame's top edge lands at the bottom of the nav.
+  transform: translateY(calc(#{$nav-height} - 35px));
+  color: var(--color-accent);
+  opacity: 0.88;
+}
+
+.hbp-stroke {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.25;
+  vector-effect: non-scaling-stroke;
+}
+
+.hbp-stroke-thin {
+  stroke-width: 0.75;
+  opacity: 0.8;
+}
+
+.hbp-stroke-dashed {
+  stroke-dasharray: 6 4;
+  opacity: 0.55;
+}
+
+.hbp-stroke-dash-dot {
+  stroke-dasharray: 12 3 2 3;
+  opacity: 0.45;
+}
+
+.hbp-frame {
+  stroke-width: 1;
+  opacity: 0.55;
+}
+
+// Draw-in animation
+.hbp-draw {
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
+  animation: hbp-draw-in 2.8s ease-out forwards;
+}
+
+@keyframes hbp-draw-in {
+  to { stroke-dashoffset: 0; }
+}
+
+// Gears rotate slowly
+.hbp-gear {
+  animation: hbp-rotate 60s linear infinite;
+}
+
+.hbp-gear:nth-of-type(2) { animation-duration: 30s; animation-direction: reverse; }
+.hbp-gear:nth-of-type(3) { animation-duration: 45s; }
+
+@keyframes hbp-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+// Dimension callouts
+.hbp-dim-bg {
+  fill: var(--color-bg);
+  opacity: 0.9;
+  stroke: none;
+}
+
+.hbp-mono {
+  font-family: $font-mono;
+  font-size: 11px;
+  fill: var(--color-accent);
+  letter-spacing: 0.02em;
+}
+
+.hbp-mono-sm {
+  font-size: 9px;
+  fill: color-mix(in srgb, var(--color-accent) 80%, var(--color-text-tertiary));
+  opacity: 0.9;
+}
+
+// Leader lines
+.hbp-anno-lead {
+  stroke-dasharray: 3 2;
+  opacity: 0.55;
+  animation: hbp-pulse 4s ease-in-out infinite;
+}
+
+.hbp-anno-dot {
+  fill: var(--color-accent);
+  stroke: none;
+}
+
+@keyframes hbp-pulse {
+  0%, 100% { opacity: 0.35; }
+  50%      { opacity: 0.75; }
+}
+
+// -- Code panel callouts (styled like mission-control guidance.ts)
+.hbp-panel-bg {
+  fill: color-mix(in srgb, var(--color-bg) 85%, transparent);
+  stroke: color-mix(in srgb, var(--color-accent) 55%, transparent);
+  stroke-width: 1;
+  opacity: 0.98;
+}
+
+.hbp-panel-sep {
+  stroke: color-mix(in srgb, var(--color-accent) 30%, transparent);
+  stroke-width: 1;
+  stroke-dasharray: 3 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.hbp-panel-hdr {
+  font-family: $font-mono;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  fill: color-mix(in srgb, var(--color-accent) 80%, var(--color-text-tertiary));
+}
+
+.hbp-panel-hdr-right {
+  fill: var(--color-accent);
+  opacity: 0.85;
+}
+
+.hbp-panel-gutter {
+  font-family: $font-mono;
+  font-size: 10px;
+  fill: color-mix(in srgb, var(--color-accent) 45%, var(--color-text-tertiary));
+  opacity: 0.55;
+}
+
+.hbp-panel-code {
+  font-family: $font-mono;
+  font-size: 10px;
+  fill: var(--color-text-secondary);
+}
+
+.hbp-panel-ftr {
+  font-family: $font-mono;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  fill: color-mix(in srgb, var(--color-accent) 75%, var(--color-text-tertiary));
+  text-transform: uppercase;
+}
+
+// Token colors (for tspan inside .hbp-panel-code)
+.hbp-tok-k { fill: var(--color-accent); font-weight: $weight-semibold; }
+.hbp-tok-f { fill: color-mix(in srgb, var(--color-accent) 80%, #fff); }
+.hbp-tok-v { fill: var(--color-text-primary); }
+.hbp-tok-c { fill: color-mix(in srgb, var(--color-accent) 55%, var(--color-text-tertiary)); font-style: italic; }
+.hbp-tok-s { fill: color-mix(in srgb, var(--color-accent) 60%, #e0d5ff); }
+.hbp-tok-n { fill: color-mix(in srgb, var(--color-accent) 55%, #60efff); }
+.hbp-tok-p { fill: var(--color-text-tertiary); }
+
+// Very soft vignette — only fades the far corners, no aggressive circular falloff.
+.hbp-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    transparent 45%,
+    color-mix(in srgb, var(--color-bg) 75%, transparent) 100%
+  );
+}
+
+// Hide the Tron canvas when this variant is active (to avoid grid-on-grid moiré).
+.hero-blueprint ~ .hero-tron {
+  display: none;
+}

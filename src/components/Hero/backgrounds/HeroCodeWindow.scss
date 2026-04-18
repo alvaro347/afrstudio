@@ -1,0 +1,192 @@
+@use "../../../css/variables" as *;
+
+.hero-code-window {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse at 50% 55%, black 20%, transparent 85%);
+  mask-image: radial-gradient(ellipse at 50% 55%, black 20%, transparent 85%);
+}
+
+// Perspective grid floor behind the window
+.hcw-floor {
+  position: absolute;
+  left: 50%;
+  bottom: -10%;
+  width: 180%;
+  height: 60%;
+  transform: translateX(-50%) perspective(600px) rotateX(62deg);
+  transform-origin: 50% 100%;
+  background-image:
+    linear-gradient(to right, var(--color-accent) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-accent) 1px, transparent 1px);
+  background-size: 60px 60px, 60px 60px;
+  opacity: 0.18;
+  -webkit-mask-image: linear-gradient(to top, black, transparent 90%);
+  mask-image: linear-gradient(to top, black, transparent 90%);
+  animation: hcw-floor-scroll 6s linear infinite;
+}
+
+@keyframes hcw-floor-scroll {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 60px, 0 60px; }
+}
+
+.hcw-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(620px, 88vw);
+  max-width: 680px;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--color-bg) 82%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 55%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-accent) 20%, transparent) inset,
+    0 0 60px -10px var(--color-accent),
+    0 20px 60px -20px rgba(0, 0, 0, 0.6);
+  opacity: 0.78;
+
+  @media (min-width: $bp-lg) {
+    width: min(680px, 60vw);
+    opacity: 0.82;
+  }
+}
+
+.hcw-chrome {
+  display: flex;
+  align-items: center;
+  gap: $space-sm;
+  padding: 10px 14px;
+  background: color-mix(in srgb, var(--color-bg) 70%, #000 20%);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 25%, transparent);
+}
+
+.hcw-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 8px currentColor;
+}
+.hcw-dot-red    { background: #ff5f57; color: #ff5f57; }
+.hcw-dot-yellow { background: #febc2e; color: #febc2e; }
+.hcw-dot-green  { background: #28c840; color: #28c840; }
+
+.hcw-tabs {
+  display: flex;
+  gap: 6px;
+  margin-left: $space-md;
+}
+
+.hcw-tab {
+  font-family: $font-mono;
+  font-size: 10px;
+  padding: 3px 10px;
+  color: var(--color-text-tertiary);
+  border-radius: $radius-sm;
+  border: 1px solid transparent;
+  letter-spacing: 0.02em;
+}
+
+.hcw-tab-active {
+  color: var(--color-accent);
+  border-color: color-mix(in srgb, var(--color-accent) 50%, transparent);
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+}
+
+.hcw-path {
+  margin-left: auto;
+  font-family: $font-mono;
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+  opacity: 0.7;
+
+  @media (max-width: $bp-md) {
+    display: none;
+  }
+}
+
+.hcw-body {
+  padding: $space-md 0 $space-lg;
+  overflow: hidden;
+  max-height: 60vh;
+}
+
+.hcw-code {
+  font-family: $font-mono;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 0;
+
+  @media (min-width: $bp-lg) {
+    font-size: 13px;
+  }
+}
+
+.hcw-line {
+  display: flex;
+  gap: 14px;
+  padding: 0 $space-md;
+  white-space: pre;
+}
+
+.hcw-gutter {
+  color: color-mix(in srgb, var(--color-accent) 45%, var(--color-text-tertiary));
+  opacity: 0.55;
+  user-select: none;
+  min-width: 2ch;
+  text-align: right;
+}
+
+.hcw-code-content {
+  color: var(--color-text-secondary);
+}
+
+// Token colors
+.hcw-t-k { color: var(--color-accent); font-weight: $weight-semibold; }        // keyword
+.hcw-t-s { color: color-mix(in srgb, var(--color-accent) 60%, #e0d5ff); }       // string
+.hcw-t-c { color: var(--color-text-tertiary); font-style: italic; opacity: 0.7; }
+.hcw-t-v { color: var(--color-text-primary); }                                   // variable
+.hcw-t-f { color: color-mix(in srgb, var(--color-accent) 80%, #fff); }          // function
+.hcw-t-t { color: color-mix(in srgb, var(--color-accent) 65%, #7ee7ff); }       // tag
+.hcw-t-a { color: color-mix(in srgb, var(--color-accent) 50%, #ffb86b); }       // attr
+.hcw-t-n { color: color-mix(in srgb, var(--color-accent) 40%, #60efff); }       // number
+.hcw-t-g { color: color-mix(in srgb, var(--color-accent) 50%, #c8ffa0); }       // template
+.hcw-t-p { color: var(--color-text-tertiary); }                                  // punctuation
+
+.hcw-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 1em;
+  background: var(--color-accent);
+  vertical-align: -2px;
+  margin-left: 2px;
+  box-shadow: 0 0 6px var(--color-accent);
+  animation: hcw-blink 1s steps(2, start) infinite;
+}
+
+@keyframes hcw-blink {
+  to { opacity: 0; }
+}
+
+.hcw-scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 2px,
+    color-mix(in srgb, var(--color-accent) 6%, transparent) 2px,
+    color-mix(in srgb, var(--color-accent) 6%, transparent) 3px
+  );
+  mix-blend-mode: screen;
+  opacity: 0.35;
+}
