@@ -80,6 +80,7 @@
     z-index: 5;
     width: $btn-height-sm;
     height: $btn-height-sm;
+    margin: 0;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: $radius-full;
@@ -91,8 +92,15 @@
 
     &:hover { opacity: 1; }
 
-    &:first-of-type { left: $space-md; }
-    &:last-of-type { right: $space-md; }
+    &[data-type="prev"] {
+      left: $space-md;
+      right: auto;
+    }
+
+    &[data-type="next"] {
+      right: $space-md;
+      left: auto;
+    }
   }
 }
 
