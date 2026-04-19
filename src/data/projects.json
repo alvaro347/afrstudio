@@ -37,8 +37,8 @@
       "technologies": ["Kotlin", "Compose", "SwiftUI", "Ktor", "PostgreSQL"],
       "highlights": ["Dual product architecture", "Offline-first SQLDelight", "JWT role-based auth"],
       "links": { "github": "https://github.com/alvaro347/aluna-releases", "live": "https://alunapet.com/" },
-      "image": "images/projects/aluna.png",
-      "gallery": [],
+      "image": "images/projects/aluna_1.png",
+      "gallery": ["images/projects/aluna.png"],
       "tags": ["cross-platform", "mobile"]
     }
   ],
